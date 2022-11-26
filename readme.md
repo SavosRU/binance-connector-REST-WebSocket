@@ -131,14 +131,22 @@ Run()
 | ------------- |-------------       | ------------- |
 | Futures       | Futures API        | Completed     |
 | Spot          | Spot API           | Completed     |
-| Coin-M        | Coin-M API         | In progress   |
-| Options       | European API       | In progress   |
+| Coin-M        | Coin-M API         | Completed     |
+| Options       | European API       | Completed     |
 | Websocket     | Abstract Websocket | Completed     |
 | Http          | Abstract Http      | Completed     |
 
 **Spot**: contains: `Wallet`, `Sub-Account`, `Market Data`, `Spot`, `Margin`, `Savings`, `Staking`, `Mining`, `Futures`, `Futures Algo`, `Portfolio`, `BLVT`, `BSwap`, `Fiat`, `C2C`, `VIP Loans`, `Crypto Loans`, `Crypto Loans`, `Pay`, `Convert`, `Rebate`, `NFT`, `Binance Code` (all available endpoints in [binance spot doc](https://binance-docs.github.io/apidocs/spot/en/#change-log))
 
 **Websocket & Http**: can connect/request to any of binance ws/rest endpoints
+
+### Endpoints Naming
+| Starts        | Example            | Http Method   |
+| ------------- |-------------       | ------------- |
+| new           | newOrder           | POST          |
+| change        | changeLeverage     | POST \| PUT   |
+| delete        | deleteOrder        | POST \| DELETE|
+| (nothing)     | exchangeInfo       | GET           |
 
 ### Notes
 - ws data are either `Buffer` OR `Raw string`    
