@@ -1,6 +1,6 @@
 import { Websocket } from "./websocket.js"
 import { Http } from "./http.js"
-import("../types/futures.type.js")
+import("../types/coinm.type.js")
 
 export class CoinM {
     
@@ -14,7 +14,7 @@ export class CoinM {
     timestamp = Date.now()
 
     /**
-     * @param {} options
+     * @param { CoinMConstructor } options
      */
     constructor(options = {}) {
 
@@ -43,9 +43,9 @@ export class CoinM {
         
         // Utils
         this.http = new Http(OPTIONS)
-        
     }
 
+    // ########################################### Market Data Endpoints
     // ########### Public
     /**
      * @param {} [params]
@@ -54,5 +54,19 @@ export class CoinM {
         return await this.http.privateGET("/dapi/v1/ping", params)
     }
 
+    /**
+     * @param {} [params]
+     */
+    async time(params) {
+        return await this.http.privateGET("/dapi/v1/time", params)
+    }
+    // ########### Private
+    
+    // ########################################### Account/Trades Endpoints
+    // ########### Public
+    // ########### Private
+
+    // ########################################### Portfolio Margin Endpoints
+    // ########### Public
     // ########### Private
 }

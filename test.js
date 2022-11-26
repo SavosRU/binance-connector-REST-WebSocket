@@ -1,5 +1,9 @@
-import { Spot, Futures } from "./index.js"
+import { Spot, Futures, CoinM } from "./index.js"
 import { config } from "./config.js"
+
+let coinm = new CoinM({
+
+})
 
 let spot = new Spot({
     isTestNet: false,
@@ -14,10 +18,7 @@ let fu = new Futures({
 })
 
 async function Run() {
-    let a = await spot.test()
+    let a = await coinm.ping()
     console.log(a)
-
-    // let a = await fu.balance()
-    // console.log(a)
 }
 Run()
