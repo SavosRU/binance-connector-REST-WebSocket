@@ -1703,6 +1703,12 @@ export class Spot {
     // ########################################### Pay Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async payTransactions(params) {
+        return await this.http.privateGET("/sapi/v1/pay/transactions", params)
+    }
 
     // ########################################### Convert Endpoints
     // ########### Public
