@@ -1582,11 +1582,15 @@ export class Spot {
      async fiatPayments(params) {
         return await this.http.privateGET("/sapi/v1/fiat/payments", params)
     }
-
     // ########################################### C2C Endpoints
     // ########### Public
     // ########### Private
-
+    /**
+     * @param {} [params]
+     */
+     async c2cOrderMatchListUserOrderHistory(params) {
+        return await this.http.privateGET("/sapi/v1/c2c/orderMatch/listUserOrderHistory", params)
+    }
     // ########################################### VIP Loans Endpoints
     // ########### Public
     // ########### Private
