@@ -614,7 +614,117 @@ export class Spot {
     // ########################################### Spot Account/Trade
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async newOrderTest(params) {
+        return await this.http.privatePOST("/api/v3/order/test", params)
+    }
 
+    /**
+     * @param {} [params]
+     */
+     async newOrder(params) {
+        return await this.http.privatePOST("/api/v3/order", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async deleteOrder(params) {
+        return await this.http.privateDELETE("/api/v3/order", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async deleteOpenOrders(params) {
+        return await this.http.privateDELETE("/api/v3/openOrders", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async order(params) {
+        return await this.http.privateGET("/api/v3/order", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newOrderCancelReplace(params) {
+        return await this.http.privatePOST("/api/v3/order/cancelReplace", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async openOrders(params) {
+        return await this.http.privateGET("/api/v3/openOrders", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async allOrders(params) {
+        return await this.http.privateGET("/api/v3/allOrders", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newOrderOco(params) {
+        return await this.http.privatePOST("/api/v3/order/oco", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async deleteOrderList(params) {
+        return await this.http.privateDELETE("/api/v3/orderList", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async orderList(params) {
+        return await this.http.privateGET("/api/v3/orderList", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async allOrderList(params) {
+        return await this.http.privateGET("/api/v3/allOrderList", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async openOrderList(params) {
+        return await this.http.privateGET("/api/v3/openOrderList", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async account(params) {
+        return await this.http.privateGET("/api/v3/account", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async myTrades(params) {
+        return await this.http.privateGET("/api/v3/myTrades", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async rateLimitOrder(params) {
+        return await this.http.privateGET("/api/v3/rateLimit/order", params)
+    }
     // ########################################### Margin Account/Trade
     // ########### Public
     // ########### Private
