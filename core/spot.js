@@ -1045,7 +1045,103 @@ export class Spot {
     // ########################################### Savings Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async lendingDailyProductList(params) {
+        return await this.http.privateGET("/sapi/v1/lending/daily/product/list", params)
+    }
 
+    /**
+     * @param {} [params]
+     */
+     async lendingDailyUserLeftQuota(params) {
+        return await this.http.privateGET("/sapi/v1/lending/daily/userLeftQuota", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newLendingDailyPurchase(params) {
+        return await this.http.privatePOST("/sapi/v1/lending/daily/purchase", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async lendingDailyUserRedemptionQuota(params) {
+        return await this.http.privateGET("/sapi/v1/lending/daily/userRedemptionQuota", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newLendingDailyRedeem(params) {
+        return await this.http.privatePOST("/sapi/v1/lending/daily/redeem", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async lendingDailyTokenPosition(params) {
+        return await this.http.privateGET("/sapi/v1/lending/daily/token/position", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async lendingProjectList(params) {
+        return await this.http.privateGET("/sapi/v1/lending/project/list", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newLendingCustomizedFixedPurchase(params) {
+        return await this.http.privatePOST("/sapi/v1/lending/customizedFixed/purchase", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async lendingProjectPositionList(params) {
+        return await this.http.privateGET("/sapi/v1/lending/project/position/list", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async lendingUnionAccount(params) {
+        return await this.http.privateGET("/sapi/v1/lending/union/account", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async lendingUnionPurchaseRecord(params) {
+        return await this.http.privateGET("/sapi/v1/lending/union/purchaseRecord", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async lendingUnionRedemptionRecord(params) {
+        return await this.http.privateGET("/sapi/v1/lending/union/redemptionRecord", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async lendingUnionInterestHistory(params) {
+        return await this.http.privateGET("/sapi/v1/lending/union/interestHistory", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newLendingPositionChanged(params) {
+        return await this.http.privatePOST("/sapi/v1/lending/positionChanged", params)
+    }
     // ########################################### Stacking Endpoints
     // ########### Public
     // ########### Private
