@@ -2,7 +2,7 @@ import { Websocket } from "./websocket.js"
 import { Http } from "./http.js"
 import("../types/futures.type.js")
 
-export class Futures {
+export class CoinM {
     
     ApiMap = {
         baseURL: "https://dapi.binance.com",
@@ -53,6 +53,6 @@ export class Futures {
     async ping(params) {
         return await this.http.privateGET("/dapi/v1/ping", params)
     }
-    
+
     // ########### Private
 }
