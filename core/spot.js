@@ -1795,5 +1795,46 @@ export class Spot {
     // ########################################### Binance Code Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async newGiftcardCreateCode(params) {
+        return await this.http.privatePOST("/sapi/v1/giftcard/createCode", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newGiftcardRedeemCode(params) {
+        return await this.http.privatePOST("/sapi/v1/giftcard/redeemCode", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async giftCardVerify(params) {
+        return await this.http.privateGET("/sapi/v1/giftcard/verify", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async giftCardCryptographyRsaPublicKey(params) {
+        return await this.http.privateGET("/sapi/v1/giftcard/cryptography/rsa-public-key", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newGiftCardBuyCode(params) {
+        return await this.http.privatePOST("/sapi/v1/giftcard/buyCode", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async giftcardBuyCodeTokenLimit(params) {
+        return await this.http.privateGET("/sapi/v1/giftcard/buyCode/token-limit", params)
+    }
 
 }
