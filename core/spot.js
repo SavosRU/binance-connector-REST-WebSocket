@@ -1594,7 +1594,26 @@ export class Spot {
     // ########################################### VIP Loans Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async loanVipOngoingOrders(params) {
+        return await this.http.privateGET("/sapi/v1/loan/vip/ongoing/orders", params)
+    }
 
+    /**
+     * @param {} [params]
+     */
+     async newLoanVipRepay(params) {
+        return await this.http.privatePOST("/sapi/v1/loan/vip/repay", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async loanVipRepayHistory(params) {
+        return await this.http.privateGET("/sapi/v1/loan/vip/repay/history", params)
+    }
     // ########################################### Crypto Loans Endpoints
     // ########### Public
     // ########### Private
