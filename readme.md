@@ -1,3 +1,9 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/mhasanjb/binance-connector/badge)](https://www.codefactor.io/repository/github/mhasanjb/binance-connector)
+![npm version](https://img.shields.io/npm/v/binance-connector)
+![npm size](https://img.shields.io/bundlephobia/min/binance-connector/latest)
+![npm downloads](https://img.shields.io/npm/dt/binance-connector)
+![last commit](https://img.shields.io/github/last-commit/mhasanjb/binance-connector)
+
 ### Requirement
 `node 18.0.0` and higher    
 otherwise you need to polyfill `fetch` with `globalThis`    
