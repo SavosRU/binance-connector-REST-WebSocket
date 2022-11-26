@@ -1756,7 +1756,12 @@ export class Spot {
     // ########################################### Rebate Endpoints
     // ########### Public
     // ########### Private
-
+    /**
+     * @param {} [params]
+     */
+     async rebateTaxQuery(params) {
+        return await this.http.privateGET("/sapi/v1/rebate/taxQuery", params)
+    }
     // ########################################### NFT Endpoints
     // ########### Public
     // ########### Private
