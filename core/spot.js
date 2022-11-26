@@ -1344,10 +1344,50 @@ export class Spot {
      async futuresLoanInterestHistory(params) {
         return await this.http.privateGET("/sapi/v1/futures/loan/interestHistory", params)
     }
-
     // ########################################### Futures Algo Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async newAlgoFuturesNewOrderVp(params) {
+        return await this.http.privatePOST("/sapi/v1/algo/futures/newOrderVp", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newAlgoFuturesNewOrderTwap(params) {
+        return await this.http.privatePOST("/sapi/v1/algo/futures/newOrderTwap", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async deleteAlgoFuturesOrder(params) {
+        return await this.http.privateDELETE("/sapi/v1/algo/futures/order", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async algoFuturesOpenOrders(params) {
+        return await this.http.privateGET("/sapi/v1/algo/futures/openOrders", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async algoFuturesHistoricalOrders(params) {
+        return await this.http.privateGET("/sapi/v1/algo/futures/historicalOrders", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async algoFuturesSubOrders(params) {
+        return await this.http.privateGET("/sapi/v1/algo/futures/subOrders", params)
+    }
 
     // ########################################### Portfolio Margin Endpoints
     // ########### Public
