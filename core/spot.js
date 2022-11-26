@@ -1617,7 +1617,89 @@ export class Spot {
     // ########################################### Crypto Loans Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async loanIncome(params) {
+        return await this.http.privateGET("/sapi/v1/loan/income", params)
+    }
 
+    /**
+     * @param {} [params]
+     */
+     async newLoanBorrow(params) {
+        return await this.http.privatePOST("/sapi/v1/loan/borrow", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async loanBorrowHistory(params) {
+        return await this.http.privateGET("/sapi/v1/loan/borrow/history", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async loanOngoingOrders(params) {
+        return await this.http.privateGET("/sapi/v1/loan/ongoing/orders", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newLoanRepay(params) {
+        return await this.http.privatePOST("/sapi/v1/loan/repay", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async loanRepayHistory(params) {
+        return await this.http.privateGET("/sapi/v1/loan/repay/history", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newLoanAdjustLtv(params) {
+        return await this.http.privatePOST("/sapi/v1/loan/adjust/ltv", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async loanLtvAdjustmentHistory(params) {
+        return await this.http.privateGET("/sapi/v1/loan/ltv/adjustment/history", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async loanLoanableData(params) {
+        return await this.http.privateGET("/sapi/v1/loan/loanable/data", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async loanCollateralData(params) {
+        return await this.http.privateGET("/sapi/v1/loan/collateral/data", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async loanRepayCollateralRate(params) {
+        return await this.http.privateGET("/sapi/v1/loan/repay/collateral/rate", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newLoanCustomizeMarginCall(params) {
+        return await this.http.privatePOST("/sapi/v1/loan/customize/margin_call", params)
+    }
     // ########################################### Pay Endpoints
     // ########### Public
     // ########### Private
