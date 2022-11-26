@@ -1765,7 +1765,33 @@ export class Spot {
     // ########################################### NFT Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async nftHistoryTransactions(params) {
+        return await this.http.privateGET("/sapi/v1/nft/history/transactions", params)
+    }
 
+    /**
+     * @param {} [params]
+     */
+     async nftHistoryDeposit(params) {
+        return await this.http.privateGET("/sapi/v1/nft/history/deposit", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async nftHistoryWithdraw(params) {
+        return await this.http.privateGET("/sapi/v1/nft/history/withdraw", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async nftUserGetAsset(params) {
+        return await this.http.privateGET("/sapi/v1/nft/user/getAsset", params)
+    }
     // ########################################### Binance Code Endpoints
     // ########### Public
     // ########### Private
