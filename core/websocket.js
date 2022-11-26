@@ -44,8 +44,7 @@ export class Websocket extends EventEmitter {
         }
     }
 
-    // ########################################
-    // https://stackoverflow.com/questions/47045000/how-do-i-jsdoc-custom-eventemitter-on-events-in-visual-studio-code
+    // ######################################## Overwrite addListener & on JSDoc
     /**
      * @typedef WsApiOptions
      * @property {String} api_key
