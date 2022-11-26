@@ -1,9 +1,9 @@
-import { Spot, Futures, CoinM } from "./index.js"
+import { Spot, Futures, CoinM, EuOptions } from "./index.js"
 import { config } from "./config.js"
 
-let coinm = new CoinM({
+let euoptions = new EuOptions({})
 
-})
+let coinm = new CoinM({})
 
 let spot = new Spot({
     isTestNet: false,
@@ -18,7 +18,6 @@ let fu = new Futures({
 })
 
 async function Run() {
-    let a = await coinm.ping()
-    console.log(a)
+    
 }
 Run()
