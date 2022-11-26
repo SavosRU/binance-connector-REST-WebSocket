@@ -47,6 +47,7 @@ export class Futures {
         
     }
 
+    // ########################################### Market Data Endpoints
     // ########### Public
     /**
      * @param {FuturesJustRecvWindow} [params]
@@ -222,22 +223,8 @@ export class Futures {
     async assetIndex(params) {
         return await this.http.publicGET("/fapi/v1/assetIndex", params)
     }
-
-    /**
-     * @param { FuturesGetPmExchangeInfo } params
-     */
-     async pmExchangeInfo(params) {
-        return await this.http.publicGET("/fapi/v1/pmExchangeInfo", params)
-    }
-
-    /**
-     * @param { FuturesPmAccountInfo } params
-     */
-    async pmAccountInfo(params) {
-        return await this.http.publicGET("/fapi/v1/pmAccountInfo", params)
-    }
+    // ########################################### Account/Trades Endpoints
     // ########### Private
-
     /**
      * @param {FuturesPostPositionSideDual} params 
      */
@@ -467,5 +454,21 @@ export class Futures {
      */
     async deleteListenKey(params) {
         return await this.http.privateDELETE("/fapi/v1/listenKey", params)
+    }
+
+    // ########################################### Portfolio Margin Endpoints
+    // ########### Public
+    /**
+     * @param { FuturesGetPmExchangeInfo } params
+     */
+     async pmExchangeInfo(params) {
+        return await this.http.publicGET("/fapi/v1/pmExchangeInfo", params)
+    }
+
+    /**
+     * @param { FuturesPmAccountInfo } params
+     */
+    async pmAccountInfo(params) {
+        return await this.http.publicGET("/fapi/v1/pmAccountInfo", params)
     }
 }
