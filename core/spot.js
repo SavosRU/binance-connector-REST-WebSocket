@@ -1569,6 +1569,19 @@ export class Spot {
     // ########################################### Fiat Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async fiatOrders(params) {
+        return await this.http.privateGET("/sapi/v1/fiat/orders", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async fiatPayments(params) {
+        return await this.http.privateGET("/sapi/v1/fiat/payments", params)
+    }
 
     // ########################################### C2C Endpoints
     // ########### Public
