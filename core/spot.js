@@ -728,7 +728,320 @@ export class Spot {
     // ########################################### Margin Account/Trade
     // ########### Public
     // ########### Private
-
+    /**
+     * @param {} [params]
+     */
+     async newMarginTransfer(params) {
+        return await this.http.privatePOST("/sapi/v1/margin/transfer", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async newMarginLoan(params) {
+        return await this.http.privatePOST("/sapi/v1/margin/loan", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async newMarginRepay(params) {
+        return await this.http.privatePOST("/sapi/v1/margin/repay", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginAsset(params) {
+        return await this.http.privateGET("/sapi/v1/margin/asset", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginPair(params) {
+        return await this.http.privateGET("/sapi/v1/margin/pair", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginAllAssets(params) {
+        return await this.http.privateGET("/sapi/v1/margin/allAssets", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginAllPairs(params) {
+        return await this.http.privateGET("/sapi/v1/margin/allPairs", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginPriceIndex(params) {
+        return await this.http.privateGET("/sapi/v1/margin/priceIndex", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async newMarginOrder(params) {
+        return await this.http.privatePOST("/sapi/v1/margin/order", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async deleteMarginOrder(params) {
+        return await this.http.privateDELETE("/sapi/v1/margin/order", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async deleteMarginOpenOrders(params) {
+        return await this.http.privateDELETE("/sapi/v1/margin/openOrders", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginTransfer(params) {
+        return await this.http.privateGET("/sapi/v1/margin/transfer", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginLoan(params) {
+        return await this.http.privateGET("/sapi/v1/margin/loan", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginRepay(params) {
+        return await this.http.privateGET("/sapi/v1/margin/repay", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginInterestHistory(params) {
+        return await this.http.privateGET("/sapi/v1/margin/interestHistory", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginForceLiquidationRec(params) {
+        return await this.http.privateGET("/sapi/v1/margin/forceLiquidationRec", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginAccount(params) {
+        return await this.http.privateGET("/sapi/v1/margin/account", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginOrder(params) {
+        return await this.http.privateGET("/sapi/v1/margin/order", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginOpenOrders(params) {
+        return await this.http.privateGET("/sapi/v1/margin/openOrders", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginAllOrders(params) {
+        return await this.http.privateGET("/sapi/v1/margin/allOrders", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async newMarginOrderOco(params) {
+        return await this.http.privatePOST("/sapi/v1/margin/order/oco", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async deleteMarginOrderList(params) {
+        return await this.http.privateDELETE("/sapi/v1/margin/orderList", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginOrderList(params) {
+        return await this.http.privateGET("/sapi/v1/margin/orderList", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginAllOrderList(params) {
+        return await this.http.privateGET("/sapi/v1/margin/allOrderList", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginOpenOrderList(params) {
+        return await this.http.privateGET("/sapi/v1/margin/openOrderList", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginMyTrades(params) {
+        return await this.http.privateGET("/sapi/v1/margin/myTrades", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginMaxBorrowable(params) {
+        return await this.http.privateGET("/sapi/v1/margin/maxBorrowable", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginMaxTransferable(params) {
+        return await this.http.privateGET("/sapi/v1/margin/maxTransferable", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginTradeCoeff(params) {
+        return await this.http.privateGET("/sapi/v1/margin/tradeCoeff", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async newMarginIsolatedTransfer(params) {
+        return await this.http.privatePOST("/sapi/v1/margin/isolated/transfer", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginIsolatedTransfer(params) {
+        return await this.http.privateGET("/sapi/v1/margin/isolated/transfer", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginIsolatedAccount(params) {
+        return await this.http.privateGET("/sapi/v1/margin/isolated/account", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async deleteMarginIsolatedAccount(params) {
+        return await this.http.privateDELETE("/sapi/v1/margin/isolated/account", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async newMarginIsolatedAccount(params) {
+        return await this.http.privatePOST("/sapi/v1/margin/isolated/account", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginIsolatedAccountLimit(params) {
+        return await this.http.privateGET("/sapi/v1/margin/isolated/accountLimit", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginIsolatedPair(params) {
+        return await this.http.privateGET("/sapi/v1/margin/isolated/pair", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginIsolatedAllPairs(params) {
+        return await this.http.privateGET("/sapi/v1/margin/isolated/allPairs", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async newBnbBurn(params) {
+        return await this.http.privatePOST("/sapi/v1/bnbBurn", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async bnbBurn(params) {
+        return await this.http.privateGET("/sapi/v1/bnbBurn", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginInterestRateHistory(params) {
+        return await this.http.privateGET("/sapi/v1/margin/interestRateHistory", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginCrossMarginData(params) {
+        return await this.http.privateGET("/sapi/v1/margin/crossMarginData", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginIsolatedMarginData(params) {
+        return await this.http.privateGET("/sapi/v1/margin/isolatedMarginData", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginIsolatedMarginTier(params) {
+        return await this.http.privateGET("/sapi/v1/margin/isolatedMarginTier", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginRateLimitOrder(params) {
+        return await this.http.privateGET("/sapi/v1/margin/rateLimit/order", params)
+    }
+    
+    /**
+     * @param {} [params]
+     */
+     async marginDribblet(params) {
+        return await this.http.privateGET("/sapi/v1/margin/dribblet", params)
+    }
     // ########################################### Savings Endpoints
     // ########### Public
     // ########### Private
