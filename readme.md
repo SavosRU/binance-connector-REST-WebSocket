@@ -130,7 +130,7 @@ Run()
 | Component     | Info               | Status        |
 | ------------- |-------------       | ------------- |
 | Futures       | Futures API        | Completed     |
-| Spot          | Spot API           | In progress   |
+| Spot          | Spot API           | Completed     |
 | Coin-M        | Coin-M API         | In progress   |
 | Options       | European API       | In progress   |
 | Websocket     | Abstract Websocket | Completed     |
