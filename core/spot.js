@@ -1709,11 +1709,50 @@ export class Spot {
      async payTransactions(params) {
         return await this.http.privateGET("/sapi/v1/pay/transactions", params)
     }
-
     // ########################################### Convert Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async convertExchangeInfo(params) {
+        return await this.http.privateGET("/sapi/v1/convert/exchangeInfo", params)
+    }
 
+    /**
+     * @param {} [params]
+     */
+     async convertAssetInfo(params) {
+        return await this.http.privateGET("/sapi/v1/convert/assetInfo", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newConvertGetQuote(params) {
+        return await this.http.privatePOST("/sapi/v1/convert/getQuote", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newConvertAcceptQuote(params) {
+        return await this.http.privatePOST("/sapi/v1/convert/acceptQuote", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async convertOrderStatus(params) {
+        return await this.http.privateGET("/sapi/v1/convert/orderStatus", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async convertTradeFlow(params) {
+        return await this.http.privateGET("/sapi/v1/convert/tradeFlow", params)
+    }
     // ########################################### Rebate Endpoints
     // ########### Public
     // ########### Private
