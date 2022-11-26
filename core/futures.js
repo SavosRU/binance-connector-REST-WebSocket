@@ -241,7 +241,7 @@ export class Futures {
     /**
      * @param {FuturesPostPositionSideDual} params 
      */
-    async changePositionSideDual(params) {
+    async updatePositionSideDual(params) {
         return await this.http.privatePOST("/fapi/v1/positionSide/dual", params)
     }
 
@@ -255,7 +255,7 @@ export class Futures {
     /**
      * @param {FuturesPostMultiAssetsMargin} params 
      */
-    async changeMultiAssetsMargin(params) {
+    async updateMultiAssetsMargin(params) {
         return await this.http.privatePOST("/fapi/v1/multiAssetsMargin", params)
     }
 
@@ -353,21 +353,21 @@ export class Futures {
     /**
      * @param {FuturesPostLeverage} params 
      */
-     async changeLeverage(params) {
+     async updateLeverage(params) {
         return await this.http.privatePOST("/fapi/v1/leverage", params)
     }
 
     /**
      * @param { FuturesPostMarginType } params 
      */
-     async changeMarginType(params) {
+     async updateMarginType(params) {
         return await this.http.privatePOST("/fapi/v1/marginType", params)
     }
 
     /**
      * @param {FuturesPostPositionMargin} params 
      */
-     async changePositionMargin(params) {
+     async updatePositionMargin(params) {
         return await this.http.privatePOST("/fapi/v1/positionMargin", params)
     }
     

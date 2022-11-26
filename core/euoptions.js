@@ -58,6 +58,14 @@ export class EuOptions {
     async time(params) {
         return await this.http.privateGET("/eapi/v1/time", params)
     }
+
+    /**
+     * @param {} [params]
+     */
+    async test(params) {
+        return await this.http.privateGET("/eapi/v1/klines", params)
+        // return await this.http.privateGET("/eapi/v1/exchangeInfo", params)
+    }
     // ########### Private
     
     // ########################################### Account/Trades Endpoints

@@ -18,6 +18,20 @@ let fu = new Futures({
 })
 
 async function Run() {
-    
+    // let a = await euoptions.test({
+    //     symbol: "ETH-221209-1000-P",
+    //     interval: "1m",
+    //     limit: 10
+    // })
+    // console.log(a)
+
+    // euoptions.ws.subscribe(["ETH-221209-1000-P@kline_1m"], 1)
+
+    // euoptions.ws.addListener("DATA", (socket) => {
+    //     socket.addEventListener("message", (event) => {
+    //         console.log(event.data)
+    //     })
+    // })
+
 }
 Run()
