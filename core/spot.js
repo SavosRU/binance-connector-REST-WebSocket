@@ -1701,7 +1701,6 @@ export class Spot {
         return await this.http.privatePOST("/sapi/v1/loan/customize/margin_call", params)
     }
     // ########################################### Pay Endpoints
-    // ########### Public
     // ########### Private
     /**
      * @param {} [params]
@@ -1710,7 +1709,6 @@ export class Spot {
         return await this.http.privateGET("/sapi/v1/pay/transactions", params)
     }
     // ########################################### Convert Endpoints
-    // ########### Public
     // ########### Private
     /**
      * @param {} [params]
@@ -1754,7 +1752,6 @@ export class Spot {
         return await this.http.privateGET("/sapi/v1/convert/tradeFlow", params)
     }
     // ########################################### Rebate Endpoints
-    // ########### Public
     // ########### Private
     /**
      * @param {} [params]
@@ -1763,7 +1760,6 @@ export class Spot {
         return await this.http.privateGET("/sapi/v1/rebate/taxQuery", params)
     }
     // ########################################### NFT Endpoints
-    // ########### Public
     // ########### Private
     /**
      * @param {} [params]
