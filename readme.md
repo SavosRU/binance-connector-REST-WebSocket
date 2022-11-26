@@ -127,14 +127,14 @@ Run()
 ### Structure
 `binance-connector` contains this components    
 
-| Component     | Info               | Status        |
-| ------------- |-------------       | ------------- |
-| Futures       | Futures API        | Completed     |
-| Spot          | Spot API           | Completed     |
-| Coin-M        | Coin-M API         | Completed     |
-| Options       | European API       | Completed     |
-| Websocket     | Abstract Websocket | Completed     |
-| Http          | Abstract Http      | Completed     |
+| Component     | Info               | Status        | Document Link        |
+| ------------- |-------------       | ------------- | -------------        |
+| Spot          | Spot API           | Completed     | [Spot](https://binance-docs.github.io/apidocs/spot/en/) |
+| Futures       | Futures API        | Completed     | [Futures](https://binance-docs.github.io/apidocs/futures/en/) |
+| Coin-M        | Coin-M API         | Completed     | [Coin-M](https://binance-docs.github.io/apidocs/delivery/en/) |
+| Options       | European API       | Completed     | [Options](https://binance-docs.github.io/apidocs/voptions/en/) |
+| Websocket     | Abstract Websocket | Completed     | |
+| Http          | Abstract Http      | Completed     | |
 
 **Spot**: contains: `Wallet`, `Sub-Account`, `Market Data`, `Spot`, `Margin`, `Savings`, `Staking`, `Mining`, `Futures`, `Futures Algo`, `Portfolio`, `BLVT`, `BSwap`, `Fiat`, `C2C`, `VIP Loans`, `Crypto Loans`, `Crypto Loans`, `Pay`, `Convert`, `Rebate`, `NFT`, `Binance Code` (all available endpoints in [binance spot doc](https://binance-docs.github.io/apidocs/spot/en/#change-log))
 
