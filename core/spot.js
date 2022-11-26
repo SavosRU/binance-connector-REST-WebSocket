@@ -1289,6 +1289,61 @@ export class Spot {
     // ########################################### Futures
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async newFuturesTransfer(params) {
+        return await this.http.privatePOST("/sapi/v1/futures/transfer", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async futuresTransfer(params) {
+        return await this.http.privateGET("/sapi/v1/futures/transfer", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async futuresLoanBorrowHistory(params) {
+        return await this.http.privateGET("/sapi/v1/futures/loan/borrow/history", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async futuresLoanRepayHistory(params) {
+        return await this.http.privateGET("/sapi/v1/futures/loan/repay/history", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async futuresLoanWallet(params) {
+        return await this.http.privateGET("/sapi/v2/futures/loan/wallet", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async futuresLoanAdjustCollateralHistory(params) {
+        return await this.http.privateGET("/sapi/v1/futures/loan/adjustCollateral/history", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async futuresLoanLiquidationHistory(params) {
+        return await this.http.privateGET("/sapi/v1/futures/loan/liquidationHistory", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async futuresLoanInterestHistory(params) {
+        return await this.http.privateGET("/sapi/v1/futures/loan/interestHistory", params)
+    }
 
     // ########################################### Futures Algo Endpoints
     // ########### Public
