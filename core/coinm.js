@@ -419,6 +419,18 @@ export class CoinM {
         return await this.http.privateGET("/dapi/v1/commissionRate", params)
     }
     // ########################################### Portfolio Margin Endpoints
-    // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async pmExchangeInfo(params) {
+        return await this.http.publicGET("/dapi/v1/pmExchangeInfo", params)
+    }
+ 
+    /**
+     * @param {} [params]
+     */
+     async pmAccountInfo(params) {
+        return await this.http.publicGET("/dapi/v1/pmAccountInfo", params)
+    }
 }
