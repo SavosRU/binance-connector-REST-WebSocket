@@ -1145,6 +1145,54 @@ export class Spot {
     // ########################################### Stacking Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async stakingProductList(params) {
+        return await this.http.privateGET("/sapi/v1/staking/productList", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newStakingPurchase(params) {
+        return await this.http.privatePOST("/sapi/v1/staking/purchase", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newStakingRedeem(params) {
+        return await this.http.privatePOST("/sapi/v1/staking/redeem", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async stakingPosition(params) {
+        return await this.http.privateGET("/sapi/v1/staking/position", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async stakingStakingRecord(params) {
+        return await this.http.privateGET("/sapi/v1/staking/stakingRecord", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newStakingSetAutoStaking(params) {
+        return await this.http.privatePOST("/sapi/v1/staking/setAutoStaking", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async stakingPersonalLeftQuota(params) {
+        return await this.http.privateGET("/sapi/v1/staking/personalLeftQuota", params)
+    }
 
     // ########################################### Mining Endpoints
     // ########### Public
