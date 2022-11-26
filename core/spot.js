@@ -1388,11 +1388,36 @@ export class Spot {
      async algoFuturesSubOrders(params) {
         return await this.http.privateGET("/sapi/v1/algo/futures/subOrders", params)
     }
-
     // ########################################### Portfolio Margin Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async portfolioAccount(params) {
+        return await this.http.privateGET("/sapi/v1/portfolio/account", params)
+    }
 
+    /**
+     * @param {} [params]
+     */
+     async portfolioCollateralRate(params) {
+        return await this.http.privateGET("/sapi/v1/portfolio/collateralRate", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async portfolioPmLoan(params) {
+        return await this.http.privateGET("/sapi/v1/portfolio/pmLoan", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newPortfolioRepay(params) {
+        return await this.http.privatePOST("/sapi/v1/portfolio/repay", params)
+    }
     // ########################################### BLVT Endpoints
     // ########### Public
     // ########### Private
