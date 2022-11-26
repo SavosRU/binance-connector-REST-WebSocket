@@ -2,6 +2,10 @@ import { Websocket } from "./websocket.js"
 import { Http } from "./http.js"
 import("../types/spot.types.js")
 
+/**
+ * @TODO https://binance-docs.github.io/apidocs/spot/en/#websocket-blvt-info-streams
+ */
+
 export class Spot {
     
     ApiMap = {
@@ -1465,7 +1469,103 @@ export class Spot {
     // ########################################### BSwap Endpoints
     // ########### Public
     // ########### Private
+    /**
+     * @param {} [params]
+     */
+     async bswapPools(params) {
+        return await this.http.privateGET("/sapi/v1/bswap/pools", params)
+    }
 
+    /**
+     * @param {} [params]
+     */
+     async bswapLiquidity(params) {
+        return await this.http.privateGET("/sapi/v1/bswap/liquidity", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newBswapLiquidityAdd(params) {
+        return await this.http.privatePOST("/sapi/v1/bswap/liquidityAdd", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async deleteBswapLiquidityRemove(params) {
+        return await this.http.privatePOST("/sapi/v1/bswap/liquidityRemove", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async bswapLiquidityOps(params) {
+        return await this.http.privateGET("/sapi/v1/bswap/liquidityOps", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async bswapQuote(params) {
+        return await this.http.privateGET("/sapi/v1/bswap/quote", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newBswapSwap(params) {
+        return await this.http.privatePOST("/sapi/v1/bswap/swap", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async bswapSwap(params) {
+        return await this.http.privateGET("/sapi/v1/bswap/swap", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async bswapPoolConfigure(params) {
+        return await this.http.privateGET("/sapi/v1/bswap/poolConfigure", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async bswapAddLiquidityPreview(params) {
+        return await this.http.privateGET("/sapi/v1/bswap/addLiquidityPreview", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async bswapRemoveLiquidityPreview(params) {
+        return await this.http.privateGET("/sapi/v1/bswap/removeLiquidityPreview", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async bswapUnclaimedRewards(params) {
+        return await this.http.privateGET("/sapi/v1/bswap/unclaimedRewards", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async newBswapClaimRewards(params) {
+        return await this.http.privatePOST("/sapi/v1/bswap/claimRewards", params)
+    }
+
+    /**
+     * @param {} [params]
+     */
+     async bswapClaimedHistory(params) {
+        return await this.http.privateGET("/sapi/v1/bswap/claimedHistory", params)
+    }
     // ########################################### Fiat Endpoints
     // ########### Public
     // ########### Private
