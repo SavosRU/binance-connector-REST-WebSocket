@@ -884,7 +884,7 @@
  * @property {Number} [endTime]
  * @property {Number} [current]
  * @property {Number} [size]
- * @property {String} [archived] // Default: false. Set to true for archived data from 6 months ago
+ * @property {String} [archived] Default: false. Set to true for archived data from 6 months ago
  * @property {Number} [recvWindow]
  */
 
@@ -897,7 +897,7 @@
  * @property {Number} [endTime]
  * @property {Number} [current]
  * @property {Number} [size]
- * @property {String} [archived] // Default: false. Set to true for archived data from 6 months
+ * @property {String} [archived] Default: false. Set to true for archived data from 6 months
  * @property {Number} [recvWindow]
  */
 
@@ -910,7 +910,7 @@
  * @property {Number} [endTime]
  * @property {Number} [current]
  * @property {Number} [size]
- * @property {String} [archived] // Default: false. Set to true for archived data from 6 months
+ * @property {String} [archived] Default: false. Set to true for archived data from 6 months
  * @property {Number} [recvWindow]
  */
 
@@ -922,7 +922,7 @@
  * @property {Number} [endTime]
  * @property {Number} [current]
  * @property {Number} [size]
- * @property {String} [archived] // Default: false. Set to true for archived data from 6 months
+ * @property {String} [archived] Default: false. Set to true for archived data from 6 months
  * @property {Number} [recvWindow]
  */
 
@@ -1075,7 +1075,7 @@
  * @property {Number} [endTime]
  * @property {Number} [current]
  * @property {Number} [size]
- * @property {String} [archived] // Default: false. Set to true for archived data from 6 months ago
+ * @property {String} [archived] Default: false. Set to true for archived data from 6 months ago
  * @property {Number} [recvWindow]
  */
 
@@ -1115,8 +1115,8 @@
 
 /**
  * @typedef {Object} SpotPostBnbBurn
- * * @property {"true" | "false"} [spotBNBBurn] // "true" or "false"; Determines whether to use BNB to pay for trading fees on SPOT
- * @property {"true" | "false"} [interestBNBBurn] // "true" or "false"; Determines whether to use BNB to pay for margin loan's interest
+ * * @property {"true" | "false"} [spotBNBBurn] "true" or "false"; Determines whether to use BNB to pay for trading fees on SPOT
+ * @property {"true" | "false"} [interestBNBBurn] "true" or "false"; Determines whether to use BNB to pay for margin loan's interest
  * @property {Number} [recvWindow]
  */
 
@@ -1286,37 +1286,66 @@
  */
 // ########### Staking
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotStakingProductList
+ * @property {"STAKING" | "F_DEFI" | "L_DEFI"} product
+ * @property {String} [asset]
+ * @property {Number} [current]
+ * @property {Number} [size]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostStakingPurchase
+ * @property {"STAKING" | "F_DEFI" | "L_DEFI"} product
+ * @property {String} productId
+ * @property {Number} amount
+ * @property {String} [renewable] true or false, default false. Active if product is "STAKING" or "L_DEFI"
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostStakingRedeem
+ * @property {"STAKING" | "F_DEFI" | "L_DEFI"} product
+ * @property {String} [positionId]
+ * @property {String} productId
+ * @property {Number} [amount]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotStakingPosition
+ * @property {"STAKING" | "F_DEFI" | "L_DEFI"} product
+ * @property {String} [productId]
+ * @property {String} [asset]
+ * @property {Number} [current]
+ * @property {Number} [size]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotStakingStakingRecord
+ * @property {"STAKING" | "F_DEFI" | "L_DEFI"} product
+ * @property {"SUBSCRIPTION" | "REDEMPTION" | "INTEREST"} txnType
+ * @property {String} [asset]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [size]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostStakingSetAutoStaking
+ * @property {"STAKING" | "L_DEFI"} product there isn't any document for "F_DEFI"
+ * @property {String} positionId
+ * @property {String} renewable true or false
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotStakingPersonalLeftQuota
+ * @property {"STAKING" | "F_DEFI" | "L_DEFI"} product
+ * @property {String} productId
  * @property {Number} [recvWindow]
  */
 // ########### Mining
