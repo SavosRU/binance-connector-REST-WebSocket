@@ -790,26 +790,39 @@
 // ########### Margin Account/Trade
 /**
  * @typedef {Object} SpotPostMarginTransfer
+ * @property {String} asset
+ * @property {Number} amount
+ * @property {1 | 2} type
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostMarginLoa
+ * @property {String} asset
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {Number} [symbol]
+ * @property {Number} amount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostMarginRepay
+ * @property {String} asset
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {Number} [symbol]
+ * @property {Number} amount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginAsset
+ * @property {String} asset
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginPair
+ * @property {String} symbol
  * @property {Number} [recvWindow]
  */
 
@@ -825,46 +838,101 @@
 
 /**
  * @typedef {Object} SpotMarginPriceIndex
+ * @property {String} symbol
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostMarginOrder
+ * @property {Number} symbol
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {"BUY" | "SELL"} side
+ * @property {} type #ENUM
+ * @property {Number} [quantity]
+ * @property {Number} [quoteOrderQty]
+ * @property {Number} [price]
+ * @property {Number} [stopPrice]
+ * @property {String} [newClientOrderId]
+ * @property {Number} [icebergQty]
+ * @property {} [newOrderRespType] #ENUM
+ * @property {"NO_SIDE_EFFECT" | "MARGIN_BUY" | "AUTO_REPAY"} [sideEffectType]
+ * @property {} [timeInForce] #ENUM
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotDeleteMarginOrder
+ * @property {String} symbol
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {Number} [orderId]
+ * @property {String} [origClientOrderId]
+ * @property {String} [newClientOrderId]
  * @property {Number} [recvWindow]
  */
-
 /**
  * @typedef {Object} SpotDeleteMarginOpenOrders
+ * @property {String} symbol
+ * @property {"TRUE" | "FALSE"} [isIsolated]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginTransfer
+ * @property {String} [asset]
+ * @property {"ROLL_IN" | "ROLL_OUT"} [type]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [size]
+ * @property {String} [archived] // Default: false. Set to true for archived data from 6 months ago
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginLoan
+ * @property {String} asset
+ * @property {String} [isolatedSymbol]
+ * @property {Number} [txId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [size]
+ * @property {String} [archived] // Default: false. Set to true for archived data from 6 months
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginRepay
+ * @property {String} asset
+ * @property {String} [isolatedSymbol]
+ * @property {Number} [txId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [size]
+ * @property {String} [archived] // Default: false. Set to true for archived data from 6 months
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginInterestHistory
+ * @property {String} [asset]
+ * @property {String} [isolatedSymbol]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [size]
+ * @property {String} [archived] // Default: false. Set to true for archived data from 6 months
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginForceLiquidationRec
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {String} [isolatedSymbol]
+ * @property {Number} [current]
+ * @property {Number} [size]
  * @property {Number} [recvWindow]
  */
 
@@ -875,21 +943,48 @@
 
 /**
  * @typedef {Object} SpotMarginOrder
+ * @property {String} symbol
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {Number} [orderId]
+ * @property {String} [origClientOrderId]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginOpenOrders
+ * @property {String} [symbol]
+ * @property {"TRUE" | "FALSE"} [isIsolated]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginAllOrders
+ * @property {String} symbol
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {Number} [orderId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostMarginOrderOco
+ * @property {String} symbol
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {String} [listClientOrderId]
+ * @property {} side #ENUM
+ * @property {Number} quantity
+ * @property {String} [limitClientOrderId]
+ * @property {Number} price
+ * @property {Number} [limitIcebergQty]
+ * @property {String} [stopClientOrderId]
+ * @property {Number} stopPrice
+ * @property {Number} [stopLimitPrice]
+ * @property {Number} [stopIcebergQty]
+ * @property {} [stopLimitTimeInForce] #ENUM
+ * @property {} [newOrderRespType] #ENUM
+ * @property {"NO_SIDE_EFFECT" | "MARGIN_BUY" | "AUTO_REPAY"} [sideEffectType] #ENUM
  * @property {Number} [recvWindow]
  */
 
