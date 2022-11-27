@@ -987,40 +987,66 @@
  * @property {"NO_SIDE_EFFECT" | "MARGIN_BUY" | "AUTO_REPAY"} [sideEffectType] #ENUM
  * @property {Number} [recvWindow]
  */
-// ##TODO START FROM HERE
-// https://binance-docs.github.io/apidocs/spot/en/#margin-account-cancel-oco-trade
+
 /**
  * @typedef {Object} SpotDeleteMarginOrderList
+ * @property {String} symbol
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {Number} [orderListId]
+ * @property {String} [listClientOrderId]
+ * @property {String} [newClientOrderId]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginOrderList
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {String} [symbol]
+ * @property {Number} [orderListId]
+ * @property {String} [origClientOrderId]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginAllOrderList
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {String} [symbol]
+ * @property {Number} [fromId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginOpenOrderList
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {String} [symbol]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginMyTrades
+ * @property {String} symbol
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {Number} [orderId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [fromId]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginMaxBorrowable
+ * @property {String} asset
+ * @property {String} [isolatedSymbol]
  * @property {Number} [recvWindow]
  */
-
 /**
  * @typedef {Object} SpotMarginMaxTransferable
+ * @property {String} asset
+ * @property {String} [isolatedSymbol]
  * @property {Number} [recvWindow]
  */
 
@@ -1031,26 +1057,43 @@
 
 /**
  * @typedef {Object} SpotPostMarginIsolatedTransfer
+ * @property {String} [asset]
+ * @property {String} [symbol]
+ * @property {"SPOT" | "ISOLATED_MARGIN"} [transFrom]
+ * @property {"SPOT" | "ISOLATED_MARGIN"} [transTo]
+ * @property {Number} [amount]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginIsolatedTransfer
+ * @property {String} [asset]
+ * @property {String} symbol
+ * @property {"SPOT" | "ISOLATED_MARGIN"} [transFrom]
+ * @property {"SPOT" | "ISOLATED_MARGIN"} [transTo]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [size]
+ * @property {String} [archived] // Default: false. Set to true for archived data from 6 months ago
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginIsolatedAccount
+ * @property {String} [symbols]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotDeleteMarginIsolatedAccount
+ * @property {String} symbol
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostMarginIsolatedAccount
+ * @property {String} symbol
  * @property {Number} [recvWindow]
  */
 
@@ -1061,6 +1104,7 @@
 
 /**
  * @typedef {Object} SpotMarginIsolatedPair
+ * @property {String} symbol
  * @property {Number} [recvWindow]
  */
 
@@ -1071,6 +1115,8 @@
 
 /**
  * @typedef {Object} SpotPostBnbBurn
+ * * @property {"true" | "false"} [spotBNBBurn] // "true" or "false"; Determines whether to use BNB to pay for trading fees on SPOT
+ * @property {"true" | "false"} [interestBNBBurn] // "true" or "false"; Determines whether to use BNB to pay for margin loan's interest
  * @property {Number} [recvWindow]
  */
 
@@ -1081,31 +1127,45 @@
 
 /**
  * @typedef {Object} SpotMarginInterestRateHistory
+ * @property {String} asset
+ * @property {Number} [vipLevel]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginCrossMarginData
+ * @property {Number} [vipLevel]
+ * @property {String} [coin]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginIsolatedMarginData
+ * @property {Number} [vipLevel]
+ * @property {String} [symbol]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginIsolatedMarginTier
+ * @property {String} symbol
+ * @property {Number} [tier]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginRateLimitOrder
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {String} [symbol]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMarginDribblet
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
  * @property {Number} [recvWindow]
  */
 // ########### Saving
