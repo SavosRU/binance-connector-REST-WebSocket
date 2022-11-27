@@ -788,6 +788,230 @@
  * @property {Number} [recvWindow]
  */
 // ########### Margin Account/Trade
+/**
+ * @typedef {Object} SpotPostMarginTransfer
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostMarginLoa
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostMarginRepay
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginAsset
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginPair
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginAllAssets
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginAllPairs
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginPriceIndex
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostMarginOrder
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDeleteMarginOrder
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDeleteMarginOpenOrders
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginTransfer
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginLoan
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginRepay
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginInterestHistory
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginForceLiquidationRec
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginAccount
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginOrder
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginOpenOrders
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginAllOrders
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostMarginOrderOco
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDeleteMarginOrderList
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginOrderList
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginAllOrderList
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginOpenOrderList
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginMyTrades
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginMaxBorrowable
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginMaxTransferable
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginTradeCoeff
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostMarginIsolatedTransfer
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginIsolatedTransfer
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginIsolatedAccount
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDeleteMarginIsolatedAccount
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostMarginIsolatedAccount
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginIsolatedAccountLimit
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginIsolatedPair
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginIsolatedAllPairs
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostBnbBurn
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotBnbBurn
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginInterestRateHistory
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginCrossMarginData
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginIsolatedMarginData
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginIsolatedMarginTier
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginRateLimitOrder
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMarginDribblet
+ * @property {Number} [recvWindow]
+ */
 // ########### Saving
 // ########### Staking
 // ########### Mining
