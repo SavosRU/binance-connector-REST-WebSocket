@@ -628,8 +628,165 @@
  * @property {"FULL" | "MINI"} [type]
  * @property {Number} [recvWindow]
  */
-
 // ########### Spot Account/Trade
+/**
+ * @typedef {SpotPostOrder} SpotPostOrderTest
+ */
+
+/**
+ * @typedef {Object} SpotPostOrder
+ * @property {String} symbol
+ * @property {} side #ENUM
+ * @property {} type #ENUM
+ * @property {} [timeInForce] #ENUM
+ * @property {Number} quantity
+ * @property {Number} [quoteOrderQty]
+ * @property {Number} [price]
+ * @property {String} [newClientOrderId]
+ * @property {Number} [strategyId]
+ * @property {Number} [strategyType]
+ * @property {Number} [stopPrice]
+ * @property {Number} [trailingDelta]
+ * @property {Number} [icebergQty]
+ * @property {} [newOrderRespType] #ENUM
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDeleteOrder
+ * @property {String} symbol
+ * @property {Number} [orderId]
+ * @property {String} [origClientOrderId]
+ * @property {String} [newClientOrderId]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDeleteOpenOrders
+ * @property {String} symbol
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotOrder
+ * @property {String} symbol
+ * @property {Number} [orderId]
+ * @property {String} [origClientOrderId]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostCancelReplace
+ * @property {String} symbol
+ * @property {} side #ENUM
+ * @property {} type #ENUM
+ * @property {"STOP_ON_FAILURE" | "ALLOW_FAILURE"} cancelReplaceMode #ENUM
+ * @property {} [timeInForce] #ENUM
+ * @property {Number} quantity
+ * @property {Number} [quoteOrderQty]
+ * @property {Number} [price]
+ * @property {String} [cancelNewClientOrderId]
+ * @property {String} [cancelOrigClientOrderId]
+ * @property {String} [cancelOrderId]
+ * @property {String} [newClientOrderId]
+ * @property {Number} [strategyId]
+ * @property {Number} [strategyType]
+ * @property {Number} [stopPrice]
+ * @property {Number} [trailingDelta]
+ * @property {Number} [icebergQty]
+ * @property {} [newOrderRespType] #ENUM
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotOpenOrders
+ * @property {String} [symbol]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotAllOrders
+ * @property {String} symbol
+ * @property {Number} [orderId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostOrderOco
+ * @property {String} symbol
+ * @property {String} [listClientOrderId]
+ * @property {} side #ENUM
+ * @property {Number} quantity
+ * @property {String} [limitClientOrderId]
+ * @property {Number} [limitStrategyId]
+ * @property {Number} [limitStrategyType]
+ * @property {Number} price
+ * @property {Number} [limitIcebergQty]
+ * @property {Number} [trailingDelta]
+ * @property {String} [stopClientOrderId]
+ * @property {Number} stopPrice
+ * @property {Number} [stopStrategyId]
+ * @property {Number} [stopStrategyType]
+ * @property {Number} [stopLimitPrice]
+ * @property {Number} [stopIcebergQty]
+ * @property {Number} [stopLimitTimeInForce] #ENUM
+ * @property {} [newOrderRespType] #ENUM
+ * @property {} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDeleteOrderList
+ * @property {String} symbol
+ * @property {Number} [orderListId]
+ * @property {String} [listClientOrderId]
+ * @property {String} [newClientOrderId]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotOrderList
+ * @property {Number} [orderListId]
+ * @property {String} [origClientOrderId]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotAllOrderList
+ * @property {Number} [fromId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotOpenOrderList
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotAccount
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotMyTrades
+ * @property {String} symbol
+ * @property {Number} [orderId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [fromId]
+ * @property {Number} [limit]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotRateLimitOrder
+ * @property {Number} [recvWindow]
+ */
 // ########### Margin Account/Trade
 // ########### Saving
 // ########### Staking
