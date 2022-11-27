@@ -1285,19 +1285,487 @@
  * @property {Number} [recvWindow]
  */
 // ########### Staking
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### Mining
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### Futures
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### Futures Algo
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### Portfolio
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### BLVT
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### BSwap
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### Fiat
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### C2C
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### VIP Loans
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### Crypto Loans
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### Pay
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### Convert
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### Rebate
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### NFT
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
 // ########### Binance Code
-// ########### 
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} Spot
+ * @property {Number} [recvWindow]
+ */
