@@ -1361,56 +1361,102 @@
 
 /**
  * @typedef {Object} SpotMiningWorkerDetail
+ * @property {String} algo
+ * @property {String} userName
+ * @property {String} workerName
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMiningWorkerList
+ * @property {String} algo
+ * @property {String} userName
+ * @property {Number} [pageIndex]
+ * @property {Number} [sort]
+ * @property {1 | 2 | 3 | 4 | 5} [sortColumn]
+ * @property {0 | 1 | 2 | 3} [workerStatus]
  * @property {Number} [recvWindow]
- */
+ */	
 
 /**
  * @typedef {Object} SpotMiningPaymentList
+ * @property {String} algo
+ * @property {String} userName
+ * @property {String} [coin]
+ * @property {Number} [startDate]
+ * @property {Number} [endDate]
+ * @property {Number} [pageIndex]
+ * @property {Number} [pageSize]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMiningPaymentOther
+ * @property {String} algo
+ * @property {String} userName
+ * @property {String} [coin]
+ * @property {Number} [startDate]
+ * @property {Number} [endDate]
+ * @property {Number} [pageIndex]
+ * @property {Number} [pageSize]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMiningHashTransferConfigDetailsList
+ * @property {Number} [pageIndex]
+ * @property {Number} [pageSize]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMiningHashTransferProfitDetails
+ * @property {Number} configId
+ * @property {String} userName
+ * @property {Number} [pageIndex]
+ * @property {Number} [pageSize]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostMiningHashTransferConfig
+ * @property {String} userName
+ * @property {String} algo
+ * @property {Number} endDate
+ * @property {Number} startDate
+ * @property {String} toPoolUser
+ * @property {Number} hashRate
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostMiningHashTransferConfigCancel
+ * @property {Number} configId
+ * @property {String} userName
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMiningStatisticsUserStatus
+ * @property {String} algo
+ * @property {String} userName
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMiningStatisticsUserList
+ * @property {String} algo
+ * @property {String} userName
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotMiningPaymentUid
+ * @property {String} algo
+ * @property {Number} [startDate]
+ * @property {Number} [endDate]
+ * @property {Number} [pageIndex]
+ * @property {Number} [pageSize]
  * @property {Number} [recvWindow]
  */
 // ########### Futures
