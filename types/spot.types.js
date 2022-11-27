@@ -521,6 +521,114 @@
  * @property {Number} [recvWindow]
  */
 // ########### Market Data
+/**
+ * @typedef {Object} SpotPing
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotTime
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotExchangeInfo
+ * @property {String} [symbol]
+ * @property {String} [symbols]
+ * @property {String} [permissions]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDepth
+ * @property {String} symbol
+ * @property {Number} [limit]
+ * @property {Number} [recvWindow]
+ */
+ 
+/**
+ * @typedef {Object} SpotTrades
+ * @property {String} symbol
+ * @property {Number} [limit]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotHistoricalTrades
+ * @property {String} symbol
+ * @property {Number} [limit]
+ * @property {Number} [fromId]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotAggTrades
+ * @property {String} symbol
+ * @property {Number} [fromId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotKlines
+ * @property {String} symbol
+ * @property {} interval #ENUM
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotUiKlines
+ * @property {String} symbol
+ * @property {} interval #ENUM
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotAvgPrice
+ * @property {String} symbol
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotTicker24hr
+ * @property {String} [symbol]
+ * @property {String} [symbols]
+ * @property {} [type] #ENUM
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotTickerPrice
+ * @property {String} [symbol]
+ * @property {String} [symbols]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotTickerBookTicker
+ * @property {String} [symbol]
+ * @property {String} [symbols]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * one of symbol | symbols should send
+ * @typedef {Object} SpotTicker
+ * @property {String} [symbol]
+ * @property {String} [symbols]
+ * @property {} [windowSize] #ENUM
+ * @property {"FULL" | "MINI"} [type]
+ * @property {Number} [recvWindow]
+ */
+
 // ########### Spot Account/Trade
 // ########### Margin Account/Trade
 // ########### Saving
