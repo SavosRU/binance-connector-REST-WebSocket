@@ -403,53 +403,73 @@
 
 /**
  * @typedef {Object} SpotSubAccountUniversalTransfer
+ * @property {String} [fromEmail]
+ * @property {String} [toEmail]
+ * @property {String} [clientTranId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [page]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
- fromEmail	STRING	NO	
- toEmail	STRING	NO	
- clientTranId	STRING	NO	
- startTime	LONG	NO	
- endTime	LONG	NO	
- page	INT	NO	Default 1
- limit	INT	NO	Default 500, Max 500
- 
+
 /**
  * @typedef {Object} SpotSubAccountFuturesAccount
+ * @property {Number} email
+ * @property {1 | 2} futuresType
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountFuturesAccountSummary
+ * @property {1 | 2} futuresType
+ * @property {Number} [page]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountFuturesPositionRisk
+ * @property {String} email
+ * @property {1 | 2} futuresType
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostSubAccountBlvtEnable
+ * @property {String} email
+ * @property {Boolean} enableBlvt
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostSubAccountSubAccountApiIpRestriction
+ * @property {String} email
+ * @property {String} subAccountApiKey
+ * @property {Boolean} ipRestrict
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostSubAccountSubAccountApiIpRestrictionIpList
+ * @property {String} email
+ * @property {String} subAccountApiKey
+ * @property {String} [ipAddress]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountSubAccountApiIpRestriction
+ * @property {String} email
+ * @property {String} subAccountApiKey
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotDeleteSubAccountSubAccountApiIpRestrictionIpList
+ * @property {String} email
+ * @property {String} subAccountApiKey
+ * @property {String} [ipAddress]
  * @property {Number} [recvWindow]
  */
 
@@ -460,25 +480,43 @@
 
 /**
  * @typedef {Object} SpotPostSubAccountSubAccountApiIpRestriction
+ * @property {String} email
+ * @property {String} subAccountApiKey
+ * @property {"1" | "2" | "3"} status
+ * @property {String} [thirdPartyName]
+ * @property {String} [ipAddress]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostManagedSubaccountDeposit
+ * @property {String} toEmail
+ * @property {String} asset
+ * @property {Number} amount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotManagedSubaccountAsset
+ * @property {String} email
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostManagedSubaccountWithdraw
+ * @property {String} fromEmail
+ * @property {String} asset
+ * @property {Number} amount
+ * @property {Number} [transferDate]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotManagedSubaccountAccountSnapshot
+ * @property {String} email
+ * @property {"SPOT" | "MARGIN" | "FUTURES"} type
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
