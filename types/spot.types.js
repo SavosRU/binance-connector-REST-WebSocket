@@ -216,4 +216,193 @@
  * @typedef {Object} SpotAccountApiRestrictions
  * @property {Number} [recvWindow]
  */
+// ########### Sub-Account
+/**
+ * @typedef {Object} SpotPostSubAccountVirtualSubAccount
+ * @property {Number} [recvWindow]
+ */
 
+/**
+ * @typedef {Object} SpotSubAccountList
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountSubTransferHistory
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountFuturesInternalTransfer
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountFuturesInternalTransfer
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountAssets
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountSpotSummary
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotCapitalDepositSubAddress
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotCapitalDepositSubHisrec
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountStatus
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountMarginEnable
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountMarginAccount
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountMarginAccountSummary
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountFuturesEnable
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountFuturesAccount
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountFuturesAccountSummary
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountFuturesPositionRisk
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountFuturesTransfer
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountMarginTransfer
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountTransferSubToSub
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountTransferSubToMaster
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountTransferSubUserHistory
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountUniversalTransfer
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountUniversalTransfer
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountFuturesAccount
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountFuturesAccountSummary
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountFuturesPositionRisk
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountBlvtEnable
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountSubAccountApiIpRestriction
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountSubAccountApiIpRestrictionIpList
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountSubAccountApiIpRestriction
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDeleteSubAccountSubAccountApiIpRestrictionIpList
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotSubAccountApiRestrictionsIpRestrictionThirdPartyList
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostSubAccountSubAccountApiIpRestriction
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostManagedSubaccountDeposit
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotManagedSubaccountAsset
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostManagedSubaccountWithdraw
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotManagedSubaccountAccountSnapshot
+ * @property {Number} [recvWindow]
+ */
