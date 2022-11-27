@@ -520,3 +520,24 @@
  * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
+// ########### Market Data
+// ########### Spot Account/Trade
+// ########### Margin Account/Trade
+// ########### Saving
+// ########### Staking
+// ########### Mining
+// ########### Futures
+// ########### Futures Algo
+// ########### Portfolio
+// ########### BLVT
+// ########### BSwap
+// ########### Fiat
+// ########### C2C
+// ########### VIP Loans
+// ########### Crypto Loans
+// ########### Pay
+// ########### Convert
+// ########### Rebate
+// ########### NFT
+// ########### Binance Code
+// ########### 
