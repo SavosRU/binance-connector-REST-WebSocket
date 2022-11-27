@@ -219,61 +219,101 @@
 // ########### Sub-Account
 /**
  * @typedef {Object} SpotPostSubAccountVirtualSubAccount
+ * @property {String} subAccountString
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountList
+ * @property {String} [email]
+ * @property {true | false} [isFreeze] String true | false
+ * @property {Number} [page]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountSubTransferHistory
+ * @property {String} [fromEmail]
+ * @property {String} [toEmail]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [page]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountFuturesInternalTransfer
+ * @property {String} email
+ * @property {1 | 2} futuresType
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [page]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostSubAccountFuturesInternalTransfer
+ * @property {String} fromEmail
+ * @property {String} toEmail
+ * @property {1 | 2} futuresType
+ * @property {String} asset
+ * @property {Number} amount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountAssets
+ * @property {String} email
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountSpotSummary
+ * @property {String} [email]
+ * @property {Number} [page]
+ * @property {Number} [size]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotCapitalDepositSubAddress
+ * @property {String} email
+ * @property {String} coin
+ * @property {String} [network]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotCapitalDepositSubHisrec
+ * @property {String} email
+ * @property {String} [coin]
+ * @property {0 | 1 | 6} [status]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
+ * @property {Number} [offset]
+ * @property {String} [txId]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountStatus
+ * @property {String} [email]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostSubAccountMarginEnable
+ * @property {String} email
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountMarginAccount
+ * @property {String} email
  * @property {Number} [recvWindow]
  */
 
@@ -284,11 +324,13 @@
 
 /**
  * @typedef {Object} SpotPostSubAccountFuturesEnable
+ * @property {String} email
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountFuturesAccount
+ * @property {String} email
  * @property {Number} [recvWindow]
  */
 
@@ -299,36 +341,63 @@
 
 /**
  * @typedef {Object} SpotSubAccountFuturesPositionRisk
+ * @property {String} email
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostSubAccountFuturesTransfer
+ * @property {String} email
+ * @property {String} asset
+ * @property {Number} amount
+ * @property {1 | 2 | 3 | 4} type
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostSubAccountMarginTransfer
+ * @property {String} email
+ * @property {String} asset
+ * @property {Number} amount
+ * @property {1 | 2} type
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostSubAccountTransferSubToSub
+ * @property {String} toEmail
+ * @property {String} asset
+ * @property {Number} amount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostSubAccountTransferSubToMaster
+ * @property {String} asset
+ * @property {Number} amount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotSubAccountTransferSubUserHistory
+ * @property {String} [asset]
+ * @property {1 | 2} [type]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
-
+ 
 /**
  * @typedef {Object} SpotPostSubAccountUniversalTransfer
+ * @property {String} [fromEmail]
+ * @property {String} [toEmail]
+ * @property {"SPOT" | "USDT_FUTURE" | "COIN_FUTURE" | "MARGIN" | "ISOLATED_MARGIN"} fromAccountType
+ * @property {"SPOT" | "USDT_FUTURE" | "COIN_FUTURE" | "MARGIN" | "ISOLATED_MARGIN"} toAccountType
+ * @property {String} [clientTranId]
+ * @property {String} [symbol]
+ * @property {String} asset
+ * @property {Number} amount
  * @property {Number} [recvWindow]
  */
 
@@ -336,7 +405,14 @@
  * @typedef {Object} SpotSubAccountUniversalTransfer
  * @property {Number} [recvWindow]
  */
-
+ fromEmail	STRING	NO	
+ toEmail	STRING	NO	
+ clientTranId	STRING	NO	
+ startTime	LONG	NO	
+ endTime	LONG	NO	
+ page	INT	NO	Default 1
+ limit	INT	NO	Default 500, Max 500
+ 
 /**
  * @typedef {Object} SpotSubAccountFuturesAccount
  * @property {Number} [recvWindow]
