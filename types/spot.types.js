@@ -1169,6 +1169,121 @@
  * @property {Number} [recvWindow]
  */
 // ########### Saving
+/**
+ * @typedef {Object} SpotLendingDailyProductList
+ * @property {"ALL" | "SUBSCRIBABLE" | "UNSUBSCRIBABLE"} [status]
+ * @property {"ALL" | "TRUE"} [featured]
+ * @property {Number} [current]
+ * @property {Number} [size]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotLendingDailyUserLeftQuota
+ * @property {String} productId
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostLendingDailyPurchase
+ * @property {String} productId
+ * @property {Number} amount
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotLendingDailyUserRedemptionQuota
+ * @property {String} productId
+ * @property {"FAST" | "NORMAL"} type
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostLendingDailyRedeem
+ * @property {String} productId
+ * @property {Number} amount
+ * @property {"FAST" | "NORMAL"} type
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotLendingDailyTokenPosition
+ * @property {String} [asset]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotLendingProjectList
+ * @property {String} [asset]
+ * @property {"ACTIVITY" | "CUSTOMIZED_FIXED"} type
+ * @property {"ALL" | "SUBSCRIBABLE" | "UNSUBSCRIBABLE"} [status]
+ * @property {Boolean} [isSortAsc]
+ * @property {"START_TIME" | "LOT_SIZE" | "INTEREST_RATE" | "DURATION"} [sortBy]
+ * @property {Number} [current]
+ * @property {Number} [size]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostLendingCustomizedFixedPurchase
+ * @property {String} projectId
+ * @property {Number} lot
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotLendingProjectPositionList
+ * @property {String} [asset]
+ * @property {String} [projectId]
+ * @property {"HOLDING" | "REDEEMED"} [status]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotLendingUnionAccount
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotLendingUnionPurchaseRecord
+ * @property {"DAILY" | "ACTIVITY" | "CUSTOMIZED_FIXED"} lendingType
+ * @property {String} [asset]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [size]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotLendingUnionRedemptionRecord
+ * @property {"DAILY" | "ACTIVITY" | "CUSTOMIZED_FIXED"} lendingType
+ * @property {String} [asset]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [size]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotLendingUnionInterestHistory
+ * @property {"DAILY" | "ACTIVITY" | "CUSTOMIZED_FIXED"} lendingType
+ * @property {String} [asset]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [size]
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostLendingPositionChanged
+ * @property {String} projectId
+ * @property {Number} lot
+ * @property {Number} [positionId]
+ * @property {Number} [recvWindow]
+ */
 // ########### Staking
 // ########### Mining
 // ########### Futures
