@@ -1350,67 +1350,67 @@
  */
 // ########### Mining
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotMiningPubAlgoList
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotMiningPubCoinList
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotMiningWorkerDetail
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotMiningWorkerList
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotMiningPaymentList
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotMiningPaymentOther
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotMiningHashTransferConfigDetailsList
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotMiningHashTransferProfitDetails
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostMiningHashTransferConfig
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostMiningHashTransferConfigCancel
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotMiningStatisticsUserStatus
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotMiningStatisticsUserList
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotMiningPaymentUid
  * @property {Number} [recvWindow]
  */
 // ########### Futures
