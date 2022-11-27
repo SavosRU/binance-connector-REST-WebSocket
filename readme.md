@@ -207,6 +207,3 @@ myFuture.http.publicGET("/fapi/v1/exchangeInfo")
 
 ### Documentation
 [Binance Doc](https://binance-docs.github.io/apidocs/futures/en/#general-info)
-
-### TODO
-- Spot and other endpoints
