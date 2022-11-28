@@ -519,15 +519,15 @@ export class Spot {
     /**
      * @param {SpotPing} [params]
      */
-     async ping(params) {
-        return await this.http.simpleRequest("/api/v3/ping", params)
+     async ping() {
+        return await this.http.simpleRequest("/api/v3/ping", {})
     }
 
     /**
      * @param {SpotTime} [params]
      */
-     async time(params) {
-        return await this.http.simpleRequest("/api/v3/time", params)
+     async time() {
+        return await this.http.simpleRequest("/api/v3/time", {})
     }
 
     /**

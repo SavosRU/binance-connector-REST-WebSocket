@@ -18,7 +18,10 @@ let fu = new Futures({
 })
 
 async function Run() {
-    let a = await spot.marginAllAssets()
+    await spot.time()
+    let a = await spot.exchangeInfo({
+
+    })
     console.log(a)
 }
 Run()

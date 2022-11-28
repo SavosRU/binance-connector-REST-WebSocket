@@ -577,12 +577,10 @@
 // ########### Market Data
 /**
  * @typedef {Object} SpotPing
- * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotTime
- * @property {Number} [recvWindow]
  */
 
 /**
@@ -590,21 +588,18 @@
  * @property {String} [symbol]
  * @property {String} [symbols]
  * @property {String} [permissions]
- * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotDepth
  * @property {String} symbol
  * @property {Number} [limit]
- * @property {Number} [recvWindow]
  */
  
 /**
  * @typedef {Object} SpotTrades
  * @property {String} symbol
  * @property {Number} [limit]
- * @property {Number} [recvWindow]
  */
 
 /**
@@ -612,7 +607,6 @@
  * @property {String} symbol
  * @property {Number} [limit]
  * @property {Number} [fromId]
- * @property {Number} [recvWindow]
  */
 
 /**
@@ -622,7 +616,6 @@
  * @property {Number} [startTime]
  * @property {Number} [endTime]
  * @property {Number} [limit]
- * @property {Number} [recvWindow]
  */
 
 /**
@@ -632,7 +625,6 @@
  * @property {Number} [startTime]
  * @property {Number} [endTime]
  * @property {Number} [limit]
- * @property {Number} [recvWindow]
  */
 
 /**
@@ -642,13 +634,11 @@
  * @property {Number} [startTime]
  * @property {Number} [endTime]
  * @property {Number} [limit]
- * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotAvgPrice
  * @property {String} symbol
- * @property {Number} [recvWindow]
  */
 
 /**
@@ -656,21 +646,18 @@
  * @property {String} [symbol]
  * @property {String} [symbols]
  * @property {"FULL" | "MINI"} [type]
- * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotTickerPrice
  * @property {String} [symbol]
  * @property {String} [symbols]
- * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotTickerBookTicker
  * @property {String} [symbol]
  * @property {String} [symbols]
- * @property {Number} [recvWindow]
  */
 
 /**
@@ -680,7 +667,6 @@
  * @property {String} [symbols]
  * @property {String} [windowSize] 1m,2m....59m for minutes, 1h, 2h....23h - for hours, 1d...7d - for days
  * @property {"FULL" | "MINI"} [type]
- * @property {Number} [recvWindow]
  */
 // ########### Spot Account/Trade
 /**
