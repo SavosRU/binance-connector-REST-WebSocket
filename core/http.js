@@ -21,6 +21,61 @@ export class Http {
     /**
      * @type {HttpRequest}
      */
+     async simpleRequest(address, params = {}) {
+        try {
+            if (this.isTestNet) {
+                console.log("## Test Net Request ##")
+                address = this.baseURLTest + address
+            } else {
+                address = this.baseURL + address
+            }
+
+            const queries = {
+                ...params,
+            }
+
+            let queryToString = Object.keys(queries)
+                .map((key) => {
+                    let value = queries[key]
+
+                    if (value instanceof Array) {
+                        value = JSON.stringify(value)
+                        value = encodeURI(value)
+                    }
+                    return `${key}=${value}`
+                })
+                .join("&")
+
+            address = address + "?" + queryToString
+
+            let data = await fetch(address, {
+                method: "GET",
+            })
+
+            if (data.status == 404) {
+                throw new Error("404 not found")
+            } else if (data.status == 406) {
+                throw new Error("Client error 406: something you should fix")
+            }
+
+            let body = await data.json()
+            // console.log(body)
+            return body
+
+        } catch (error) {
+            let errorMessage = {
+                name: error.name,
+                message: error.message,
+                stack: error.stack,
+            }
+
+            return errorMessage
+        }
+    }
+
+    /**
+     * @type {HttpRequest}
+     */
     async request(method, address, params = {}, isPrivate = false) {
         try {
             if (this.isTestNet) {

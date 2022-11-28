@@ -520,98 +520,98 @@ export class Spot {
      * @param {SpotPing} [params]
      */
      async ping(params) {
-        return await this.http.publicGET("/api/v3/ping", params)
+        return await this.http.simpleRequest("/api/v3/ping", params)
     }
 
     /**
      * @param {SpotTime} [params]
      */
      async time(params) {
-        return await this.http.publicGET("/api/v3/time", params)
+        return await this.http.simpleRequest("/api/v3/time", params)
     }
 
     /**
      * @param {SpotExchangeInfo} params
      */
      async exchangeInfo(params) {
-        return await this.http.publicGET("/api/v3/exchangeInfo", params)
+        return await this.http.simpleRequest("/api/v3/exchangeInfo", params)
     }
 
     /**
      * @param {SpotDepth} params
      */
      async depth(params) {
-        return await this.http.publicGET("/api/v3/depth", params)
+        return await this.http.simpleRequest("/api/v3/depth", params)
     }
 
     /**
      * @param {SpotTrades} params
      */
      async trades(params) {
-        return await this.http.publicGET("/api/v3/trades", params)
+        return await this.http.simpleRequest("/api/v3/trades", params)
     }
 
     /**
      * @param {SpotHistoricalTrades} params
      */
      async historicalTrades(params) {
-        return await this.http.publicGET("/api/v3/historicalTrades", params)
+        return await this.http.simpleRequest("/api/v3/historicalTrades", params)
     }
 
     /**
      * @param {SpotAggTrades} params
      */
      async aggTrades(params) {
-        return await this.http.publicGET("/api/v3/aggTrades", params)
+        return await this.http.simpleRequest("/api/v3/aggTrades", params)
     }
 
     /**
      * @param {SpotKlines} params
      */
      async klines(params) {
-        return await this.http.publicGET("/api/v3/klines", params)
+        return await this.http.simpleRequest("/api/v3/klines", params)
     }
 
     /**
      * @param {SpotUiKlines} params
      */
      async uiKlines(params) {
-        return await this.http.publicGET("/api/v3/uiKlines", params)
+        return await this.http.simpleRequest("/api/v3/uiKlines", params)
     }
 
     /**
      * @param {SpotAvgPrice} params
      */
      async avgPrice(params) {
-        return await this.http.publicGET("/api/v3/avgPrice", params)
+        return await this.http.simpleRequest("/api/v3/avgPrice", params)
     }
 
     /**
      * @param {SpotTicker24hr} params
      */
      async ticker24hr(params) {
-        return await this.http.publicGET("/api/v3/ticker/24hr", params)
+        return await this.http.simpleRequest("/api/v3/ticker/24hr", params)
     }
 
     /**
      * @param {SpotTickerPrice} params
      */
      async tickerPrice(params) {
-        return await this.http.publicGET("/api/v3/ticker/price", params)
+        return await this.http.simpleRequest("/api/v3/ticker/price", params)
     }
 
     /**
      * @param {SpotTickerBookTicker} params
      */
      async tickerBookTicker(params) {
-        return await this.http.publicGET("/api/v3/ticker/bookTicker", params)
+        return await this.http.simpleRequest("/api/v3/ticker/bookTicker", params)
     }
 
     /**
      * @param {SpotTicker} params
      */
      async ticker(params) {
-        return await this.http.publicGET("/api/v3/ticker", params)
+        return await this.http.simpleRequest("/api/v3/ticker", params)
     }
     // ########################################### Spot Account/Trade
     // ########### Private
