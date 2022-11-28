@@ -6,7 +6,7 @@ export class EuOptions {
     
     ApiMap = {
         baseURL: "https://eapi.binance.com",
-        wsBaseURL: "wss://nbstream.binance.com/eoptions/",
+        wsBaseURL: "wss://nbstream.binance.com/eoptions",
     }
 
     timestamp = Date.now()

@@ -13,8 +13,8 @@ async function Run() {
 
     // ##### Websocket
     // 1- listenKey
-    let newListenKey = await futures.newListenKey()
-    let listenKey    = newListenKey.listenKey
+    let listenKey = await futures.newListenKey()
+    listenKey = listenKey.listenKey
 
     // 2- subscribe
     futures.ws.userStream(listenKey, "USER_DATA")
