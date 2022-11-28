@@ -1956,6 +1956,8 @@
 // ########### Convert
 /**
  * @typedef {Object} SpotConvertExchangeInfo
+ * @property {String} [fromAsset]
+ * @property {String} [toAsset]
  * @property {Number} [recvWindow]
  */
 
@@ -1966,21 +1968,31 @@
 
 /**
  * @typedef {Object} SpotPostConvertGetQuote
+ * @property {String} fromAsset
+ * @property {String} toAsset
+ * @property {Number} [fromAmount]
+ * @property {Number} [toAmount]
+ * @property {"10s" | "30s" | "1m" | "2m"} [validTime]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostConvertAcceptQuote
+ * @property {String} quoteId
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotConvertOrderStatus
+ * @property {String} orderId
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotConvertTradeFlow
+ * @property {Number} startTime
+ * @property {Number} endTime
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 // ########### Rebate
