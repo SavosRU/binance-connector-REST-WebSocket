@@ -46,84 +46,84 @@ export class EuOptions {
     // ########################################### Market Data Endpoints
     // ########### Public
     /**
-     * @param {} [params]
+     * @param {EuOptionsPing} [params]
      */
     async ping(params) {
         return await this.http.publicGET("/eapi/v1/ping", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsTime} [params]
      */
     async time(params) {
         return await this.http.publicGET("/eapi/v1/time", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsExchangeInfo} [params]
      */
     async exchangeInfo(params) {
         return await this.http.publicGET("/eapi/v1/exchangeInfo", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsDepth} [params]
      */
     async depth(params) {
         return await this.http.publicGET("/eapi/v1/depth", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsTrades} [params]
      */
     async trades(params) {
         return await this.http.publicGET("/eapi/v1/trades", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsHistoricalTrades} [params]
      */
     async historicalTrades(params) {
         return await this.http.publicGET("/eapi/v1/historicalTrades", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsKlines} [params]
      */
     async klines(params) {
         return await this.http.publicGET("/eapi/v1/klines", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsMark} [params]
      */
     async mark(params) {
         return await this.http.publicGET("/eapi/v1/mark", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsTicker} [params]
      */
     async ticker(params) {
         return await this.http.publicGET("/eapi/v1/ticker", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsIndex} [params]
      */
     async index(params) {
         return await this.http.publicGET("/eapi/v1/index", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsExerciseHistory} [params]
      */
     async exerciseHistory(params) {
         return await this.http.publicGET("/eapi/v1/exerciseHistory", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsOpenInterest} [params]
      */
     async openInterest(params) {
         return await this.http.publicGET("/eapi/v1/openInterest", params)
@@ -131,28 +131,28 @@ export class EuOptions {
     // ########################################### Account/Trades Endpoints
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {EuOptionsAccount} [params]
      */
      async account(params) {
         return await this.http.privateGET("/eapi/v1/account", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionPostTransfer} [params]
      */
      async newTransfer(params) {
         return await this.http.privatePOST("/eapi/v1/transfer", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsPostOrder} [params]
      */
      async newOrder(params) {
         return await this.http.privatePOST("/eapi/v1/order", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {BatchOrders} [params]
      */
      async newBatchOrders(params) {
         return await this.http.privatePOST("/eapi/v1/batchOrders", params)
