@@ -18,9 +18,12 @@ let fu = new Futures({
 })
 
 async function Run() {
-    let a = await spot.exchangeInfo({
-        symbol: "BTCUSDT"
-    })
+    let a = await coinm.ping()
     console.log(a)
+
+    // let a = await spot.exchangeInfo({
+    //     symbol: "BTCUSDT"
+    // })
+    // console.log(a)
 }
 Run()

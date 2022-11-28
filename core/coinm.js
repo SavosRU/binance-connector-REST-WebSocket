@@ -48,7 +48,7 @@ export class CoinM {
     // ########################################### Market Data Endpoints
     // ########### Public
     /**
-     * @param {} [params]
+     * @param {CoinmPing} [params]
      */
     async ping(params) {
         return await this.http.publicGET("/dapi/v1/ping", params)
