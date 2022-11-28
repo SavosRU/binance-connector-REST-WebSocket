@@ -2041,16 +2041,20 @@
 // ########### Binance Code
 /**
  * @typedef {Object} SpotPostGiftcardCreateCode
+ * @property {String} token
+ * @property {Number} amount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostGiftcardRedeemCode
+ * @property {String} code
+ * @property {String} [externalUid]
  * @property {Number} [recvWindow]
  */
-
 /**
  * @typedef {Object} SpotGiftcardVerify
+ * @property {String} referenceNo
  * @property {Number} [recvWindow]
  */
 
@@ -2061,10 +2065,14 @@
 
 /**
  * @typedef {Object} SpotPostGiftcardBuyCode
+ * @property {String} baseToken
+ * @property {String} faceToken
+ * @property {Number} baseTokenAmount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotGiftcardBuyCodeTokenLimit
+ * @property {String} baseToken
  * @property {Number} [recvWindow]
  */
