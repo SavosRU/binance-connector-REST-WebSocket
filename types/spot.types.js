@@ -730,7 +730,7 @@
  */
 
 /**
- * @typedef {Object} SpotPostCancelReplace
+ * @typedef {Object} SpotPostOrderCancelReplace
  * @property {String} symbol
  * @property {EnumSpotOrderSide} side
  * @property {EnumSpotOrderTypes} type
@@ -939,6 +939,15 @@
  * @property {Number} [current]
  * @property {Number} [size]
  * @property {String} [archived] Default: false. Set to true for archived data from 6 months ago
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPostMarginLoan
+ * @property {String} asset
+ * @property {"TRUE" | "FALSE"} [isIsolated]
+ * @property {String} [symbol]
+ * @property {Number} amount
  * @property {Number} [recvWindow]
  */
 

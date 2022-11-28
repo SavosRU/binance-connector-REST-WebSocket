@@ -517,98 +517,98 @@ export class Spot {
     // ########################################### Market Data Endpoints
     // ########### Public
     /**
-     * @param {} [params]
+     * @param {SpotPing} [params]
      */
      async ping(params) {
         return await this.http.publicGET("/api/v3/ping", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotTime} [params]
      */
      async time(params) {
         return await this.http.publicGET("/api/v3/time", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotExchangeInfo} [params]
      */
      async exchangeInfo(params) {
         return await this.http.publicGET("/api/v3/exchangeInfo", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotDepth} [params]
      */
      async depth(params) {
         return await this.http.publicGET("/api/v3/depth", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotTrades} [params]
      */
      async trades(params) {
         return await this.http.publicGET("/api/v3/trades", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotHistoricalTrades} [params]
      */
      async historicalTrades(params) {
         return await this.http.publicGET("/api/v3/historicalTrades", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAggTrades} [params]
      */
      async aggTrades(params) {
         return await this.http.publicGET("/api/v3/aggTrades", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotKlines} [params]
      */
      async klines(params) {
         return await this.http.publicGET("/api/v3/klines", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotUiKlines} [params]
      */
      async uiKlines(params) {
         return await this.http.publicGET("/api/v3/uiKlines", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAvgPrice} [params]
      */
      async avgPrice(params) {
         return await this.http.publicGET("/api/v3/avgPrice", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotTicker24hr} [params]
      */
      async ticker24hr(params) {
         return await this.http.publicGET("/api/v3/ticker/24hr", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotTickerPrice} [params]
      */
      async tickerPrice(params) {
         return await this.http.publicGET("/api/v3/ticker/price", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotTickerBookTicker} [params]
      */
      async tickerBookTicker(params) {
         return await this.http.publicGET("/api/v3/ticker/bookTicker", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotTicker} [params]
      */
      async ticker(params) {
         return await this.http.publicGET("/api/v3/ticker", params)
@@ -619,112 +619,112 @@ export class Spot {
     // ########### Public
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {SpotPostOrderTest} [params]
      */
      async newOrderTest(params) {
         return await this.http.privatePOST("/api/v3/order/test", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostOrder} [params]
      */
      async newOrder(params) {
         return await this.http.privatePOST("/api/v3/order", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotDeleteOrder} [params]
      */
      async deleteOrder(params) {
         return await this.http.privateDELETE("/api/v3/order", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotDeleteOpenOrders} [params]
      */
      async deleteOpenOrders(params) {
         return await this.http.privateDELETE("/api/v3/openOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotOrder} [params]
      */
      async order(params) {
         return await this.http.privateGET("/api/v3/order", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostOrderCancelReplace} [params]
      */
      async newOrderCancelReplace(params) {
         return await this.http.privatePOST("/api/v3/order/cancelReplace", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotOpenOrders} [params]
      */
      async openOrders(params) {
         return await this.http.privateGET("/api/v3/openOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAllOrders} [params]
      */
      async allOrders(params) {
         return await this.http.privateGET("/api/v3/allOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostOrderOco} [params]
      */
      async newOrderOco(params) {
         return await this.http.privatePOST("/api/v3/order/oco", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotDeleteOrderList} [params]
      */
      async deleteOrderList(params) {
         return await this.http.privateDELETE("/api/v3/orderList", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotOrderList} [params]
      */
      async orderList(params) {
         return await this.http.privateGET("/api/v3/orderList", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAllOrderList} [params]
      */
      async allOrderList(params) {
         return await this.http.privateGET("/api/v3/allOrderList", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotOpenOrderList} [params]
      */
      async openOrderList(params) {
         return await this.http.privateGET("/api/v3/openOrderList", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAccount} [params]
      */
      async account(params) {
         return await this.http.privateGET("/api/v3/account", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotMyTrades} [params]
      */
      async myTrades(params) {
         return await this.http.privateGET("/api/v3/myTrades", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotRateLimitOrder} [params]
      */
      async rateLimitOrder(params) {
         return await this.http.privateGET("/api/v3/rateLimit/order", params)
@@ -733,315 +733,315 @@ export class Spot {
     // ########### Public
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {SpotPostMarginTransfer} [params]
      */
      async newMarginTransfer(params) {
         return await this.http.privatePOST("/sapi/v1/margin/transfer", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotPostMarginLoan} [params]
      */
      async newMarginLoan(params) {
         return await this.http.privatePOST("/sapi/v1/margin/loan", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotPostMarginRepay} [params]
      */
      async newMarginRepay(params) {
         return await this.http.privatePOST("/sapi/v1/margin/repay", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginAsset} [params]
      */
      async marginAsset(params) {
         return await this.http.privateGET("/sapi/v1/margin/asset", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginPair} [params]
      */
      async marginPair(params) {
         return await this.http.privateGET("/sapi/v1/margin/pair", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginAllAssets} [params]
      */
      async marginAllAssets(params) {
         return await this.http.privateGET("/sapi/v1/margin/allAssets", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginAllPairs} [params]
      */
      async marginAllPairs(params) {
         return await this.http.privateGET("/sapi/v1/margin/allPairs", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginPriceIndex} [params]
      */
      async marginPriceIndex(params) {
         return await this.http.privateGET("/sapi/v1/margin/priceIndex", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotPostMarginOrder} [params]
      */
      async newMarginOrder(params) {
         return await this.http.privatePOST("/sapi/v1/margin/order", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotDeleteMarginOrder} [params]
      */
      async deleteMarginOrder(params) {
         return await this.http.privateDELETE("/sapi/v1/margin/order", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotDeleteMarginOpenOrders} [params]
      */
      async deleteMarginOpenOrders(params) {
         return await this.http.privateDELETE("/sapi/v1/margin/openOrders", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginTransfer} [params]
      */
      async marginTransfer(params) {
         return await this.http.privateGET("/sapi/v1/margin/transfer", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginLoan} [params]
      */
      async marginLoan(params) {
         return await this.http.privateGET("/sapi/v1/margin/loan", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginRepay} [params]
      */
      async marginRepay(params) {
         return await this.http.privateGET("/sapi/v1/margin/repay", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginInterestHistory} [params]
      */
      async marginInterestHistory(params) {
         return await this.http.privateGET("/sapi/v1/margin/interestHistory", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginForceLiquidationRec} [params]
      */
      async marginForceLiquidationRec(params) {
         return await this.http.privateGET("/sapi/v1/margin/forceLiquidationRec", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginAccount} [params]
      */
      async marginAccount(params) {
         return await this.http.privateGET("/sapi/v1/margin/account", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginOrder} [params]
      */
      async marginOrder(params) {
         return await this.http.privateGET("/sapi/v1/margin/order", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginOpenOrders} [params]
      */
      async marginOpenOrders(params) {
         return await this.http.privateGET("/sapi/v1/margin/openOrders", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginAllOrders} [params]
      */
      async marginAllOrders(params) {
         return await this.http.privateGET("/sapi/v1/margin/allOrders", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotPostMarginOrderOco} [params]
      */
      async newMarginOrderOco(params) {
         return await this.http.privatePOST("/sapi/v1/margin/order/oco", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotDeleteMarginOrderList} [params]
      */
      async deleteMarginOrderList(params) {
         return await this.http.privateDELETE("/sapi/v1/margin/orderList", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginOrderList} [params]
      */
      async marginOrderList(params) {
         return await this.http.privateGET("/sapi/v1/margin/orderList", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginAllOrderList} [params]
      */
      async marginAllOrderList(params) {
         return await this.http.privateGET("/sapi/v1/margin/allOrderList", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginOpenOrderList} [params]
      */
      async marginOpenOrderList(params) {
         return await this.http.privateGET("/sapi/v1/margin/openOrderList", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginMyTrades} [params]
      */
      async marginMyTrades(params) {
         return await this.http.privateGET("/sapi/v1/margin/myTrades", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginMaxBorrowable} [params]
      */
      async marginMaxBorrowable(params) {
         return await this.http.privateGET("/sapi/v1/margin/maxBorrowable", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginMaxTransferable} [params]
      */
      async marginMaxTransferable(params) {
         return await this.http.privateGET("/sapi/v1/margin/maxTransferable", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginTradeCoeff} [params]
      */
      async marginTradeCoeff(params) {
         return await this.http.privateGET("/sapi/v1/margin/tradeCoeff", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotPostMarginIsolatedTransfer} [params]
      */
      async newMarginIsolatedTransfer(params) {
         return await this.http.privatePOST("/sapi/v1/margin/isolated/transfer", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginIsolatedTransfer} [params]
      */
      async marginIsolatedTransfer(params) {
         return await this.http.privateGET("/sapi/v1/margin/isolated/transfer", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginIsolatedAccount} [params]
      */
      async marginIsolatedAccount(params) {
         return await this.http.privateGET("/sapi/v1/margin/isolated/account", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotDeleteMarginIsolatedAccount} [params]
      */
      async deleteMarginIsolatedAccount(params) {
         return await this.http.privateDELETE("/sapi/v1/margin/isolated/account", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotPostMarginIsolatedAccount} [params]
      */
      async newMarginIsolatedAccount(params) {
         return await this.http.privatePOST("/sapi/v1/margin/isolated/account", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginIsolatedAccountLimit} [params]
      */
      async marginIsolatedAccountLimit(params) {
         return await this.http.privateGET("/sapi/v1/margin/isolated/accountLimit", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginIsolatedPair} [params]
      */
      async marginIsolatedPair(params) {
         return await this.http.privateGET("/sapi/v1/margin/isolated/pair", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginIsolatedAllPairs} [params]
      */
      async marginIsolatedAllPairs(params) {
         return await this.http.privateGET("/sapi/v1/margin/isolated/allPairs", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotPostBnbBurn} [params]
      */
      async newBnbBurn(params) {
         return await this.http.privatePOST("/sapi/v1/bnbBurn", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotBnbBurn} [params]
      */
      async bnbBurn(params) {
         return await this.http.privateGET("/sapi/v1/bnbBurn", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginInterestRateHistory} [params]
      */
      async marginInterestRateHistory(params) {
         return await this.http.privateGET("/sapi/v1/margin/interestRateHistory", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginCrossMarginData} [params]
      */
      async marginCrossMarginData(params) {
         return await this.http.privateGET("/sapi/v1/margin/crossMarginData", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginIsolatedMarginData} [params]
      */
      async marginIsolatedMarginData(params) {
         return await this.http.privateGET("/sapi/v1/margin/isolatedMarginData", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginIsolatedMarginTier} [params]
      */
      async marginIsolatedMarginTier(params) {
         return await this.http.privateGET("/sapi/v1/margin/isolatedMarginTier", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginRateLimitOrder} [params]
      */
      async marginRateLimitOrder(params) {
         return await this.http.privateGET("/sapi/v1/margin/rateLimit/order", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotMarginDribblet} [params]
      */
      async marginDribblet(params) {
         return await this.http.privateGET("/sapi/v1/margin/dribblet", params)
