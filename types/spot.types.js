@@ -1998,26 +1998,44 @@
 // ########### Rebate
 /**
  * @typedef {Object} SpotRebateTaxQuery
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [page]
  * @property {Number} [recvWindow]
  */
 // ########### NFT
 /**
  * @typedef {Object} SpotNftHistoryTransactions
+ * @property {0 | 1 | 2 | 3 | 4} orderType
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
+ * @property {Number} [page]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotNftHistoryDeposit
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
+ * @property {Number} [page]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotNftHistoryWithdraw
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
+ * @property {Number} [page]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotNftUserGetAsset
+ * @property {Number} [limit]
+ * @property {Number} [page]
  * @property {Number} [recvWindow]
  */
 // ########### Binance Code
