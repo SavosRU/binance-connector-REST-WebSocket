@@ -1796,21 +1796,40 @@
 // ########### C2C
 /**
  * @typedef {Object} SpotC2cOrderMatchListUserOrderHistory
+ * @property {"BUY" | "SELL"} tradeType
+ * @property {Number} [startTimestamp]
+ * @property {Number} [endTimestamp]
+ * @property {Number} [page]
+ * @property {Number} [rows]
  * @property {Number} [recvWindow]
  */
 // ########### VIP Loans
 /**
  * @typedef {Object} SpotLoanVipOngoingOrders
+ * @property {Number} [orderId]
+ * @property {Number} [collateralAccountId]
+ * @property {String} [loanCoin]
+ * @property {String} [collateralCoin]
+ * @property {Number} [current]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostLoanVipRepay
+ * @property {Number} orderId
+ * @property {Number} amount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotLoanVipRepayHistory
+ * @property {Number} [orderId]
+ * @property {String} [loanCoin]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 // ########### Crypto Loans
