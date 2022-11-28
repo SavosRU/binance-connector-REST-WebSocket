@@ -1396,28 +1396,28 @@ export class Spot {
     // ########### Public
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {SpotPortfolioAccount} [params]
      */
      async portfolioAccount(params) {
         return await this.http.privateGET("/sapi/v1/portfolio/account", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPortfolioCollateralRate} [params]
      */
      async portfolioCollateralRate(params) {
         return await this.http.privateGET("/sapi/v1/portfolio/collateralRate", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPortfolioPmLoan} [params]
      */
      async portfolioPmLoan(params) {
         return await this.http.privateGET("/sapi/v1/portfolio/pmLoan", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostPortfolioRepay} [params]
      */
      async newPortfolioRepay(params) {
         return await this.http.privatePOST("/sapi/v1/portfolio/repay", params)
