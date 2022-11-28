@@ -70,7 +70,7 @@ export class Spot {
     // ########################################### Wallet Endpoints
     // ########### Public
     /**
-     * @param {SpotJustRecvWindow} [params]
+     * @param {SpotSystemStatus} [params]
      */
     async systemStatus(params) {
         return await this.http.publicGET("/sapi/v1/system/status", params)
@@ -78,7 +78,7 @@ export class Spot {
     
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {SpotCapitalConfigGetall} [params]
      */
     async capitalConfigGetAll(params) {
         return await this.http.privateGET("/sapi/v1/capital/config/getall", params)
@@ -86,161 +86,161 @@ export class Spot {
 
 
     /**
-     * @param {} [params]
+     * @param {SpotAccountSnapshot} [params]
      */
     async accountSnapshot(params) {
         return await this.http.privateGET("/sapi/v1/accountSnapshot", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostAccountDisableFastWithdrawSwitch} [params]
      */
     async accountDisableFastWithdrawSwitch(params) {
-        return await this.http.privateGET("/sapi/v1/account/disableFastWithdrawSwitch", params)
+        return await this.http.privatePOST("/sapi/v1/account/disableFastWithdrawSwitch", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostAccountEnableFastWithdrawSwitch} [params]
      */
     async newAccountEnableFastWithdrawSwitch(params) {
         return await this.http.privatePOST("/sapi/v1/account/enableFastWithdrawSwitch", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostCapitalWithdrawApply} [params]
      */
     async newCapitalWithdrawApply(params) {
         return await this.http.privatePOST("/sapi/v1/capital/withdraw/apply", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotCapitalDepositHisrec} [params]
      */
     async capitalDepositHisrec(params) {
         return await this.http.privateGET("/sapi/v1/capital/deposit/hisrec", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotCapitalWithdrawHistory} [params]
      */
     async capitalWithdrawHistory(params) {
         return await this.http.privateGET("/sapi/v1/capital/withdraw/history", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotCapitalDepositAddress} [params]
      */
     async capitalDepositAddress(params) {
         return await this.http.privateGET("/sapi/v1/capital/deposit/address", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAccountStatus} [params]
      */
     async accountStatus(params) {
         return await this.http.privateGET("/sapi/v1/account/status", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAccountApiTradingStatus} [params]
      */
     async accountApiTradingStatus(params) {
         return await this.http.privateGET("/sapi/v1/account/apiTradingStatus", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAssetDribblet} [params]
      */
     async assetDribblet(params) {
         return await this.http.privateGET("/sapi/v1/asset/dribblet", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostAssetDustBtc} [params]
      */
     async newAssetDustBTC(params) {
         return await this.http.privatePOST("/sapi/v1/asset/dust-btc", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostAssetDust} [params]
      */
     async newAssetDust(params) {
         return await this.http.privatePOST("/sapi/v1/asset/dust", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAssetAssetDividend} [params]
      */
     async assetAssetDividend(params) {
         return await this.http.privateGET("/sapi/v1/asset/assetDividend", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {SpotAssetAssetDetail} [params]
      */
     async assetAssetDetail(params) {
         return await this.http.privateGET("/sapi/v1/asset/assetDetail", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAssetTradeFee} [params]
      */
     async assetTradeFee(params) {
         return await this.http.privateGET("/sapi/v1/asset/tradeFee", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostAssetTransfer} [params]
      */
     async newAssetTransfer(params) {
         return await this.http.privatePOST("/sapi/v1/asset/transfer", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAssetTransfer} [params]
      */
     async assetTransfer(params) {
         return await this.http.privateGET("/sapi/v1/asset/transfer", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostAssetGetFundingAsset} [params]
      */
     async assetGetFundingAsset(params) {
         return await this.http.privatePOST("/sapi/v1/asset/get-funding-asset", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostAssetGetUserAsset} [params]
      */
     async assetGetUserAsset(params) {
         return await this.http.privatePOST("/sapi/v3/asset/getUserAsset", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostAssetConvertTransfer} [params]
      */
     async newAssetConvertTransfer(params) {
         return await this.http.privatePOST("/sapi/v1/asset/convert-transfer", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAssetConvertTransferQueryByPage} [params]
      */
     async assetConvertTransferQueryByPage(params) {
         return await this.http.privateGET("/sapi/v1/asset/convert-transfer/queryByPage", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAssetLedgerTransferCloudMiningQueryByPag} [params]
      */
     async assetLedgerTransferCloudMiningQueryByPage(params) {
         return await this.http.privateGET("/sapi/v1/asset/ledger-transfer/cloud-mining/queryByPage", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAccountApiRestrictions} [params]
      */
     async accountApiRestrictions(params) {
         return await this.http.privateGET("/sapi/v1/account/apiRestrictions", params)
@@ -250,266 +250,266 @@ export class Spot {
     // ########### Public
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountVirtualSubAccount} [params]
      */
     async newSubAccountVirtualSubAccount(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/virtualSubAccount", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountList} [params]
      */
     async subAccountList(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/list", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountSubTransferHistory} [params]
      */
     async subAccountSubTransferHistory(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/sub/transfer/history", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountFuturesInternalTransfer} [params]
      */
     async subAccountFuturesInternalTransfer(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/futures/internalTransfer", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountFuturesInternalTransfer} [params]
      */
     async newSubAccountFuturesInternalTransfer(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/futures/internalTransfer", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountAssets} [params]
      */
     async subAccountAssets(params) {
         return await this.http.privateGET("/sapi/v3/sub-account/assets", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountSpotSummary} [params]
      */
     async subAccountSpotSummary(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/spotSummary", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotCapitalDepositSubAddress} [params]
      */
     async capitalDepositSubAddress(params) {
         return await this.http.privateGET("/sapi/v1/capital/deposit/subAddress", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotCapitalDepositSubHisrec} [params]
      */
     async capitalDepositSubHisrec(params) {
         return await this.http.privateGET("/sapi/v1/capital/deposit/subHisrec", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountStatus} [params]
      */
     async subAccountStatus(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/status", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountMarginEnable} [params]
      */
     async newSubAccountMarginEnable(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/margin/enable", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountMarginAccount} [params]
      */
     async subAccountMarginAccount(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/margin/account", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountMarginAccountSummary} [params]
      */
     async subAccountMarginAccountSummary(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/margin/accountSummary", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountFuturesEnable} [params]
      */
     async newSubAccountFuturesEnable(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/futures/enable", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountFuturesAccount} [params]
      */
     async subAccountFuturesAccount(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/futures/account", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountFuturesAccountSummary} [params]
      */
     async subAccountFuturesAccountSummary(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/futures/accountSummary", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountFuturesPositionRisk} [params]
      */
     async subAccountFuturesPositionRisk(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/futures/positionRisk", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountFuturesTransfer} [params]
      */
     async newSubAccountFuturesTransfer(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/futures/transfer", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountMarginTransfer} [params]
      */
     async newSubAccountMarginTransfer(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/margin/transfer", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountTransferSubToSub} [params]
      */
     async newSubAccountTransferSubToSub(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/transfer/subToSub", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountTransferSubToMaster} [params]
      */
     async newSubAccountTransferSubToMaster(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/transfer/subToMaster", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountTransferSubUserHistory} [params]
      */
     async subAccountTransferSubUserHistory(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/transfer/subUserHistory", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountUniversalTransfer} [params]
      */
     async newSubAccountUniversalTransfer(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/universalTransfer", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountUniversalTransfer} [params]
      */
     async subAccountUniversalTransfer(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/universalTransfer", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountFuturesAccount} [params]
      */
     async subAccountFuturesAccount(params) {
         return await this.http.privateGET("/sapi/v2/sub-account/futures/account", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountFuturesAccountSummary} [params]
      */
     async subAccountFuturesAccountSummary(params) {
         return await this.http.privateGET("/sapi/v2/sub-account/futures/accountSummary", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountFuturesPositionRisk} [params]
      */
     async subAccountFuturesPositionRisk(params) {
         return await this.http.privateGET("/sapi/v2/sub-account/futures/positionRisk", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountBlvtEnable} [params]
      */
     async newSubAccountBlvtEnable(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/blvt/enable", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountSubAccountApiIpRestriction} [params]
      */
     async newSubAccountSubAccountApiIpRestriction(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/subAccountApi/ipRestriction", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountSubAccountApiIpRestrictionIpList} [params]
      */
     async newSubAccountSubAccountApiIpRestrictionIpList(params) {
         return await this.http.privatePOST("/sapi/v1/sub-account/subAccountApi/ipRestriction/ipList", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountSubAccountApiIpRestriction} [params]
      */
     async subAccountSubAccountApiIpRestriction(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/subAccountApi/ipRestriction", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotDeleteSubAccountSubAccountApiIpRestrictionIpList} [params]
      */
     async deleteSubAccountSubAccountApiIpRestrictionIpList(params) {
         return await this.http.privateDELETE("/sapi/v1/sub-account/subAccountApi/ipRestriction/ipList", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotSubAccountApiRestrictionsIpRestrictionThirdPartyList} [params]
      */
     async subAccountApiRestrictionsIpRestrictionThirdPartyList(params) {
         return await this.http.privateGET("/sapi/v1/sub-account/apiRestrictions/ipRestriction/thirdPartyList", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotPostSubAccountSubAccountApiIpRestriction} [params]
      */
     async updateSubAccountSubAccountApiIpRestriction(params) {
         return await this.http.privatePOST("/sapi/v2/sub-account/subAccountApi/ipRestriction", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {SpotPostManagedSubaccountDeposit} [params]
      */
     async newManagedSubaccountDeposit(params) {
         return await this.http.privatePOST("/sapi/v1/managed-subaccount/deposit", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotManagedSubaccountAsset} [params]
      */
     async managedSubaccountAsset(params) {
         return await this.http.privateGET("/sapi/v1/managed-subaccount/asset", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostManagedSubaccountWithdraw} [params]
      */
     async newManagedSubaccountWithdraw(params) {
         return await this.http.privatePOST("/sapi/v1/managed-subaccount/withdraw", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotManagedSubaccountAccountSnapshot} [params]
      */
     async managedSubaccountAccountSnapshot(params) {
         return await this.http.privateGET("/sapi/v1/managed-subaccount/accountSnapshot", params)
