@@ -1,7 +1,7 @@
 {
   "name": "binance-connector",
   "version": "1.0.18",
-  "description": "",
+  "description": "binance connector is a SDK for binance that supports all endpoints (including websocket)",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -14,7 +14,7 @@
     "websocket",
     "binance-websocket",
   ],
-  "author": "",
+  "author": "M.H Jabbari",
   "license": "MIT",
   "dependencies": {
     "crypto-js": "^4.1.1",
