@@ -1150,49 +1150,49 @@ export class Spot {
     // ########### Public
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {SpotStakingProductList} [params]
      */
      async stakingProductList(params) {
         return await this.http.privateGET("/sapi/v1/staking/productList", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostStakingPurchase} [params]
      */
      async newStakingPurchase(params) {
         return await this.http.privatePOST("/sapi/v1/staking/purchase", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostStakingRedeem} [params]
      */
      async newStakingRedeem(params) {
         return await this.http.privatePOST("/sapi/v1/staking/redeem", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotStakingPosition} [params]
      */
      async stakingPosition(params) {
         return await this.http.privateGET("/sapi/v1/staking/position", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotStakingStakingRecord} [params]
      */
      async stakingStakingRecord(params) {
         return await this.http.privateGET("/sapi/v1/staking/stakingRecord", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostStakingSetAutoStaking} [params]
      */
      async newStakingSetAutoStaking(params) {
         return await this.http.privatePOST("/sapi/v1/staking/setAutoStaking", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotStakingPersonalLeftQuota} [params]
      */
      async stakingPersonalLeftQuota(params) {
         return await this.http.privateGET("/sapi/v1/staking/personalLeftQuota", params)
