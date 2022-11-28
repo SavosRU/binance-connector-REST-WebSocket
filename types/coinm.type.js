@@ -135,7 +135,7 @@
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmContinuousKlines
  * @property {String} pair
  * @property {EnumCoinmContractType} contractType
  * @property {EnumCoinmIntervals} interval

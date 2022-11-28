@@ -55,154 +55,154 @@ export class CoinM {
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmTime} [params]
      */
     async time(params) {
         return await this.http.publicGET("/dapi/v1/time", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmExchangeInfo} [params]
      */
     async exchangeInfo(params) {
         return await this.http.publicGET("/dapi/v1/exchangeInfo", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmDepth} [params]
      */
     async depth(params) {
         return await this.http.publicGET("/dapi/v1/depth", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmTrades} [params]
      */
     async trades(params) {
         return await this.http.publicGET("/dapi/v1/trades", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmHistoricalTrades} [params]
      */
     async historicalTrades(params) {
         return await this.http.publicGET("/dapi/v1/historicalTrades", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmAggTrades} [params]
      */
     async aggTrades(params) {
         return await this.http.publicGET("/dapi/v1/aggTrades", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmPremiumIndex} [params]
      */
     async premiumIndex(params) {
         return await this.http.publicGET("/dapi/v1/premiumIndex", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmFundingRate} [params]
      */
     async fundingRate(params) {
         return await this.http.publicGET("/dapi/v1/fundingRate", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmKlines} [params]
      */
     async klines(params) {
         return await this.http.publicGET("/dapi/v1/klines", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmContinuousKlines} [params]
      */
     async continuousKlines(params) {
         return await this.http.publicGET("/dapi/v1/continuousKlines", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmIndexPriceKlines} [params]
      */
     async indexPriceKlines(params) {
         return await this.http.publicGET("/dapi/v1/indexPriceKlines", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmMarkPriceKlines} [params]
      */
     async markPriceKlines(params) {
         return await this.http.publicGET("/dapi/v1/markPriceKlines", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmTicker24hr} [params]
      */
     async ticker24hr(params) {
         return await this.http.publicGET("/dapi/v1/ticker/24hr", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmTickerPrice} [params]
      */
     async tickerPrice(params) {
         return await this.http.publicGET("/dapi/v1/ticker/price", params)
     }
    
     /**
-     * @param {} [params]
+     * @param {CoinmTickerBookTicker} [params]
      */
     async tickerBookTicker(params) {
         return await this.http.publicGET("/dapi/v1/ticker/bookTicker", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmOpenInterest} [params]
      */
     async openInterest(params) {
         return await this.http.publicGET("/dapi/v1/openInterest", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmFuturesDataOpenInterestHist} [params]
      */
     async dataOpenInterestHist(params) {
         return await this.http.publicGET("/futures/data/openInterestHist", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmFuturesDataTopLongShortAccountRatio} [params]
      */
     async dataTopLongShortAccountRatio(params) {
         return await this.http.publicGET("/futures/data/topLongShortAccountRatio", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmFuturesDataTopLongShortPositionRatio} [params]
      */
     async dataTopLongShortPositionRatio(params) {
         return await this.http.publicGET("/futures/data/topLongShortPositionRatio", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmFuturesDataGlobalLongShortAccountRatio} [params]
      */
     async dataGlobalLongShortAccountRatio(params) {
         return await this.http.publicGET("/futures/data/globalLongShortAccountRatio", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmFuturesDataTakerBuySellVol} [params]
      */
     async dataTakerBuySellVol(params) {
         return await this.http.publicGET("/futures/data/takerBuySellVol", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {CoinmFuturesDataBasis} [params]
      */
     async dataBasis(params) {
         return await this.http.publicGET("/futures/data/basis", params)
@@ -210,210 +210,203 @@ export class CoinM {
     // ########################################### Account/Trades Endpoints
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {CoinmPostPositionSideDual} [params]
      */
      async updatePositionSideDual(params) {
         return await this.http.privatePOST("/dapi/v1/positionSide/dual", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmPositionSideDual} [params]
      */
      async positionSideDual(params) {
         return await this.http.privateGET("/dapi/v1/positionSide/dual", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmPostOrder} [params]
      */
      async newOrder(params) {
         return await this.http.privatePOST("/dapi/v1/order", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmPutOrder} [params]
      */
      async updateOrder(params) {
         return await this.http.privatePUT("/dapi/v1/order", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmPostBatchOrders} [params]
      */
-     async neBatchOrders(params) {
+     async newBatchOrders(params) {
         return await this.http.privatePOST("/dapi/v1/batchOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmPutBatchOrders} [params]
      */
      async updateBatchOrders(params) {
         return await this.http.privatePUT("/dapi/v1/batchOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmOrderAmendment} [params]
      */
      async orderAmendment(params) {
         return await this.http.privateGET("/dapi/v1/orderAmendment", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmOrder} [params]
      */
      async order(params) {
         return await this.http.privateGET("/dapi/v1/order", params)
     }
 
     /**
-     * @param {} [params]
-     */
-     async f(params) {
-        return await this.http.privateGET("", params)
-    }
-
-    /**
-     * @param {} [params]
+     * @param {CoinmDeleteOrder} [params]
      */
      async deleteOrder(params) {
         return await this.http.privateDELETE("/dapi/v1/order", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmDeleteAllOpenOrders} [params]
      */
      async deleteAllOpenOrders(params) {
         return await this.http.privateDELETE("/dapi/v1/allOpenOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmDeleteBatchOrders} [params]
      */
      async deleteBatchOrders(params) {
         return await this.http.privateDELETE("/dapi/v1/batchOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmPostCountDownCancelAll} [params]
      */
      async newCountDownCancelAll(params) {
         return await this.http.privatePOST("/dapi/v1/countdownCancelAll", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmOpenOrder} [params]
      */
      async openOrder(params) {
         return await this.http.privateGET("/dapi/v1/openOrder", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmOpenOrders} [params]
      */
      async openOrders(params) {
         return await this.http.privateGET("/dapi/v1/openOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmAllOrders} [params]
      */
      async allOrders(params) {
         return await this.http.privateGET("/dapi/v1/allOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmBalance} [params]
      */
      async balance(params) {
         return await this.http.privateGET("/dapi/v1/balance", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmAccount} [params]
      */
      async account(params) {
         return await this.http.privateGET("/dapi/v1/account", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmPostLeverage} [params]
      */
      async updateLeverage(params) {
         return await this.http.privatePOST("/dapi/v1/leverage", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmPostMarginType} [params]
      */
      async updateMarginType(params) {
         return await this.http.privatePOST("/dapi/v1/marginType", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmPostPositionMargin} [params]
      */
      async updatePositionMargin(params) {
         return await this.http.privatePOST("/dapi/v1/positionMargin", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmPositionMarginHistory} [params]
      */
      async positionMarginHistory(params) {
         return await this.http.privateGET("/dapi/v1/positionMargin/history", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmPositionRisk} [params]
      */
      async positionRisk(params) {
         return await this.http.privateGET("/dapi/v1/positionRisk", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmUserTrades} [params]
      */
      async userTrades(params) {
         return await this.http.privateGET("/dapi/v1/userTrades", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmIncome} [params]
      */
      async income(params) {
         return await this.http.privateGET("/dapi/v1/income", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmLeverageBracket} [params]
      */
      async leverageBracket(params) {
         return await this.http.privateGET("/dapi/v1/leverageBracket", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmLeverageBracket} [params]
      */
      async leverageBracket(params) {
         return await this.http.privateGET("/dapi/v2/leverageBracket", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmForceOrders} [params]
      */
      async forceOrders(params) {
         return await this.http.privateGET("/dapi/v1/forceOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmAdlQuantile} [params]
      */
      async adlQuantile(params) {
         return await this.http.privateGET("/dapi/v1/adlQuantile", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {CoinmCommissionRate} [params]
      */
      async commissionRate(params) {
         return await this.http.privateGET("/dapi/v1/commissionRate", params)
@@ -421,14 +414,14 @@ export class CoinM {
     // ########################################### Portfolio Margin Endpoints
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {CoinmPmExchangeInfo} [params]
      */
      async pmExchangeInfo(params) {
         return await this.http.publicGET("/dapi/v1/pmExchangeInfo", params)
     }
  
     /**
-     * @param {} [params]
+     * @param {CoinmPmAccountInfo} [params]
      */
      async pmAccountInfo(params) {
         return await this.http.publicGET("/dapi/v1/pmAccountInfo", params)
