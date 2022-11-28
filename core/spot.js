@@ -1816,4 +1816,68 @@ export class Spot {
         return await this.http.privateGET("/sapi/v1/giftcard/buyCode/token-limit", params)
     }
 
+    // ################# Listen Key
+    // ###### Listen Key - SPOT
+    /**
+     * @param { SpotPostListenKeySPOT } [params]
+     */
+    async newListenKeySPOT(params) {
+        return await this.http.privatePOST("/api/v3/userDataStream", params)
+    }
+
+    /**
+     * @param { SpotPutListenKeySPOT} [params]
+     */
+    async keepAliveListenKeySPOT(params) {
+        return await this.http.privatePUT("/api/v3/userDataStream", params)
+    }
+
+    /**
+     * @param { SpotDeleteListenKeySPOT } [params]
+     */
+    async deleteListenKeySPOT(params) {
+        return await this.http.privateDELETE("/api/v3/userDataStream", params)
+    }
+    // ###### Listen Key - Margin
+    /**
+     * @param { SpotPostListenKeyMARGIN } [params]
+     */
+     async newListenKeyMARGIN(params) {
+        return await this.http.privatePOST("/sapi/v1/userDataStream", params)
+    }
+
+    /**
+     * @param { SpotPutListenKeyMARGIN } [params]
+     */
+    async keepAliveListenKeyMARGIN(params) {
+        return await this.http.privatePUT("/sapi/v1/userDataStream", params)
+    }
+
+    /**
+     * @param { SpotDeleteListenKeyMARGIN } [params]
+     */
+    async deleteListenKeyMARGIN(params) {
+        return await this.http.privateDELETE("/sapi/v1/userDataStream", params)
+    }
+    // ###### Listen Key - Isolated Margin
+    /**
+     * @param { SpotPostListenKeyISOMARGIN } [params]
+     */
+     async newListenKeyISOMARGIN(params) {
+        return await this.http.privatePOST("/sapi/v1/userDataStream/isolated", params)
+    }
+
+    /**
+     * @param { SpotPutListenKeyISOMARGIN } [params]
+     */
+    async keepAliveListenKeyISOMARGIN(params) {
+        return await this.http.privatePUT("/sapi/v1/userDataStream/isolated", params)
+    }
+
+    /**
+     * @param { SpotDeleteListenKeyISOMARGIN } [params]
+     */
+    async deleteListenKeyISOMARGIN(params) {
+        return await this.http.privateDELETE("/sapi/v1/userDataStream/isolated", params)
+    }
 }

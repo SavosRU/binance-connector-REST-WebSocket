@@ -455,7 +455,6 @@ export class Futures {
     async deleteListenKey(params) {
         return await this.http.privateDELETE("/fapi/v1/listenKey", params)
     }
-
     // ########################################### Portfolio Margin Endpoints
     // ########### Public
     /**

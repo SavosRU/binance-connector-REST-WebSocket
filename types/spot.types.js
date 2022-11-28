@@ -2125,3 +2125,59 @@
  * @property {String} baseToken
  * @property {Number} [recvWindow]
  */
+
+// #################### Listen Key
+// ########### Spot
+/**
+ * @typedef {Object} SpotPostListenKeySPOT
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPutListenKeySPOT
+ * @property {String} listenKey
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDeleteListenKeySPOT
+ * @property {String} listenKey
+ * @property {Number} [recvWindow]
+ */
+// ########### Margin
+/**
+ * @typedef {Object} SpotPostListenKeyMARGIN
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPutListenKeyMARGIN
+ * @property {String} listenKey
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDeleteListenKeyMARGIN
+ * @property {String} listenKey
+ * @property {Number} [recvWindow]
+ */
+// ########### Isolated Margin
+/**
+ * @typedef {Object} SpotPostListenKeyISOMARGIN
+ * @property {String} symbol
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotPutListenKeyISOMARGIN
+ * @property {String} symbol
+ * @property {String} listenKey
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} SpotDeleteListenKeyISOMARGIN
+ * @property {String} symbol
+ * @property {String} listenKey
+ * @property {Number} [recvWindow]
+ */
