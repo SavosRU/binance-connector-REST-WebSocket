@@ -1776,11 +1776,21 @@
 // ########### Fiat
 /**
  * @typedef {Object} SpotFiatOrders
+ * @property {"0" | "1"} transactionType
+ * @property {Number} [beginTime]
+ * @property {Number} [endTime]
+ * @property {Number} [page]
+ * @property {Number} [rows]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotFiatPayments
+ * @property {"0" | "1"} transactionType
+ * @property {Number} [beginTime]
+ * @property {Number} [endTime]
+ * @property {Number} [page]
+ * @property {Number} [rows]
  * @property {Number} [recvWindow]
  */
 // ########### C2C
