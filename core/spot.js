@@ -1352,42 +1352,42 @@ export class Spot {
     // ########### Public
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {SpotPostAlgoFuturesNewOrderVp} [params]
      */
      async newAlgoFuturesNewOrderVp(params) {
         return await this.http.privatePOST("/sapi/v1/algo/futures/newOrderVp", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostAlgoFuturesNewOrderTwap} [params]
      */
      async newAlgoFuturesNewOrderTwap(params) {
         return await this.http.privatePOST("/sapi/v1/algo/futures/newOrderTwap", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotDeleteAlgoFuturesOrder} [params]
      */
      async deleteAlgoFuturesOrder(params) {
         return await this.http.privateDELETE("/sapi/v1/algo/futures/order", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAlgoFuturesOpenOrders} [params]
      */
      async algoFuturesOpenOrders(params) {
         return await this.http.privateGET("/sapi/v1/algo/futures/openOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAlgoFuturesHistoricalOrders} [params]
      */
      async algoFuturesHistoricalOrders(params) {
         return await this.http.privateGET("/sapi/v1/algo/futures/historicalOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotAlgoFuturesSubOrders} [params]
      */
      async algoFuturesSubOrders(params) {
         return await this.http.privateGET("/sapi/v1/algo/futures/subOrders", params)
