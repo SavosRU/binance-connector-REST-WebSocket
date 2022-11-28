@@ -1201,91 +1201,91 @@ export class Spot {
     // ########### Public
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {SpotMiningPubAlgoList} [params]
      */
      async miningPubAlgoList(params) {
         return await this.http.privateGET("/sapi/v1/mining/pub/algoList", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotMiningPubCoinList} [params]
      */
      async miningPubCoinList(params) {
         return await this.http.privateGET("/sapi/v1/mining/pub/coinList", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotMiningWorkerDetail} [params]
      */
      async miningWorkerDetail(params) {
         return await this.http.privateGET("/sapi/v1/mining/worker/detail", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotMiningWorkerList} [params]
      */
      async miningWorkerList(params) {
         return await this.http.privateGET("/sapi/v1/mining/worker/list", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotMiningPaymentList} [params]
      */
      async miningPaymentList(params) {
         return await this.http.privateGET("/sapi/v1/mining/payment/list", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotMiningPaymentOther} [params]
      */
      async miningPaymentOther(params) {
         return await this.http.privateGET("/sapi/v1/mining/payment/other", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotMiningHashTransferConfigDetailsList} [params]
      */
      async miningHashTransferConfigDetailsList(params) {
         return await this.http.privateGET("/sapi/v1/mining/hash-transfer/config/details/list", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotMiningHashTransferProfitDetails} [params]
      */
      async miningHashTransferProfitDetails(params) {
         return await this.http.privateGET("/sapi/v1/mining/hash-transfer/profit/details", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostMiningHashTransferConfig} [params]
      */
      async newMiningHashTransferConfig(params) {
         return await this.http.privatePOST("/sapi/v1/mining/hash-transfer/config", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostMiningHashTransferConfigCancel} [params]
      */
      async deleteMiningHashTransferConfigCancel(params) {
         return await this.http.privatePOST("/sapi/v1/mining/hash-transfer/config/cancel", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotMiningStatisticsUserStatus} [params]
      */
      async miningStatisticsUserStatus(params) {
         return await this.http.privateGET("/sapi/v1/mining/statistics/user/status", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotMiningStatisticsUserList} [params]
      */
      async miningStatisticsUserList(params) {
         return await this.http.privateGET("/sapi/v1/mining/statistics/user/list", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotMiningPaymentUid} [params]
      */
      async miningPaymentUid(params) {
         return await this.http.privateGET("/sapi/v1/mining/payment/uid", params)
