@@ -21,6 +21,8 @@ import { Futures } from "binance-connector"
 ### Examples
 **Note: Everything is`Promised` so you need to do `.then` or `await`**
 
+[All Examples](https://github.com/mhasanjb/binance-connector/tree/main/examples)
+
 - Rest (Public)
 
 ```js
