@@ -1462,21 +1462,37 @@
 // ########### Futures
 /**
  * @typedef {Object} SpotPostFuturesTransfer
+ * @property {String} asset
+ * @property {Number} amount
+ * @property {1 | 2 | 3 | 4} type
  * @property {Number} [recvWindow]
  */
-
+ 
 /**
  * @typedef {Object} SpotFuturesTransfer
+ * @property {String} asset
+ * @property {Number} startTime
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [size]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotFuturesLoanBorrowHistory
+ * @property {String} [coin]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotFuturesLoanRepayHistory
+ * @property {String} [coin]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
@@ -1487,31 +1503,63 @@
 
 /**
  * @typedef {Object} SpotFuturesLoanAdjustCollateralHistory
+ * @property {String} [loanCoin]
+ * @property {String} [collateralCoin]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotFuturesLoanLiquidationHistory
+ * @property {String} [loanCoin]
+ * @property {String} [collateralCoin]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotFuturesLoanInterestHistory
+ * @property {String} [collateralCoin]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 // ########### Futures Algo
 /**
  * @typedef {Object} SpotPostAlgoFuturesNewOrderVp
+ * @property {String} symbol
+ * @property {"BUY" | "SELL"} side
+ * @property {"BOTH" | "LONG" | "SHORT"} [positionSide]
+ * @property {Number} quantity
+ * @property {"LOW" | "MEDIUM" | "HIGH"} urgency
+ * @property {String} [clientAlgoId]
+ * @property {Boolean} [reduceOnly]
+ * @property {Number} [limitPrice]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostAlgoFuturesNewOrderTwap
+ * @property {String} symbol
+ * @property {"BUY" | "SELL"} side
+ * @property {"BOTH" | "LONG" | "SHORT"} [positionSide]
+ * @property {Number} quantity
+ * @property {Number} duration
+ * @property {String} [clientAlgoId]
+ * @property {Boolean} [reduceOnly]
+ * @property {Number} [limitPrice]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotDeleteAlgoFuturesOrder
+ * @property {Number} algoId
  * @property {Number} [recvWindow]
  */
 
@@ -1522,11 +1570,20 @@
 
 /**
  * @typedef {Object} SpotAlgoFuturesHistoricalOrders
+ * @property {String} [symbol]
+ * @property {"BUY" | "SELL"} [side]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [page]
+ * @property {Number} [pageSize]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotAlgoFuturesSubOrders
+ * @property {Number} algoId
+ * @property {Number} [page]
+ * @property {Number} [pageSize]
  * @property {Number} [recvWindow]
  */
 // ########### Portfolio
