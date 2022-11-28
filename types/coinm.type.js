@@ -502,3 +502,19 @@
  * @property {String} asset
  * @property {Number} [recvWindow]
  */
+
+// ############# Listen Key
+/**
+ * @typedef {Object} CoinmPostListenKey
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} CoinmPutListenKey
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} CoinmDeleteListenKey
+ * @property {Number} [recvWindow]
+ */

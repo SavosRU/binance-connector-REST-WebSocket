@@ -297,3 +297,19 @@
  * @property {String} underlyings
  * @property {Number} [recvWindow]
  */
+
+// ############# Listen Key
+/**
+ * @typedef {Object} EuOptionsPostListenKey
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} EuOptionsPutListenKey
+ * @property {Number} [recvWindow]
+ */
+
+/**
+ * @typedef {Object} EuOptionsDeleteListenKey
+ * @property {Number} [recvWindow]
+ */

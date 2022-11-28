@@ -277,4 +277,26 @@ export class EuOptions {
      async newCountdownCancelAllHeartBeat(params) {
         return await this.http.privateGET("/eapi/v1/countdownCancelAllHeartBeat", params)
     }
+
+    // ####################### ListenKey
+    /**
+     * @param { EuOptionsPostListenKey } [params]
+     */
+     async newListenKey(params) {
+        return await this.http.privatePOST("/eapi/v1/listenKey", params)
+    }
+
+    /**
+     * @param { EuOptionsPutListenKey } [params]
+     */
+    async keepAliveListenKey(params) {
+        return await this.http.privatePUT("/eapi/v1/listenKey", params)
+    }
+
+    /**
+     * @param { EuOptionsDeleteListenKey } [params]
+     */
+    async deleteListenKey(params) {
+        return await this.http.privateDELETE("/eapi/v1/listenKey", params)
+    }
 }

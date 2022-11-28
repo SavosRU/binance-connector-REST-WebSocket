@@ -426,4 +426,26 @@ export class CoinM {
      async pmAccountInfo(params) {
         return await this.http.publicGET("/dapi/v1/pmAccountInfo", params)
     }
+
+    // ####################### ListenKey
+    /**
+     * @param { CoinmPostListenKey } [params]
+     */
+    async newListenKey(params) {
+        return await this.http.privatePOST("/dapi/v1/listenKey", params)
+    }
+
+    /**
+     * @param { CoinmPutListenKey } [params]
+     */
+    async keepAliveListenKey(params) {
+        return await this.http.privatePUT("/dapi/v1/listenKey", params)
+    }
+
+    /**
+     * @param { CoinmDeleteListenKey } [params]
+     */
+    async deleteListenKey(params) {
+        return await this.http.privateDELETE("/dapi/v1/listenKey", params)
+    }
 }
