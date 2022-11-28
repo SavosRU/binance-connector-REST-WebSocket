@@ -2,10 +2,6 @@ import { Websocket } from "./websocket.js"
 import { Http } from "./http.js"
 import("../types/spot.types.js")
 
-/**
- * @TODO https://binance-docs.github.io/apidocs/spot/en/#websocket-blvt-info-streams
- */
-
 export class Spot {
     
     ApiMap = {
