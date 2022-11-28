@@ -1294,56 +1294,56 @@ export class Spot {
     // ########### Public
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {SpotPostFuturesTransfer} [params]
      */
      async newFuturesTransfer(params) {
         return await this.http.privatePOST("/sapi/v1/futures/transfer", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotFuturesTransfer} [params]
      */
      async futuresTransfer(params) {
         return await this.http.privateGET("/sapi/v1/futures/transfer", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotFuturesLoanBorrowHistory} [params]
      */
      async futuresLoanBorrowHistory(params) {
         return await this.http.privateGET("/sapi/v1/futures/loan/borrow/history", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotFuturesLoanRepayHistory} [params]
      */
      async futuresLoanRepayHistory(params) {
         return await this.http.privateGET("/sapi/v1/futures/loan/repay/history", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotFuturesLoanWallet} [params]
      */
      async futuresLoanWallet(params) {
         return await this.http.privateGET("/sapi/v2/futures/loan/wallet", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotFuturesLoanAdjustCollateralHistory} [params]
      */
      async futuresLoanAdjustCollateralHistory(params) {
         return await this.http.privateGET("/sapi/v1/futures/loan/adjustCollateral/history", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotFuturesLoanLiquidationHistory} [params]
      */
      async futuresLoanLiquidationHistory(params) {
         return await this.http.privateGET("/sapi/v1/futures/loan/liquidationHistory", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotFuturesLoanInterestHistory} [params]
      */
      async futuresLoanInterestHistory(params) {
         return await this.http.privateGET("/sapi/v1/futures/loan/interestHistory", params)
