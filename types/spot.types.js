@@ -11,8 +11,58 @@
 
 // ################################### API
 // ########### ENUM
-// 
+/**
+ * @typedef {"PRE_TRADING" |"TRADING" | "POST_TRADING" | "END_OF_DAY" | "HALT" | "AUCTION_MATCH" | "BREAK"} EnumSpotSymbolStatus
+ */
+ 
+/**
+ * @typedef {"SPOT" | "MARGIN" | "LEVERAGED" | "TRD_GRP_002" | "TRD_GRP_003" | "TRD_GRP_004" | "TRD_GRP_005"} EnumSpotPermissions
+ */
 
+/**
+ * @typedef {"NEW" | "PARTIALLY_FILLED" | "FILLED" | "CANCELED" | "PENDING_CANCEL" | "REJECTED" | "EXPIRED"} EnumSpotOrderStatus
+ */
+
+/**
+ * @typedef {"RESPONSE" | "EXEC_STARTED" | "ALL_DONE"} EnumSpotListStatusType
+ */
+
+/**
+ * @typedef {"EXECUTING" | "ALL_DONE" | "REJECT"} EnumSpotListOrderStatus
+ */
+
+/**
+ * @typedef {"OCO"} EnumSpotContingencyType
+ */
+ 
+/**
+ * @typedef {"LIMIT" | "MARKET" | "STOP_LOSS" | "STOP_LOSS_LIMIT" | "TAKE_PROFIT" | "TAKE_PROFIT_LIMIT" | "LIMIT_MAKER"} EnumSpotOrderTypes
+ */
+
+/**
+ * @typedef {"ACK" | "RESULT" | "FULL"} EnumSpotNewOrderRespType
+ */
+
+/**
+ * @typedef {"BUY" | "SELL"} EnumSpotOrderSide
+ */
+
+/**
+ * @typedef {"GTC" | "IOC" | "FOK"} EnumSpotTimeInForce
+ */
+
+/**
+ * @typedef {"1s" | "1m" | "3m" | "5m" | "15m" | "30m" | "1h" | "2h" | "4h" | "6h" | "8h" | "12h" | "1d" | "3d" | "1w" | "1M"} EnumSpotIntervals
+ */
+
+/**
+ * @typedef {"REQUEST_WEIGHT" | "ORDERS" | "RAW_REQUESTS"} EnumSpotRateLimitType
+ */
+ 
+/**
+ * @typedef {"SECOND" | "MINUTE" | "DAY"} EnumSpotRateLimitIntervals
+ */
+// ########### no class
 /**
  * @typedef {Object} SpotJustRecvWindow
  * @property {Number} [recvWindow]
