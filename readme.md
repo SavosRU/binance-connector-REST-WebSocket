@@ -141,6 +141,7 @@ Run()
 | Futures       | Futures API        | Completed     | [Futures](https://binance-docs.github.io/apidocs/futures/en/) |
 | Coin-M        | Coin-M API         | Completed     | [Coin-M](https://binance-docs.github.io/apidocs/delivery/en/) |
 | Options       | European API       | Completed     | [Options](https://binance-docs.github.io/apidocs/voptions/en/) |
+| BLVT Streams  | BLVT Streams       | Completed     | [BLVT](https://binance-docs.github.io/apidocs/spot/en/#websocket-blvt-info-streams) |
 | Websocket     | Abstract Websocket | Completed     | |
 | Http          | Abstract Http      | Completed     | |
 
