@@ -429,51 +429,76 @@
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPositionRisk
+ * @property {String} [marginAsset]
+ * @property {String} [pair]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmUserTrades
+ * @property {String} [symbol]
+ * @property {String} [pair]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [fromId]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmIncome
+ * @property {String} [symbol]
+ * @property {"TRANSFER" | "WELCOME_BONUS" | "FUNDING_FEE" | "REALIZED_PNL" | "COMMISSION" | "INSURANCE_CLEAR" | "DELIVERED_SETTELMENT"} [incomeType]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmLeverageBracket
+ * @property {String} [pair]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmLeverageBracket
+ * @property {String} [symbol]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmForceOrders
+ * @property {String} [symbol]
+ * @property {"LIQUIDATION" | "ADL"} [autoCloseType]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmAdlQuantile
+ * @property {String} [symbol]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmCommissionRate
+ * @property {String} symbol
  * @property {Number} [recvWindow]
  */
 // ########### Portfolio Margin Endpoints
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPmExchangeInfo
+ * @property {String} [symbol]
+ * @property {String} [pair]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPmAccountInfo
+ * @property {String} asset
  * @property {Number} [recvWindow]
  */
