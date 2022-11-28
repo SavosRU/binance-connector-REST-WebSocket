@@ -2,10 +2,6 @@ import { EventEmitter } from "events"
 import { WebSocket as WsClient } from "ws"
 import("../types/websocket.types.js")
 
-/**
- * @TODO - add reconnect
- */
-
 export class Websocket extends EventEmitter {
 
     wsTopics = new Map()
