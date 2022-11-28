@@ -24,14 +24,10 @@ export class BlvtStream {
         }
 
         // Coming from constructor
-        this.api_key    = options.api_key
-        this.api_secret = options.api_secret
         this.recvWindow = options.recvWindow
-        this.isTestNet  = options.isTestNet
 
         // Default values
         this.recvWindow = this.recvWindow ?? 5000
-        this.isTestNet  = this.isTestNet  ?? false
         
         if (!OPTIONS.recvWindow) {
             OPTIONS.recvWindow = this.recvWindow
