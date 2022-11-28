@@ -152,77 +152,77 @@ export class EuOptions {
     }
 
     /**
-     * @param {BatchOrders} [params]
+     * @param {EuOptionsPostBatchOrders} [params]
      */
      async newBatchOrders(params) {
         return await this.http.privatePOST("/eapi/v1/batchOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsDeleteOrder} [params]
      */
      async deleteOrder(params) {
         return await this.http.privateDELETE("/eapi/v1/order", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsDeleteBatchOrders} [params]
      */
      async deleteBatchOrders(params) {
         return await this.http.privateDELETE("/eapi/v1/batchOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsDeleteAllOpenOrdersByUnderlying} [params]
      */
      async deleteAllOpenOrders(params) {
         return await this.http.privateDELETE("/eapi/v1/allOpenOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsDeleteAllOpenOrdersByUnderlying} [params]
      */
      async deleteAllOpenOrdersByUnderlying(params) {
         return await this.http.privateDELETE("/eapi/v1/allOpenOrdersByUnderlying", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsOpenOrders} [params]
      */
      async openOrders(params) {
         return await this.http.privateGET("/eapi/v1/openOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsHistoryOrders} [params]
      */
      async historyOrders(params) {
         return await this.http.privateGET("/eapi/v1/historyOrders", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsPosition} [params]
      */
      async position(params) {
         return await this.http.privateGET("/eapi/v1/position", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsUserTrades} [params]
      */
      async userTrades(params) {
         return await this.http.privateGET("/eapi/v1/userTrades", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsExerciseRecord} [params]
      */
      async exerciseRecord(params) {
         return await this.http.privateGET("/eapi/v1/exerciseRecord", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {EuOptionsBill} [params]
      */
      async bill(params) {
         return await this.http.privateGET("/eapi/v1/bill", params)
@@ -230,49 +230,49 @@ export class EuOptions {
     // ########################################### Market Maker Endpoints
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {EuOptionsMarginAccount} [params]
      */
      async marginAccount(params) {
         return await this.http.privateGET("/eapi/v1/marginAccount", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {EuOptionsPostMmpReset} [params]
      */
      async newMmpSet(params) {
         return await this.http.privatePOST("/eapi/v1/mmpSet", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {EuOptionsMmp} [params]
      */
      async mmp(params) {
         return await this.http.privateGET("/eapi/v1/mmp", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {EuOptionsPostMmpReset} [params]
      */
      async newMmpReset(params) {
         return await this.http.privatePOST("/eapi/v1/mmpReset", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {EuOptionsPostCountdownCancelAll} [params]
      */
      async newCountdownCancelAll(params) {
         return await this.http.privatePOST("/eapi/v1/countdownCancelAll", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {EuOptionsCountdownCancelAll} [params]
      */
      async countdownCancelAll(params) {
         return await this.http.privateGET("/eapi/v1/countdownCancelAll", params)
     }
     
     /**
-     * @param {} [params]
+     * @param {EuOptionsPostCountdownCancelAllHeartBeat} [params]
      */
      async newCountdownCancelAllHeartBeat(params) {
         return await this.http.privateGET("/eapi/v1/countdownCancelAllHeartBeat", params)

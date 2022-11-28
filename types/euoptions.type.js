@@ -156,7 +156,7 @@
  */
 
 /**
- * @typedef {Object} EuOptionsBatchOrders 
+ * @typedef {Object} EuOptionsPostBatchOrders 
  * @property {EuOptionsPostOrder} orders
  * @property {Number} [recvWindow]
  */
