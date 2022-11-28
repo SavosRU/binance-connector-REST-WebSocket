@@ -1835,61 +1835,114 @@
 // ########### Crypto Loans
 /**
  * @typedef {Object} SpotLoanIncome
+ * @property {Number} [asset]
+ * @property {"borrowIn" | "collateralSpent" | "repayAmount" | "collateralReturn" | "addCollateral" | "removeCollateral" | "collateralReturnAfterLiquidation"} [type]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostLoanBorrow
+ * @property {String} loanCoin
+ * @property {Number} [loanAmount]
+ * @property {String} collateralCoin
+ * @property {Number} [collateralAmount]
+ * @property {7 | 14 | 30 | 90 |180} loanTerm // 7/14/30/90/180 days
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotLoanBorrowHistory
+ * @property {Number} [orderId]
+ * @property {String} [loanCoin]
+ * @property {String} [collateralCoin]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotLoanOngoingOrders
+ * @property {Number} [orderId]
+ * @property {String} [loanCoin]
+ * @property {String} [collateralCoin]
+ * @property {Number} [current]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostLoanRepay
+ * @property {Number} orderId
+ * @property {Number} amount
+ * @property {1 | 2} [type]
+ * @property {Boolean} [collateralReturn]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotLoanRepayHistory
+ * @property {Number} [orderId]
+ * @property {String} [loanCoin]
+ * @property {String} [collateralCoin]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostLoanAdjustLtv
+ * @property {Number} orderId
+ * @property {Number} amount
+ * @property {"ADDITIONAL" | "REDUCED"} direction
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotLoanLtvAdjustmentHistory
+ * @property {Number} [orderId]
+ * @property {String} [loanCoin]
+ * @property {String} [collateralCoin]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [current]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotLoanLoanableData
+ * @property {String} [loanCoin]
+ * @property {Number} [vipLevel]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotLoanCollateralData
+ * @property {String} [collateralCoin]
+ * @property {Number} [vipLevel]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotLoanRepayCollateralRate
+ * @property {String} loanCoin
+ * @property {String} collateralCoin
+ * @property {Number} repayAmount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostLoanCustomizeMarginCall
+ * @property {Number} [orderId]
+ * @property {String} [collateralCoin]
+ * @property {Number} marginCall
  * @property {Number} [recvWindow]
  */
 // ########### Pay
