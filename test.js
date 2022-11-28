@@ -19,8 +19,9 @@ let fu = new Futures({
 
 async function Run() {
     let a = spot.klines({
-        
+        interval: "1s",
+        symbol: "BTCUSDT", 
+        limit: 5
     })
-
 }
 Run()
