@@ -1426,42 +1426,42 @@ export class Spot {
     // ########### Public
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {SpotBlvtTokenInfo} [params]
      */
      async blvtTokenInfo(params) {
         return await this.http.privateGET("/sapi/v1/blvt/tokenInfo", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostBlvtSubscribe} [params]
      */
      async newBlvtSubscribe(params) {
         return await this.http.privatePOST("/sapi/v1/blvt/subscribe", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBlvtSubscribeRecord} [params]
      */
      async blvtSubscribeRecord(params) {
         return await this.http.privateGET("/sapi/v1/blvt/subscribe/record", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostBlvtRedeem} [params]
      */
      async newBlvtRedeem(params) {
         return await this.http.privatePOST("/sapi/v1/blvt/redeem", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBlvtRedeemRecord} [params]
      */
      async blvtRedeemRecord(params) {
         return await this.http.privateGET("/sapi/v1/blvt/redeem/record", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBlvtUserLimit} [params]
      */
      async blvtUserLimit(params) {
         return await this.http.privateGET("/sapi/v1/blvt/userLimit", params)
