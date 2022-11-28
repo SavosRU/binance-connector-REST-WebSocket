@@ -1461,386 +1461,377 @@
  */
 // ########### Futures
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostFuturesTransfer
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotFuturesTransfer
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotFuturesLoanBorrowHistory
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotFuturesLoanRepayHistory
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotFuturesLoanWallet
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotFuturesLoanAdjustCollateralHistory
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotFuturesLoanLiquidationHistory
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotFuturesLoanInterestHistory
  * @property {Number} [recvWindow]
  */
 // ########### Futures Algo
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostAlgoFuturesNewOrderVp
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostAlgoFuturesNewOrderTwap
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotDeleteAlgoFuturesOrder
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotAlgoFuturesOpenOrders
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotAlgoFuturesHistoricalOrders
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotAlgoFuturesSubOrders
  * @property {Number} [recvWindow]
  */
 // ########### Portfolio
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPortfolioAccount
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPortfolioCollateralRate
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPortfolioPmLoan
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostPortfolioRepay
  * @property {Number} [recvWindow]
  */
 // ########### BLVT
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBlvtTokenInfo
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * Historical BLVT NAV Kline/Candlestick
+ * @typedef {Object} SpotNoneNone
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostBlvtSubscribe
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBlvtSubscribeRecord
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostBlvtRedeem
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBlvtRedeemRecord
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
- * @property {Number} [recvWindow]
- */
-
-/**
- * @typedef {Object} Spot
- * @property {Number} [recvWindow]
- */
-
-/**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBlvtUserLimit
  * @property {Number} [recvWindow]
  */
 // ########### BSwap
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBswapPools
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBswapLiquidity
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostBswapLiquidityAdd
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostBswapLiquidityRemove
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBswapLiquidityOps
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBswapQuote
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostBswapSwap
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBswapSwap
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBswapPoolConfigure
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBswapAddLiquidityPreview
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBswapRemoveLiquidityPreview
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBswapUnclaimedRewards
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostBswapClaimRewards
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotBswapClaimedHistory
  * @property {Number} [recvWindow]
  */
 // ########### Fiat
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotFiatOrders
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotFiatPayments
  * @property {Number} [recvWindow]
  */
 // ########### C2C
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotC2cOrderMatchListUserOrderHistory
  * @property {Number} [recvWindow]
  */
 // ########### VIP Loans
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotLoanVipOngoingOrders
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostLoanVipRepay
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotLoanVipRepayHistory
  * @property {Number} [recvWindow]
  */
 // ########### Crypto Loans
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotLoanIncome
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostLoanBorrow
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotLoanBorrowHistory
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotLoanOngoingOrders
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostLoanRepay
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotLoanRepayHistory
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostLoanAdjustLtv
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotLoanLtvAdjustmentHistory
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotLoanLoanableData
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotLoanCollateralData
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotLoanRepayCollateralRate
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostLoanCustomizeMarginCall
  * @property {Number} [recvWindow]
  */
 // ########### Pay
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPayTransactions
  * @property {Number} [recvWindow]
  */
 // ########### Convert
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotConvertExchangeInfo
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotConvertAssetInfo
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostConvertGetQuote
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostConvertAcceptQuote
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotConvertOrderStatus
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotConvertTradeFlow
  * @property {Number} [recvWindow]
  */
 // ########### Rebate
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotRebateTaxQuery
  * @property {Number} [recvWindow]
  */
 // ########### NFT
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotNftHistoryTransactions
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotNftHistoryDeposit
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotNftHistoryWithdraw
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotNftUserGetAsset
  * @property {Number} [recvWindow]
  */
 // ########### Binance Code
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostGiftcardCreateCode
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostGiftcardRedeemCode
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotGiftcardVerify
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotGiftcardCryptographyRsaPublicKey
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotPostGiftcardBuyCode
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Spot
+ * @typedef {Object} SpotGiftcardBuyCodeTokenLimit
  * @property {Number} [recvWindow]
  */
