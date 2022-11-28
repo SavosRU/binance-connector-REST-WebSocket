@@ -21,62 +21,7 @@ export class Http {
     /**
      * @type {HttpRequest}
      */
-     async simpleRequest(address, params = {}) {
-        try {
-            if (this.isTestNet) {
-                console.log("## Test Net Request ##")
-                address = this.baseURLTest + address
-            } else {
-                address = this.baseURL + address
-            }
-
-            const queries = {
-                ...params,
-            }
-
-            let queryToString = Object.keys(queries)
-                .map((key) => {
-                    let value = queries[key]
-
-                    if (value instanceof Array) {
-                        value = JSON.stringify(value)
-                        value = encodeURI(value)
-                    }
-                    return `${key}=${value}`
-                })
-                .join("&")
-
-            address = address + "?" + queryToString
-
-            let data = await fetch(address, {
-                method: "GET",
-            })
-
-            if (data.status == 404) {
-                throw new Error("404 not found")
-            } else if (data.status == 406) {
-                throw new Error("Client error 406: something you should fix")
-            }
-
-            let body = await data.json()
-            // console.log(body)
-            return body
-
-        } catch (error) {
-            let errorMessage = {
-                name: error.name,
-                message: error.message,
-                stack: error.stack,
-            }
-
-            return errorMessage
-        }
-    }
-
-    /**
-     * @type {HttpRequest}
-     */
-    async request(method, address, params = {}, isPrivate = false) {
+    async request(method, address, params = {}, isPrivate = false, noTimestampAndRecvWindow=false) {
         try {
             if (this.isTestNet) {
                 console.log("## Test Net Request ##")
@@ -91,10 +36,15 @@ export class Http {
                 delete params.recvWindow
             }
 
-            const queries = {
+            let queries = {
                 ...params,
                 timestamp: this.timestamp,
                 recvWindow,
+            }
+
+            if (noTimestampAndRecvWindow) {
+                delete queries.timestamp
+                delete queries.recvWindow
             }
 
             let queryToString = Object.keys(queries)
@@ -107,7 +57,7 @@ export class Http {
                     }
                     return `${key}=${value}`
                 })
-                .join("&")
+                .join("&");
 
             let headers = {}
             
@@ -156,6 +106,64 @@ export class Http {
         }
     }
 
+    // ############## Requests without timestamp & recvWindow
+    /**
+     * @type {HttpPublic}
+     */
+    async simplePublicGET(address, params = {}) {
+        return await this.request("GET", address, params, false, true)
+    }
+
+    /**
+     * @type {HttpPublic}
+     */
+    async simplePublicPOST(address, params = {}) {
+        return await this.request("POST", address, params, false, true)
+    }
+
+    /**
+     * @type {HttpPublic}
+     */
+    async simplePublicPUT(address, params = {}) {
+        return await this.request("PUT", address, params, false, true)
+    }
+
+    /**
+     * @type {HttpPublic}
+     */
+    async simplePublicDELETE(address, params = {}) {
+        return await this.request("DELETE", address, params, false, true)
+    }
+
+
+    /**
+     * @type {HttpPrivate}
+     */
+    async simplePrivateGET(address, params={}) {
+        return await this.request("GET", address, params, true, true)
+    }
+
+    /**
+     * @type {HttpPrivate}
+     */
+    async simplePrivatePOST(address, params={}) {
+        return await this.request("POST", address, params, true, true)
+    }
+
+    /**
+     * @type {HttpPrivate}
+     */
+    async simplePrivatePUT(address, params={}) {
+        return await this.request("PUT", address, params, true, true)
+    }
+
+    /**
+     * @type {HttpPrivate}
+     */
+    async simplePrivateDELETE(address, params={}) {
+        return await this.request("DELETE", address, params, true, true)
+    }
+    // ############## Full Requests
     /**
      * @type {HttpPublic}
      */

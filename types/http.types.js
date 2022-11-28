@@ -21,6 +21,7 @@
  * @param {String} address https://fapi.binance.com/fapi/v1/ping
  * @param {Object} params
  * @param {Boolean} isPrivate
+ * @param {Boolean} noTimestampAndRecvWindow
  * @returns {Promise}
  */
 

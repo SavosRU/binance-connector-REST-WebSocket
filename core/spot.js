@@ -520,98 +520,98 @@ export class Spot {
      * @param {SpotPing} [params]
      */
      async ping() {
-        return await this.http.simpleRequest("/api/v3/ping", {})
+        return await this.http.simplePublicGET("/api/v3/ping", {})
     }
 
     /**
      * @param {SpotTime} [params]
      */
      async time() {
-        return await this.http.simpleRequest("/api/v3/time", {})
+        return await this.http.simplePublicGET("/api/v3/time", {})
     }
 
     /**
      * @param {SpotExchangeInfo} params
      */
      async exchangeInfo(params) {
-        return await this.http.simpleRequest("/api/v3/exchangeInfo", params)
+        return await this.http.simplePublicGET("/api/v3/exchangeInfo", params)
     }
 
     /**
      * @param {SpotDepth} params
      */
      async depth(params) {
-        return await this.http.simpleRequest("/api/v3/depth", params)
+        return await this.http.simplePublicGET("/api/v3/depth", params)
     }
 
     /**
      * @param {SpotTrades} params
      */
      async trades(params) {
-        return await this.http.simpleRequest("/api/v3/trades", params)
+        return await this.http.simplePublicGET("/api/v3/trades", params)
     }
 
     /**
      * @param {SpotHistoricalTrades} params
      */
      async historicalTrades(params) {
-        return await this.http.simpleRequest("/api/v3/historicalTrades", params)
+        return await this.http.simplePublicGET("/api/v3/historicalTrades", params)
     }
 
     /**
      * @param {SpotAggTrades} params
      */
      async aggTrades(params) {
-        return await this.http.simpleRequest("/api/v3/aggTrades", params)
+        return await this.http.simplePublicGET("/api/v3/aggTrades", params)
     }
 
     /**
      * @param {SpotKlines} params
      */
      async klines(params) {
-        return await this.http.simpleRequest("/api/v3/klines", params)
+        return await this.http.simplePublicGET("/api/v3/klines", params)
     }
 
     /**
      * @param {SpotUiKlines} params
      */
      async uiKlines(params) {
-        return await this.http.simpleRequest("/api/v3/uiKlines", params)
+        return await this.http.simplePublicGET("/api/v3/uiKlines", params)
     }
 
     /**
      * @param {SpotAvgPrice} params
      */
      async avgPrice(params) {
-        return await this.http.simpleRequest("/api/v3/avgPrice", params)
+        return await this.http.simplePublicGET("/api/v3/avgPrice", params)
     }
 
     /**
      * @param {SpotTicker24hr} params
      */
      async ticker24hr(params) {
-        return await this.http.simpleRequest("/api/v3/ticker/24hr", params)
+        return await this.http.simplePublicGET("/api/v3/ticker/24hr", params)
     }
 
     /**
      * @param {SpotTickerPrice} params
      */
      async tickerPrice(params) {
-        return await this.http.simpleRequest("/api/v3/ticker/price", params)
+        return await this.http.simplePublicGET("/api/v3/ticker/price", params)
     }
 
     /**
      * @param {SpotTickerBookTicker} params
      */
      async tickerBookTicker(params) {
-        return await this.http.simpleRequest("/api/v3/ticker/bookTicker", params)
+        return await this.http.simplePublicGET("/api/v3/ticker/bookTicker", params)
     }
 
     /**
      * @param {SpotTicker} params
      */
      async ticker(params) {
-        return await this.http.simpleRequest("/api/v3/ticker", params)
+        return await this.http.simplePublicGET("/api/v3/ticker", params)
     }
     // ########################################### Spot Account/Trade
     // ########### Private
@@ -1822,62 +1822,62 @@ export class Spot {
      * @param { SpotPostListenKeySPOT } [params]
      */
     async newListenKeySPOT(params) {
-        return await this.http.privatePOST("/api/v3/userDataStream", params)
+        return await this.http.simplePublicPOST("/api/v3/userDataStream", params)
     }
 
     /**
      * @param { SpotPutListenKeySPOT} [params]
      */
     async keepAliveListenKeySPOT(params) {
-        return await this.http.privatePUT("/api/v3/userDataStream", params)
+        return await this.http.simplePublicPUT("/api/v3/userDataStream", params)
     }
 
     /**
      * @param { SpotDeleteListenKeySPOT } [params]
      */
     async deleteListenKeySPOT(params) {
-        return await this.http.privateDELETE("/api/v3/userDataStream", params)
+        return await this.http.simplePublicDELETE("/api/v3/userDataStream", params)
     }
     // ###### Listen Key - Margin
     /**
      * @param { SpotPostListenKeyMARGIN } [params]
      */
      async newListenKeyMARGIN(params) {
-        return await this.http.privatePOST("/sapi/v1/userDataStream", params)
+        return await this.http.simplePublicPOST("/sapi/v1/userDataStream", params)
     }
 
     /**
      * @param { SpotPutListenKeyMARGIN } [params]
      */
     async keepAliveListenKeyMARGIN(params) {
-        return await this.http.privatePUT("/sapi/v1/userDataStream", params)
+        return await this.http.simplePublicPUT("/sapi/v1/userDataStream", params)
     }
 
     /**
      * @param { SpotDeleteListenKeyMARGIN } [params]
      */
     async deleteListenKeyMARGIN(params) {
-        return await this.http.privateDELETE("/sapi/v1/userDataStream", params)
+        return await this.http.simplePublicDELETE("/sapi/v1/userDataStream", params)
     }
     // ###### Listen Key - Isolated Margin
     /**
      * @param { SpotPostListenKeyISOMARGIN } [params]
      */
      async newListenKeyISOMARGIN(params) {
-        return await this.http.privatePOST("/sapi/v1/userDataStream/isolated", params)
+        return await this.http.simplePublicPOST("/sapi/v1/userDataStream/isolated", params)
     }
 
     /**
      * @param { SpotPutListenKeyISOMARGIN } [params]
      */
     async keepAliveListenKeyISOMARGIN(params) {
-        return await this.http.privatePUT("/sapi/v1/userDataStream/isolated", params)
+        return await this.http.simplePublicPUT("/sapi/v1/userDataStream/isolated", params)
     }
 
     /**
      * @param { SpotDeleteListenKeyISOMARGIN } [params]
      */
     async deleteListenKeyISOMARGIN(params) {
-        return await this.http.privateDELETE("/sapi/v1/userDataStream/isolated", params)
+        return await this.http.simplePublicDELETE("/sapi/v1/userDataStream/isolated", params)
     }
 }

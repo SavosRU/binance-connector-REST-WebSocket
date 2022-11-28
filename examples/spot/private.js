@@ -13,22 +13,23 @@ async function Run() {
 
     // ##### Websocket
     // 1- listenKey
-    let newListenKey = await spot.newListenKeySPOT()
-    let listenKey    = newListenKey.listenKey
-    console.log(newListenKey)
+    let listenKeySpot = await spot.newListenKeySPOT()
+    // let listenKeyMargin = await spot.newListenKeyMARGIN()
+    // let listenKeyIsoMargin = await spot.newListenKeyISOMARGIN()
+    listenKeySpot = listenKeySpot.listenKey
 
-    // // 2- subscribe
-    // spot.ws.userStream(listenKey, "USER_DATA")
+    // 2- subscribe
+    spot.ws.userStream(listenKeySpot, "USER_DATA")
 
-    // // 3- data
-    // spot.ws.addListener("USER_DATA", (socket, options) => {
-    //     socket.addEventListener("message", (event) => {
-    //         // Raw
-    //         let data = event.data
+    // 3- data
+    spot.ws.addListener("USER_DATA", (socket, options) => {
+        socket.addEventListener("message", (event) => {
+            // Raw
+            let data = event.data
 
-    //         // Parsed
-    //         data = JSON.parse(data)
-    //     })
-    // })
+            // Parsed
+            data = JSON.parse(data)
+        })
+    })
 }
 Run()
