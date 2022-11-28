@@ -3,6 +3,7 @@
 ![npm size](https://img.shields.io/bundlephobia/min/binance-connector/latest)
 ![npm downloads](https://img.shields.io/npm/dt/binance-connector)
 ![last commit](https://img.shields.io/github/last-commit/mhasanjb/binance-connector)
+[![Known Vulnerabilities](https://snyk.io/test/npm/binance-connector/badge.svg)](https://snyk.io/test/npm/binance-connector)
 
 ### Requirement
 `node 18.0.0` and higher    
