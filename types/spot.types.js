@@ -1609,6 +1609,7 @@
 // ########### BLVT
 /**
  * @typedef {Object} SpotBlvtTokenInfo
+ * @property {String} [tokenName]
  * @property {Number} [recvWindow]
  */
 
@@ -1620,26 +1621,41 @@
 
 /**
  * @typedef {Object} SpotPostBlvtSubscribe
+ * @property {String} tokenName
+ * @property {Number} cost
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotBlvtSubscribeRecord
+ * @property {String} [tokenName]
+ * @property {Number} [id]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostBlvtRedeem
+ * @property {String} tokenName
+ * @property {Number} [amount]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotBlvtRedeemRecord
+ * @property {String} [tokenName]
+ * @property {Number} [id]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotBlvtUserLimit
+ * @property {String} [tokenName]
  * @property {Number} [recvWindow]
  */
 // ########### BSwap
@@ -1650,66 +1666,111 @@
 
 /**
  * @typedef {Object} SpotBswapLiquidity
+ * @property {Number} [poolId]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostBswapLiquidityAdd
+ * @property {Number} poolId
+ * @property {"COMBINATION" | "SINGLE"} [type]
+ * @property {String} asset
+ * @property {Number} quantity
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostBswapLiquidityRemove
+ * @property {Number} poolId
+ * @property {"COMBINATION" | "SINGLE"} type
+ * @property {Array} [asset]
+ * @property {Number} shareAmount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotBswapLiquidityOps
+ * @property {Number} [operationId]
+ * @property {Number} [poolId]
+ * @property {"ADD" | "REMOVE"} [operation]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotBswapQuote
+ * @property {String} quoteAsset
+ * @property {String} baseAsset
+ * @property {Number} quoteQty
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostBswapSwap
+ * @property {String} quoteAsset
+ * @property {String} baseAsset
+ * @property {Number} quoteQty
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotBswapSwap
+ * @property {Number} [swapId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {0 | 1 | 2} [status]
+ * @property {String} [quoteAsset]
+ * @property {String} [baseAsset]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotBswapPoolConfigure
+ * @property {Number} [poolId]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotBswapAddLiquidityPreview
+ * @property {Number} poolId
+ * @property {"SINGLE" | "COMBINATION"} type
+ * @property {String} quoteAsset
+ * @property {Number} quoteQty
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotBswapRemoveLiquidityPreview
+ * @property {Number} poolId
+ * @property {"SINGLE" | "COMBINATION"} type
+ * @property {String} quoteAsset
+ * @property {Number} shareAmount
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotBswapUnclaimedRewards
+ * @property {0 | 1} [type]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotPostBswapClaimRewards
+ * @property {0 | 1} [type]
  * @property {Number} [recvWindow]
  */
 
 /**
  * @typedef {Object} SpotBswapClaimedHistory
+ * @property {Number} [poolId]
+ * @property {String} [assetRewards]
+ * @property {0 | 1} [type]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 // ########### Fiat
