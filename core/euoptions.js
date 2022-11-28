@@ -67,63 +67,63 @@ export class EuOptions {
     }
 
     /**
-     * @param {EuOptionsDepth} [params]
+     * @param {EuOptionsDepth} params
      */
     async depth(params) {
         return await this.http.publicGET("/eapi/v1/depth", params)
     }
 
     /**
-     * @param {EuOptionsTrades} [params]
+     * @param {EuOptionsTrades} params
      */
     async trades(params) {
         return await this.http.publicGET("/eapi/v1/trades", params)
     }
 
     /**
-     * @param {EuOptionsHistoricalTrades} [params]
+     * @param {EuOptionsHistoricalTrades} params
      */
     async historicalTrades(params) {
         return await this.http.publicGET("/eapi/v1/historicalTrades", params)
     }
 
     /**
-     * @param {EuOptionsKlines} [params]
+     * @param {EuOptionsKlines} params
      */
     async klines(params) {
         return await this.http.publicGET("/eapi/v1/klines", params)
     }
 
     /**
-     * @param {EuOptionsMark} [params]
+     * @param {EuOptionsMark} params
      */
     async mark(params) {
         return await this.http.publicGET("/eapi/v1/mark", params)
     }
 
     /**
-     * @param {EuOptionsTicker} [params]
+     * @param {EuOptionsTicker} params
      */
     async ticker(params) {
         return await this.http.publicGET("/eapi/v1/ticker", params)
     }
 
     /**
-     * @param {EuOptionsIndex} [params]
+     * @param {EuOptionsIndex} params
      */
     async index(params) {
         return await this.http.publicGET("/eapi/v1/index", params)
     }
 
     /**
-     * @param {EuOptionsExerciseHistory} [params]
+     * @param {EuOptionsExerciseHistory} params
      */
     async exerciseHistory(params) {
         return await this.http.publicGET("/eapi/v1/exerciseHistory", params)
     }
 
     /**
-     * @param {EuOptionsOpenInterest} [params]
+     * @param {EuOptionsOpenInterest} params
      */
     async openInterest(params) {
         return await this.http.publicGET("/eapi/v1/openInterest", params)
@@ -138,91 +138,91 @@ export class EuOptions {
     }
 
     /**
-     * @param {EuOptionPostTransfer} [params]
+     * @param {EuOptionPostTransfer} params
      */
      async newTransfer(params) {
         return await this.http.privatePOST("/eapi/v1/transfer", params)
     }
 
     /**
-     * @param {EuOptionsPostOrder} [params]
+     * @param {EuOptionsPostOrder} params
      */
      async newOrder(params) {
         return await this.http.privatePOST("/eapi/v1/order", params)
     }
 
     /**
-     * @param {EuOptionsPostBatchOrders} [params]
+     * @param {EuOptionsPostBatchOrders} params
      */
      async newBatchOrders(params) {
         return await this.http.privatePOST("/eapi/v1/batchOrders", params)
     }
 
     /**
-     * @param {EuOptionsDeleteOrder} [params]
+     * @param {EuOptionsDeleteOrder} params
      */
      async deleteOrder(params) {
         return await this.http.privateDELETE("/eapi/v1/order", params)
     }
 
     /**
-     * @param {EuOptionsDeleteBatchOrders} [params]
+     * @param {EuOptionsDeleteBatchOrders} params
      */
      async deleteBatchOrders(params) {
         return await this.http.privateDELETE("/eapi/v1/batchOrders", params)
     }
 
     /**
-     * @param {EuOptionsDeleteAllOpenOrdersByUnderlying} [params]
+     * @param {EuOptionsDeleteAllOpenOrdersByUnderlying} params
      */
      async deleteAllOpenOrders(params) {
         return await this.http.privateDELETE("/eapi/v1/allOpenOrders", params)
     }
 
     /**
-     * @param {EuOptionsDeleteAllOpenOrdersByUnderlying} [params]
+     * @param {EuOptionsDeleteAllOpenOrdersByUnderlying} params
      */
      async deleteAllOpenOrdersByUnderlying(params) {
         return await this.http.privateDELETE("/eapi/v1/allOpenOrdersByUnderlying", params)
     }
 
     /**
-     * @param {EuOptionsOpenOrders} [params]
+     * @param {EuOptionsOpenOrders} params
      */
      async openOrders(params) {
         return await this.http.privateGET("/eapi/v1/openOrders", params)
     }
 
     /**
-     * @param {EuOptionsHistoryOrders} [params]
+     * @param {EuOptionsHistoryOrders} params
      */
      async historyOrders(params) {
         return await this.http.privateGET("/eapi/v1/historyOrders", params)
     }
 
     /**
-     * @param {EuOptionsPosition} [params]
+     * @param {EuOptionsPosition} params
      */
      async position(params) {
         return await this.http.privateGET("/eapi/v1/position", params)
     }
 
     /**
-     * @param {EuOptionsUserTrades} [params]
+     * @param {EuOptionsUserTrades} params
      */
      async userTrades(params) {
         return await this.http.privateGET("/eapi/v1/userTrades", params)
     }
 
     /**
-     * @param {EuOptionsExerciseRecord} [params]
+     * @param {EuOptionsExerciseRecord} params
      */
      async exerciseRecord(params) {
         return await this.http.privateGET("/eapi/v1/exerciseRecord", params)
     }
 
     /**
-     * @param {EuOptionsBill} [params]
+     * @param {EuOptionsBill} params
      */
      async bill(params) {
         return await this.http.privateGET("/eapi/v1/bill", params)
@@ -237,42 +237,42 @@ export class EuOptions {
     }
     
     /**
-     * @param {EuOptionsPostMmpReset} [params]
+     * @param {EuOptionsPostMmpReset} params
      */
      async newMmpSet(params) {
         return await this.http.privatePOST("/eapi/v1/mmpSet", params)
     }
     
     /**
-     * @param {EuOptionsMmp} [params]
+     * @param {EuOptionsMmp} params
      */
      async mmp(params) {
         return await this.http.privateGET("/eapi/v1/mmp", params)
     }
     
     /**
-     * @param {EuOptionsPostMmpReset} [params]
+     * @param {EuOptionsPostMmpReset} params
      */
      async newMmpReset(params) {
         return await this.http.privatePOST("/eapi/v1/mmpReset", params)
     }
     
     /**
-     * @param {EuOptionsPostCountdownCancelAll} [params]
+     * @param {EuOptionsPostCountdownCancelAll} params
      */
      async newCountdownCancelAll(params) {
         return await this.http.privatePOST("/eapi/v1/countdownCancelAll", params)
     }
     
     /**
-     * @param {EuOptionsCountdownCancelAll} [params]
+     * @param {EuOptionsCountdownCancelAll} params
      */
      async countdownCancelAll(params) {
         return await this.http.privateGET("/eapi/v1/countdownCancelAll", params)
     }
     
     /**
-     * @param {EuOptionsPostCountdownCancelAllHeartBeat} [params]
+     * @param {EuOptionsPostCountdownCancelAllHeartBeat} params
      */
      async newCountdownCancelAllHeartBeat(params) {
         return await this.http.privateGET("/eapi/v1/countdownCancelAllHeartBeat", params)
