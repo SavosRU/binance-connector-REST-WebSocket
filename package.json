@@ -12,9 +12,9 @@
     "binance-sdk",
     "exchange",
     "websocket",
-    "binance-websocket",
+    "binance-websocket"
   ],
-  "author": "M.H Jabbari",
+  "author": "M H Jabbari",
   "license": "MIT",
   "dependencies": {
     "crypto-js": "^4.1.1",
