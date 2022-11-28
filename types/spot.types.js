@@ -12,6 +12,10 @@
 // ################################### API
 // ########### ENUM
 /**
+ * @typedef {"MAIN_UMFUTURE" | "MAIN_CMFUTURE" | "MAIN_MARGIN" | "UMFUTURE_MAIN" | "UMFUTURE_MARGIN" | "CMFUTURE_MAIN" | "CMFUTURE_MARGIN" | "MARGIN_MAIN" | "MARGIN_UMFUTURE" | "MARGIN_CMFUTURE" | "ISOLATEDMARGIN_MARGIN" | "MARGIN_ISOLATEDMARGIN" | "ISOLATEDMARGIN_ISOLATEDMARGIN" | "MAIN_FUNDING" | "FUNDING_MAIN" | "FUNDING_UMFUTURE" | "UMFUTURE_FUNDING" | "MARGIN_FUNDING" | "FUNDING_MARGIN" | "FUNDING_CMFUTURE" | "CMFUTURE_FUNDING"} EnumSpotTransferTypes
+ */
+
+/**
  * @typedef {"PRE_TRADING" |"TRADING" | "POST_TRADING" | "END_OF_DAY" | "HALT" | "AUCTION_MATCH" | "BREAK"} EnumSpotSymbolStatus
  */
  
@@ -193,7 +197,7 @@
 
 /**
  * @typedef {Object} SpotPostAssetTransfer
- * @property {} type #ENUM
+ * @property {EnumSpotTransferTypes} type
  * @property {String} asset
  * @property {Number} amount
  * @property {String} [fromSymbol]
@@ -203,7 +207,7 @@
 
 /**
  * @typedef {Object} SpotAssetTransfer
- * @property {} type #ENUM
+ * @property {EnumSpotTransferTypes} type
  * @property {Number} [startTime]
  * @property {Number} [endTime]
  * @property {Number} [current]
@@ -624,7 +628,7 @@
 /**
  * @typedef {Object} SpotKlines
  * @property {String} symbol
- * @property {} interval #ENUM
+ * @property {EnumSpotIntervals} interval
  * @property {Number} [startTime]
  * @property {Number} [endTime]
  * @property {Number} [limit]
@@ -634,7 +638,7 @@
 /**
  * @typedef {Object} SpotUiKlines
  * @property {String} symbol
- * @property {} interval #ENUM
+ * @property {EnumSpotIntervals} interval
  * @property {Number} [startTime]
  * @property {Number} [endTime]
  * @property {Number} [limit]
@@ -651,7 +655,7 @@
  * @typedef {Object} SpotTicker24hr
  * @property {String} [symbol]
  * @property {String} [symbols]
- * @property {} [type] #ENUM
+ * @property {"FULL" | "MINI"} [type]
  * @property {Number} [recvWindow]
  */
 
@@ -674,7 +678,7 @@
  * @typedef {Object} SpotTicker
  * @property {String} [symbol]
  * @property {String} [symbols]
- * @property {} [windowSize] #ENUM
+ * @property {String} [windowSize] 1m,2m....59m for minutes, 1h, 2h....23h - for hours, 1d...7d - for days
  * @property {"FULL" | "MINI"} [type]
  * @property {Number} [recvWindow]
  */
@@ -686,9 +690,9 @@
 /**
  * @typedef {Object} SpotPostOrder
  * @property {String} symbol
- * @property {} side #ENUM
- * @property {} type #ENUM
- * @property {} [timeInForce] #ENUM
+ * @property {EnumSpotOrderSide} side
+ * @property {EnumSpotOrderTypes} type
+ * @property {EnumSpotTimeInForce} [timeInForce]
  * @property {Number} quantity
  * @property {Number} [quoteOrderQty]
  * @property {Number} [price]
@@ -698,7 +702,7 @@
  * @property {Number} [stopPrice]
  * @property {Number} [trailingDelta]
  * @property {Number} [icebergQty]
- * @property {} [newOrderRespType] #ENUM
+ * @property {EnumSpotNewOrderRespType} [newOrderRespType]
  * @property {Number} [recvWindow]
  */
 
@@ -728,10 +732,10 @@
 /**
  * @typedef {Object} SpotPostCancelReplace
  * @property {String} symbol
- * @property {} side #ENUM
- * @property {} type #ENUM
- * @property {"STOP_ON_FAILURE" | "ALLOW_FAILURE"} cancelReplaceMode #ENUM
- * @property {} [timeInForce] #ENUM
+ * @property {EnumSpotOrderSide} side
+ * @property {EnumSpotOrderTypes} type
+ * @property {"STOP_ON_FAILURE" | "ALLOW_FAILURE"} cancelReplaceMode
+ * @property {EnumSpotTimeInForce} [timeInForce]
  * @property {Number} quantity
  * @property {Number} [quoteOrderQty]
  * @property {Number} [price]
@@ -744,7 +748,7 @@
  * @property {Number} [stopPrice]
  * @property {Number} [trailingDelta]
  * @property {Number} [icebergQty]
- * @property {} [newOrderRespType] #ENUM
+ * @property {EnumSpotNewOrderRespType} [newOrderRespType]
  * @property {Number} [recvWindow]
  */
 
@@ -768,7 +772,7 @@
  * @typedef {Object} SpotPostOrderOco
  * @property {String} symbol
  * @property {String} [listClientOrderId]
- * @property {} side #ENUM
+ * @property {EnumSpotOrderSide} side
  * @property {Number} quantity
  * @property {String} [limitClientOrderId]
  * @property {Number} [limitStrategyId]
@@ -782,9 +786,9 @@
  * @property {Number} [stopStrategyType]
  * @property {Number} [stopLimitPrice]
  * @property {Number} [stopIcebergQty]
- * @property {Number} [stopLimitTimeInForce] #ENUM
- * @property {} [newOrderRespType] #ENUM
- * @property {} [recvWindow]
+ * @property {EnumSpotTimeInForce} [stopLimitTimeInForce]
+ * @property {EnumSpotNewOrderRespType} [newOrderRespType]
+ * @property {Number} [recvWindow]
  */
 
 /**
@@ -896,17 +900,17 @@
  * @typedef {Object} SpotPostMarginOrder
  * @property {Number} symbol
  * @property {"TRUE" | "FALSE"} [isIsolated]
- * @property {"BUY" | "SELL"} side
- * @property {} type #ENUM
+ * @property {EnumSpotOrderSide} side
+ * @property {EnumSpotOrderTypes} type
  * @property {Number} [quantity]
  * @property {Number} [quoteOrderQty]
  * @property {Number} [price]
  * @property {Number} [stopPrice]
  * @property {String} [newClientOrderId]
  * @property {Number} [icebergQty]
- * @property {} [newOrderRespType] #ENUM
+ * @property {EnumSpotNewOrderRespType} [newOrderRespType]
  * @property {"NO_SIDE_EFFECT" | "MARGIN_BUY" | "AUTO_REPAY"} [sideEffectType]
- * @property {} [timeInForce] #ENUM
+ * @property {EnumSpotTimeInForce} [timeInForce]
  * @property {Number} [recvWindow]
  */
 
@@ -1023,7 +1027,7 @@
  * @property {String} symbol
  * @property {"TRUE" | "FALSE"} [isIsolated]
  * @property {String} [listClientOrderId]
- * @property {} side #ENUM
+ * @property {EnumSpotOrderSide} side
  * @property {Number} quantity
  * @property {String} [limitClientOrderId]
  * @property {Number} price
@@ -1032,9 +1036,9 @@
  * @property {Number} stopPrice
  * @property {Number} [stopLimitPrice]
  * @property {Number} [stopIcebergQty]
- * @property {} [stopLimitTimeInForce] #ENUM
- * @property {} [newOrderRespType] #ENUM
- * @property {"NO_SIDE_EFFECT" | "MARGIN_BUY" | "AUTO_REPAY"} [sideEffectType] #ENUM
+ * @property {EnumSpotTimeInForce} [stopLimitTimeInForce]
+ * @property {EnumSpotNewOrderRespType} [newOrderRespType]
+ * @property {"NO_SIDE_EFFECT" | "MARGIN_BUY" | "AUTO_REPAY"} [sideEffectType]
  * @property {Number} [recvWindow]
  */
 
