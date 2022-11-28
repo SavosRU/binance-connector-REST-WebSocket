@@ -9,6 +9,7 @@ async function Run() {
         symbol: "BTCUSD_PERP",
         limit: 10,
     })
+    console.log(depth)
 
     // ##### Websocket
     coin.ws.subscribe(["BTCUSD_200626@kline_1m"], 1)
@@ -20,6 +21,8 @@ async function Run() {
 
             // Parsed
             data = JSON.parse(data)
+
+            console.log(data)
         })
     })
 }

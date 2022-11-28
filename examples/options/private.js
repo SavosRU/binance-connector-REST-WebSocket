@@ -10,6 +10,7 @@ async function Run() {
     
     // ##### Rest
     let accountInfo = await options.account()
+    console.log(accountInfo)
 
     // ##### Websocket
     // 1- listenKey
@@ -27,6 +28,8 @@ async function Run() {
 
             // Parsed
             data = JSON.parse(data)
+
+            console.log(data)
         })
     })
 }

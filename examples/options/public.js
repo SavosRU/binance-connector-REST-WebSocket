@@ -9,6 +9,7 @@ async function Run() {
         symbol: "BTCUSDT",
         limit: 10,
     })
+    console.log(depth)
 
     // ##### Websocket
     options.ws.subscribe(["BTC-200630-9000-P@kline_1m"], 1)
@@ -20,6 +21,8 @@ async function Run() {
 
             // Parsed
             data = JSON.parse(data)
+
+            console.log(data)
         })
     })
 }
