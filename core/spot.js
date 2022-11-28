@@ -1470,98 +1470,98 @@ export class Spot {
     // ########### Public
     // ########### Private
     /**
-     * @param {} [params]
+     * @param {SpotBswapPools} [params]
      */
      async bswapPools(params) {
         return await this.http.privateGET("/sapi/v1/bswap/pools", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBswapLiquidity} [params]
      */
      async bswapLiquidity(params) {
         return await this.http.privateGET("/sapi/v1/bswap/liquidity", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostBswapLiquidityAdd} [params]
      */
      async newBswapLiquidityAdd(params) {
         return await this.http.privatePOST("/sapi/v1/bswap/liquidityAdd", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostBswapLiquidityRemove} [params]
      */
      async deleteBswapLiquidityRemove(params) {
         return await this.http.privatePOST("/sapi/v1/bswap/liquidityRemove", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBswapLiquidityOps} [params]
      */
      async bswapLiquidityOps(params) {
         return await this.http.privateGET("/sapi/v1/bswap/liquidityOps", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBswapQuote} [params]
      */
      async bswapQuote(params) {
         return await this.http.privateGET("/sapi/v1/bswap/quote", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostBswapSwap} [params]
      */
      async newBswapSwap(params) {
         return await this.http.privatePOST("/sapi/v1/bswap/swap", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBswapSwap} [params]
      */
      async bswapSwap(params) {
         return await this.http.privateGET("/sapi/v1/bswap/swap", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBswapPoolConfigure} [params]
      */
      async bswapPoolConfigure(params) {
         return await this.http.privateGET("/sapi/v1/bswap/poolConfigure", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBswapAddLiquidityPreview} [params]
      */
      async bswapAddLiquidityPreview(params) {
         return await this.http.privateGET("/sapi/v1/bswap/addLiquidityPreview", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBswapRemoveLiquidityPreview} [params]
      */
      async bswapRemoveLiquidityPreview(params) {
         return await this.http.privateGET("/sapi/v1/bswap/removeLiquidityPreview", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBswapUnclaimedRewards} [params]
      */
      async bswapUnclaimedRewards(params) {
         return await this.http.privateGET("/sapi/v1/bswap/unclaimedRewards", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotPostBswapClaimRewards} [params]
      */
      async newBswapClaimRewards(params) {
         return await this.http.privatePOST("/sapi/v1/bswap/claimRewards", params)
     }
 
     /**
-     * @param {} [params]
+     * @param {SpotBswapClaimedHistory} [params]
      */
      async bswapClaimedHistory(params) {
         return await this.http.privateGET("/sapi/v1/bswap/claimedHistory", params)
