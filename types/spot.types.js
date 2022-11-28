@@ -1948,6 +1948,9 @@
 // ########### Pay
 /**
  * @typedef {Object} SpotPayTransactions
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 // ########### Convert
