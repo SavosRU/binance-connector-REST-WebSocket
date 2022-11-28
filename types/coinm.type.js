@@ -256,117 +256,175 @@
  */
 // ########### Account/Trades Endpoints
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPostPositionSideDual
+ * @property {"true" | "false"} dualSidePosition "true": Hedge Mode; "false": One-way Mode
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPositionSideDual
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPostOrder
+ * @property {String} symbol
+ * @property {EnumCoinmOrderSide} side
+ * @property {EnumCoinmPositionSide} [positionSide]
+ * @property {EnumCoinmOrderType} type
+ * @property {EnumCoinmTimeInForce} [timeInForce]
+ * @property {Number} quantity
+ * @property {"true" | "false"} [reduceOnly]
+ * @property {Number} [price]
+ * @property {String} [newClientOrderId]
+ * @property {Number} [stopPrice]
+ * @property {"true" | "false"} [closePosition]
+ * @property {Number} [activationPrice]
+ * @property {Number} [callbackRate]
+ * @property {EnumCoinmWorkingType} [workingType]
+ * @property {String} [priceProtect]
+ * @property {EnumCoinmNewOrderRespType} [newOrderRespType]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPutOrder
+ * @property {Number} [orderId]
+ * @property {String} [origClientOrderId]
+ * @property {String} symbol
+ * @property {EnumCoinmOrderSide} side
+ * @property {Number} [quantity]
+ * @property {Number} [price]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPostBatchOrders
+ * @property {CoinmPostOrder} batchOrders
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPutBatchOrders
+ * @property {CoinmPutOrder} batchOrders
+ * @property {Number} [recvWindow]
+ */
+
+
+/**
+ * @typedef {Object} CoinmOrderAmendment
+ * @property {String} symbol
+ * @property {Number} [orderId]
+ * @property {String} [origClientOrderId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmOrder
+ * @property {String} symbol
+ * @property {Number} [orderId]
+ * @property {String} [origClientOrderId]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmDeleteOrder
+ * @property {String} symbol
+ * @property {Number} [orderId]
+ * @property {String} [origClientOrderId]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmDeleteAllOpenOrders
+ * @property {String} symbol
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmDeleteBatchOrders
+ * @property {String} symbol
+ * @property {Array<Number>} [orderIdList]
+ * @property {Array<String>} [origClientOrderIdList]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPostCountDownCancelAll
+ * @property {String} symbol
+ * @property {Number} countdownTime
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmOpenOrder
+ * @property {String} symbol
+ * @property {Number} [orderId]
+ * @property {String} [origClientOrderId]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmOpenOrders
+ * @property {String} [symbol]
+ * @property {String} [pair]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmAllOrders
+ * @property {String} [symbol]
+ * @property {String} [pair]
+ * @property {Number} [orderId]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmBalance
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmAccount
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPostLeverage
+ * @property {String} symbol
+ * @property {Number} leverage
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPostMarginType
+ * @property {String} symbol
+ * @property {"ISOLATED" | "CROSSED"} marginType
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPostPositionMargin
+ * @property {String} symbol
+ * @property {EnumCoinmPositionSide} [positionSide]
+ * @property {Number} amount
+ * @property {1 | 2} type
  * @property {Number} [recvWindow]
  */
 
 /**
- * @typedef {Object} Coinm
- * @property {Number} [recvWindow]
- */
-
-/**
- * @typedef {Object} Coinm
- * @property {Number} [recvWindow]
- */
-
-/**
- * @typedef {Object} Coinm
- * @property {Number} [recvWindow]
- */
-
-/**
- * @typedef {Object} Coinm
+ * @typedef {Object} CoinmPositionMarginHistory
+ * @property {String} symbol
+ * @property {1 | 2} [type]
+ * @property {Number} [startTime]
+ * @property {Number} [endTime]
+ * @property {Number} [limit]
  * @property {Number} [recvWindow]
  */
 
