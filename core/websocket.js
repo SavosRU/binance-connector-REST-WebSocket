@@ -4,7 +4,11 @@ import("../types/websocket.types.js")
 
 export class Websocket extends EventEmitter {
 
+    // for subscribing
     wsTopics = new Map()
+
+    // for connecting
+    wsLists = new Map()
 
     /**
      * @param {Constructor} options
@@ -17,6 +21,51 @@ export class Websocket extends EventEmitter {
         this.wsBaseURLTest  = options.wsBaseURLTest
         this.wsAuthURL      = options.wsAuthURL
         this.isTestNet      = options.isTestNet
+        this.reconnectSleep = options.reconnectSleep
+
+        // Default
+        if (!this.reconnectSleep) {
+            this.reconnectSleep = 3000
+        }
+    }
+    
+    // ######################################## Overwrite addListener & on JSDoc
+    /**
+     * @typedef WsApiOptions
+     * @property {String} api_key
+     * @property {String} api_secret
+     */
+
+    /**
+     * @callback WS
+     * @param {WsClient} socket
+     * @param {WsApiOptions} options
+     */
+
+    /**
+     * @param {"USER_DATA" | "DATA"} eventName or anything else
+     * @param {WS} callback
+     */
+     addListener(eventName, callback) {
+        super.addListener(eventName, callback)
+    }
+
+    /**
+     * @param {"USER_DATA" | "DATA"} eventName or anything else
+     * @param {WS} callback
+     */
+    on(eventName, callback) {
+        super.on(eventName, callback)
+    }
+    // ############################################
+
+    /**
+     * @param {Number} ms milliseconds
+     */
+    async sleep(ms) {
+        try {
+            return new Promise(resolve => setTimeout(resolve, ms))
+        } catch {}
     }
 
     /**
@@ -36,39 +85,9 @@ export class Websocket extends EventEmitter {
 
             ws.send(JSON.stringify(request))
             ws.close(1000, `Unsubscribed: ${request.params}`)
-            this.wsTopics.delete(wsID)
+            // this.wsTopics.delete(wsID) // @TODO: TEST
         }
     }
-
-    // ######################################## Overwrite addListener & on JSDoc
-    /**
-     * @typedef WsApiOptions
-     * @property {String} api_key
-     * @property {String} api_secret
-     */
-
-    /**
-     * @callback WS
-     * @param {WsClient} socket
-     * @param {WsApiOptions} options
-     */
-
-    /**
-     * @param {"USER_DATA" | "DATA"} eventName or anything else
-     * @param {WS} callback
-     */
-    addListener(eventName, callback) {
-        super.addListener(eventName, callback)
-    }
-
-    /**
-     * @param {"USER_DATA" | "DATA"} eventName or anything else
-     * @param {WS} callback
-     */
-    on(eventName, callback) {
-        super.on(eventName, callback)
-    }
-    // ############################################
     
     /**
      * 
@@ -92,15 +111,9 @@ export class Websocket extends EventEmitter {
         }
 
         ws.on("ping", (data) => {
-            // console.log(`${new Date()} - Binance Said: Ping`)
-            
             ws.ping()
             ws.pong()
         })
-
-        // ws.on("pong", (data) => {
-        //     // console.log("We Said: Pong")
-        // })
 
         ws.on("open", (event) => {
 
@@ -118,8 +131,31 @@ export class Websocket extends EventEmitter {
             })
         })
 
-        ws.on("close", (event) => console.log("Websocket Closed"))
-        ws.on("error", (event) => console.log("Error Happens"))
+        ws.on("close", (code, reason) => {
+            console.log(`Websocket Closed - Code: ${code} - Reason: ${reason}`)
+            
+            let wsReference = this.wsTopics.get(request.id)
+            if (wsReference) {
+                console.log(`Reconnecting after ${this.reconnectSleep} ms`)
+                this.sleep(this.reconnectSleep).then(() => {
+                    this.subscribe(params, request.id, eventName)
+                })
+            }
+        })
+
+        ws.on("error", (error) => console.log("Error Happens", error))
+    }
+
+    /**
+     * @param {String} path Example: "/ws/bnbusdt@aggTrade"
+     */
+    disconnect(path) {
+        let wsRef = this.wsLists.get(path)
+        if (wsRef.ws) {
+            let ws = wsRef.ws
+            ws.close()
+            this.wsLists.delete(path)
+        }
     }
 
     /**
@@ -139,16 +175,28 @@ export class Websocket extends EventEmitter {
         ws.on("open", (event) => {
             console.log(`Connection Opened for: ${path}`)
 
+            // Add to connection list
+            this.wsLists.set(path, {ws, eventName})
+            
             this.emit(eventName, ws, {
                 api_key: this.api_key,
                 api_secret: this.api_secret,
             })
         })
         
-        ws.on("close", (event) => {
-            console.log(`Connection closed for: ${path}`)
+        ws.on("close", (code, reason) => {
+            console.log(`Connection closed for: ${path} - Code: ${code} - Reason: ${reason}`)
+
+            let wsReference = this.wsLists.get(path)
+            if (wsReference) {
+                console.log(`Reconnecting after ${this.reconnectSleep} ms`)
+                this.sleep(this.reconnectSleep).then(() => {
+                    this.connect(path, eventName)
+                })
+            }
         })
 
+        ws.on("error", (error) => console.log("Error Happens", error))
     }
 
     /**

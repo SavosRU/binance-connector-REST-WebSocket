@@ -3,6 +3,7 @@
  * @typedef {Object} FuturesConstructor
  * @property {String} [api_key]
  * @property {String} [api_secret]
+ * @property {Number} [reconnectSleep]
  * @property {Number} [recvWindow]
  * @property {Boolean} [isTestNet]
  */
