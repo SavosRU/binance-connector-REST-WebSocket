@@ -85,7 +85,7 @@ export class Websocket extends EventEmitter {
 
             ws.send(JSON.stringify(request))
             ws.close(1000, `Unsubscribed: ${request.params}`)
-            // this.wsTopics.delete(wsID) // @TODO: TEST
+            this.wsTopics.delete(wsID)
         }
     }
     
