@@ -2,7 +2,7 @@ import { Websocket } from "./websocket.js"
 import("../types/blvtstream.type.js")
 
 /**
- * BLVT Streams
+ * @namespace
  */
 export class BlvtStream {
     
