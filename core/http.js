@@ -33,9 +33,9 @@ export class Http {
         return new Promise((resolve, reject) => {
 
             function callback(res) {
-                if (res.statusCode < 200 || res.statusCode >= 300) {
-                    return reject(new Error(res.statusCode))
-                }
+                // if (res.statusCode < 200 || res.statusCode >= 300) {
+                //     return reject(new Error(res.statusCode))
+                // }
 
                 let resBody = []
                 
@@ -55,7 +55,12 @@ export class Http {
                         }
 
                         // else Buffer
-                        resolve(resBody)
+                        resolve({
+                            body: resBody,
+                            statusCode: res.statusCode,
+                            statusMessage: res.statusMessage,
+                            headers: res.headers,
+                        })
                     } catch(error) {
                         reject(error)
                     }
@@ -101,13 +106,16 @@ export class Http {
         })
     }
 
-    async request(method, address, params, isPrivate=false, noTimestampAndRecvWindow=false) {
+    /**
+     * @type {HttpRequest}
+     */
+    async request(method, address, params = {}, isPrivate = false, noTimestampAndRecvWindow=false) {
         try {
+
+            let hostname = this.baseURL 
             if (this.isTestNet) {
                 console.log("## Test Net Request ##")
-                address = this.baseURLTest + address
-            } else {
-                address = this.baseURL + address
+                hostname = this.baseURLTest
             }
 
             let recvWindow = this.recvWindow
@@ -159,23 +167,23 @@ export class Http {
             if (this.api_key) {
                 headers["X-MBX-APIKEY"] = this.api_key
             }
-
-            return false
-            let data = await fetch(address, {
+            
+            let req = await this.httpRequest(hostname, address, {
                 method,
                 headers,
             })
+            // console.log("BODY:", req.body)
+            // console.log("Status Code:", req.statusCode)
+            // console.log("Status Message:", req.statusMessage)
+            // console.log("Headers:", req.headers)
 
-            if (data.status == 404) {
+            if (req.status == 404) {
                 throw new Error("404 not found")
-            } else if (data.status == 406) {
+            } else if (req.status == 406) {
                 throw new Error("Client error 406: something you should fix")
             }
-
-            let body = await data.json()
-            // console.log(body)
-            return body
-
+            
+            return req.body
         } catch (error) {
             let errorMessage = {
                 name: error.name,
@@ -188,9 +196,12 @@ export class Http {
     }
 
     /**
+     * it's using fetch module which is available on node 18.0.0 and higher
+     * so due to compatibility we are disabling it.
+     * so this is PRAISE (opposite of DEPRECATE)
      * @type {HttpRequest}
      */
-    async DEP_request(method, address, params = {}, isPrivate = false, noTimestampAndRecvWindow=false) {
+    async PRAISE_request(method, address, params = {}, isPrivate = false, noTimestampAndRecvWindow=false) {
         try {
             if (this.isTestNet) {
                 console.log("## Test Net Request ##")
