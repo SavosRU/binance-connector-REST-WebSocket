@@ -1,4 +1,5 @@
 import CryptoJS from "crypto-js"
+import https from "https"
 import("../types/http.types.js")
 
 export class Http {
@@ -19,9 +20,177 @@ export class Http {
     }
 
     /**
+     * @param {String} hostname example: catfact.ninja
+     * @param {String} [path] example: /fact
+     * @param {Object} options 
+     * @param {"GET" | "POST" | "PUT" | "DELETE" | "OPTIONS"} [options.method] or anything else
+     * @param {Object} [options.headers]
+     * @param {String} [options.body] if its object, it should be JSON.stringify
+     * @returns {Promise<Buffer | JSON>}
+     */
+    async httpRequest(hostname, path="", options) {
+
+        return new Promise((resolve, reject) => {
+
+            function callback(res) {
+                if (res.statusCode < 200 || res.statusCode >= 300) {
+                    return reject(new Error(res.statusCode))
+                }
+
+                let resBody = []
+                
+                res.on('data', function(chunk) {
+                    resBody.push(chunk)
+                })
+
+                res.on('end', function() {
+                    try {
+                        resBody = Buffer.concat(resBody)
+ 
+                        let contentType = res.headers['content-type']
+                        if (contentType) {
+                            if (contentType.includes("application/json")) {
+                                resBody = JSON.parse(resBody)
+                            }
+                        }
+
+                        // else Buffer
+                        resolve(resBody)
+                    } catch(error) {
+                        reject(error)
+                    }
+                })    
+            }
+            
+            // remove https:// OR http:// from hostname
+            if (hostname.startsWith("https://")) {
+                hostname = hostname.replace("https://", "")
+            } else if (hostname.startsWith("http://")) {
+                hostname = hostname.replace("http://", "")
+            }
+
+            let criteria = {}
+
+            criteria.hostname = hostname
+
+            if (path) {
+                criteria.path = path
+            }
+
+            if (options?.headers) {
+                criteria.headers = options.headers
+            }
+
+            if (options?.method) {
+                criteria.method = options.method
+            } else {
+                criteria.method = "GET"
+            }
+            
+            const req = https.request({...criteria}, callback)
+            
+            req.on('error', (error) => {
+                reject(error.message)
+            })
+
+            if (options?.body) {
+                req.write(options.body)
+            }
+
+            req.end()
+        })
+    }
+
+    async request(method, address, params, isPrivate=false, noTimestampAndRecvWindow=false) {
+        try {
+            if (this.isTestNet) {
+                console.log("## Test Net Request ##")
+                address = this.baseURLTest + address
+            } else {
+                address = this.baseURL + address
+            }
+
+            let recvWindow = this.recvWindow
+            if (params.recvWindow) {
+                recvWindow = params.recvWindow
+                delete params.recvWindow
+            }
+
+            let queries = {
+                ...params,
+                timestamp: this.timestamp,
+                recvWindow,
+            }
+
+            if (noTimestampAndRecvWindow) {
+                delete queries.timestamp
+                delete queries.recvWindow
+            }
+
+            let queryToString = Object.keys(queries)
+                .map((key) => {
+                    let value = queries[key]
+
+                    if (value instanceof Array) {
+                        value = JSON.stringify(value)
+                        value = encodeURI(value)
+                    }
+                    return `${key}=${value}`
+                })
+                .join("&");
+
+            let headers = {}
+            
+            if (method != "GET") {
+                headers["Accept"] = "application/x-www-form-urlencoded"
+            }
+
+            if (isPrivate && this.api_secret) {
+                const signature = this.HmacSHA256(
+                    queryToString,
+                    this.api_secret
+                ).toString()
+
+                address = address + "?" + queryToString + "&signature=" + signature
+            } else {
+                address = address + "?" + queryToString
+            }
+
+            if (this.api_key) {
+                headers["X-MBX-APIKEY"] = this.api_key
+            }
+
+            return false
+            let data = await fetch(address, {
+                method,
+                headers,
+            })
+
+            if (data.status == 404) {
+                throw new Error("404 not found")
+            } else if (data.status == 406) {
+                throw new Error("Client error 406: something you should fix")
+            }
+
+            let body = await data.json()
+            // console.log(body)
+            return body
+
+        } catch (error) {
+            let errorMessage = {
+                name: error.name,
+                message: error.message,
+                stack: error.stack,
+            }
+
+            return errorMessage
+        }
+    }
+
+    /**
      * @type {HttpRequest}
      */
-    async request(method, address, params = {}, isPrivate = false, noTimestampAndRecvWindow=false) {
+    async DEP_request(method, address, params = {}, isPrivate = false, noTimestampAndRecvWindow=false) {
         try {
             if (this.isTestNet) {
                 console.log("## Test Net Request ##")
