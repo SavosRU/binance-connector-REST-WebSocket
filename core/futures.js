@@ -2,6 +2,9 @@ import { Websocket } from "./websocket.js"
 import { Http } from "./http.js"
 import("../types/futures.type.js")
 
+/**
+ * Futures
+ */
 export class Futures {
     
     ApiMap = {

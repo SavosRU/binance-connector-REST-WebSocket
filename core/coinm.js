@@ -2,6 +2,9 @@ import { Websocket } from "./websocket.js"
 import { Http } from "./http.js"
 import("../types/coinm.type.js")
 
+/**
+ * CoinM
+ */
 export class CoinM {
     
     ApiMap = {

@@ -1,6 +1,9 @@
 import { Websocket } from "./websocket.js"
 import("../types/blvtstream.type.js")
 
+/**
+ * BLVT Streams
+ */
 export class BlvtStream {
     
     ApiMap = {

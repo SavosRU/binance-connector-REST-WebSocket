@@ -2,6 +2,9 @@ import CryptoJS from "crypto-js"
 import https from "https"
 import("../types/http.types.js")
 
+/**
+ * Abstract HTTP
+ */
 export class Http {
     HmacSHA256 = CryptoJS.HmacSHA256
 

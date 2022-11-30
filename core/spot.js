@@ -2,6 +2,9 @@ import { Websocket } from "./websocket.js"
 import { Http } from "./http.js"
 import("../types/spot.types.js")
 
+/**
+ * SPOT
+ */
 export class Spot {
     
     ApiMap = {

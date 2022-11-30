@@ -2,6 +2,10 @@ import { EventEmitter } from "events"
 import { WebSocket as WsClient } from "ws"
 import("../types/websocket.types.js")
 
+/**
+ * Websocket
+ * @extends EventEmitter
+ */
 export class Websocket extends EventEmitter {
 
     // for subscribing

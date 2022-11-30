@@ -2,6 +2,9 @@ import { Websocket } from "./websocket.js"
 import { Http } from "./http.js"
 import("../types/euoptions.type.js")
 
+/**
+ * EU Options
+ */
 export class EuOptions {
     
     ApiMap = {
