@@ -5,6 +5,23 @@
 ![last commit](https://img.shields.io/github/last-commit/mhasanjb/binance-connector)
 [![Known Vulnerabilities](https://snyk.io/test/npm/binance-connector/badge.svg)](https://snyk.io/test/npm/binance-connector)
 
+### Structure
+`binance-connector` contains this components    
+
+| Component     | Info               | Status        | Document Link        |
+| ------------- |-------------       | ------------- | -------------        |
+| Spot          | Spot API           | Completed     | [Spot](https://binance-docs.github.io/apidocs/spot/en/) |
+| Futures       | Futures API        | Completed     | [Futures](https://binance-docs.github.io/apidocs/futures/en/) |
+| Coin-M        | Coin-M API         | Completed     | [Coin-M](https://binance-docs.github.io/apidocs/delivery/en/) |
+| Options       | European API       | Completed     | [Options](https://binance-docs.github.io/apidocs/voptions/en/) |
+| BLVT Streams  | BLVT Streams       | Completed     | [BLVT](https://binance-docs.github.io/apidocs/spot/en/#websocket-blvt-info-streams) |
+| Websocket     | Abstract Websocket | Completed     | |
+| Http          | Abstract Http      | Completed     | |
+
+**Spot**: contains: `Wallet`, `Sub-Account`, `Market Data`, `Spot`, `Margin`, `Savings`, `Staking`, `Mining`, `Futures`, `Futures Algo`, `Portfolio`, `BLVT`, `BSwap`, `Fiat`, `C2C`, `VIP Loans`, `Crypto Loans`, `Crypto Loans`, `Pay`, `Convert`, `Rebate`, `NFT`, `Binance Code` (all available endpoints in [binance spot doc](https://binance-docs.github.io/apidocs/spot/en/#change-log))
+
+**Websocket & Http**: can connect/request to any of binance ws/rest endpoints
+
 ### Requirement  
 you need to enable node ES6 `module`    
 package.json -> `"type": "module"`
@@ -129,24 +146,6 @@ Run()
 ### Types & Intellisense
 ![img1](https://github.com/mhasanjb/binance-connector/blob/main/images/img01.png "img1")
 ![img2](https://github.com/mhasanjb/binance-connector/blob/main/images/img02.png "img2")
-
-
-### Structure
-`binance-connector` contains this components    
-
-| Component     | Info               | Status        | Document Link        |
-| ------------- |-------------       | ------------- | -------------        |
-| Spot          | Spot API           | Completed     | [Spot](https://binance-docs.github.io/apidocs/spot/en/) |
-| Futures       | Futures API        | Completed     | [Futures](https://binance-docs.github.io/apidocs/futures/en/) |
-| Coin-M        | Coin-M API         | Completed     | [Coin-M](https://binance-docs.github.io/apidocs/delivery/en/) |
-| Options       | European API       | Completed     | [Options](https://binance-docs.github.io/apidocs/voptions/en/) |
-| BLVT Streams  | BLVT Streams       | Completed     | [BLVT](https://binance-docs.github.io/apidocs/spot/en/#websocket-blvt-info-streams) |
-| Websocket     | Abstract Websocket | Completed     | |
-| Http          | Abstract Http      | Completed     | |
-
-**Spot**: contains: `Wallet`, `Sub-Account`, `Market Data`, `Spot`, `Margin`, `Savings`, `Staking`, `Mining`, `Futures`, `Futures Algo`, `Portfolio`, `BLVT`, `BSwap`, `Fiat`, `C2C`, `VIP Loans`, `Crypto Loans`, `Crypto Loans`, `Pay`, `Convert`, `Rebate`, `NFT`, `Binance Code` (all available endpoints in [binance spot doc](https://binance-docs.github.io/apidocs/spot/en/#change-log))
-
-**Websocket & Http**: can connect/request to any of binance ws/rest endpoints
 
 ### Endpoints Naming
 | Starts        | Example            | Http Method   |
