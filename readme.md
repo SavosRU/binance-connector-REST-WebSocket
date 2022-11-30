@@ -5,10 +5,8 @@
 ![last commit](https://img.shields.io/github/last-commit/mhasanjb/binance-connector)
 [![Known Vulnerabilities](https://snyk.io/test/npm/binance-connector/badge.svg)](https://snyk.io/test/npm/binance-connector)
 
-### Requirement
-`node 18.0.0` and higher    
-otherwise you need to polyfill `fetch` with `globalThis`    
-also you need to enable node ES6 `module`    
+### Requirement  
+you need to enable node ES6 `module`    
 package.json -> `"type": "module"`
 
 ### Installation
