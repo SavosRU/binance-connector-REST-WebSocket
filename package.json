@@ -1,6 +1,6 @@
 {
   "name": "binance-connector",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "binance connector is a SDK for binance that supports all endpoints including websocket",
   "main": "index.js",
   "type": "module",
