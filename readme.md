@@ -144,8 +144,8 @@ Run()
 
 
 ### Types & Intellisense
-![img1](https://github.com/mhasanjb/binance-connector/blob/main/images/img01.png "img1")
-![img2](https://github.com/mhasanjb/binance-connector/blob/main/images/img02.png "img2")
+![img1](https://raw.githubusercontent.com/mhasanjb/binance-connector/main/images/img01.png "img1")
+![img2](https://raw.githubusercontent.com/mhasanjb/binance-connector/main/images/img02.png "img2")
 
 ### Endpoints Naming
 | Starts        | Example            | Http Method   |

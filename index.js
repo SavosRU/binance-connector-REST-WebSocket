@@ -1,3 +1,7 @@
+/**
+ * @author M.H Jabbari
+ */
+
 export { Futures } from "./core/futures.js"
 export { Spot } from "./core/spot.js"
 export { CoinM } from "./core/coinm.js"

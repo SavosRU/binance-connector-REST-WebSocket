@@ -30,7 +30,7 @@
     
         <h2><span class="attribs"><span class="type-signature"></span></span>WebSocket<span class="signature">(address, protocols<span class="signature-attributes">opt</span>, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
         
-            <div class="class-description">Class representing a WebSocket.</div>
+            <div class="class-description"><p>Class representing a WebSocket.</p></div>
         
     
 </header>
@@ -53,7 +53,7 @@
 
 
 <div class="description">
-    Create a new `WebSocket`.
+    <p>Create a new <code>WebSocket</code>.</p>
 </div>
 
 
@@ -118,7 +118,7 @@
 
             
 
-            <td class="description last">The URL to which to connect</td>
+            <td class="description last"><p>The URL to which to connect</p></td>
         </tr>
 
     
@@ -154,7 +154,7 @@
 
             
 
-            <td class="description last">The subprotocols</td>
+            <td class="description last"><p>The subprotocols</p></td>
         </tr>
 
     
@@ -187,7 +187,7 @@
 
             
 
-            <td class="description last">Connection options</td>
+            <td class="description last"><p>Connection options</p></td>
         </tr>
 
     
@@ -567,9 +567,9 @@
 
 
 <div class="description">
-    This deviates from the WHATWG interface since ws doesn't support the
-required default "blob" type (instead we define a custom "nodebuffer"
-type).
+    <p>This deviates from the WHATWG interface since ws doesn't support the
+required default &quot;blob&quot; type (instead we define a custom &quot;nodebuffer&quot;
+type).</p>
 </div>
 
 
@@ -1333,19 +1333,19 @@ type).
 
 
 <div class="description">
-    Start a closing handshake.
-
-         +----------+   +-----------+   +----------+
-    - - -|ws.close()|-->|close frame|-->|ws.close()|- - -
-   |     +----------+   +-----------+   +----------+     |
-         +----------+   +-----------+         |
-CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
-         +----------+   +-----------+   |
-   |           |                        |   +---+        |
-               +------------------------+-->|fin| - - - -
-   |         +---+                      |   +---+
-    - - - - -|fin|<---------------------+
-             +---+
+    <p>Start a closing handshake.</p>
+<pre><code>     +----------+   +-----------+   +----------+
+- - -|ws.close()|--&gt;|close frame|--&gt;|ws.close()|- - -
+</code></pre>
+<p>|     +----------+   +-----------+   +----------+     |
++----------+   +-----------+         |
+CLOSING  |ws.close()|&lt;--|close frame|&lt;--+-----+       CLOSING
++----------+   +-----------+   |
+|           |                        |   +---+        |
++------------------------+--&gt;|fin| - - - -
+|         +---+                      |   +---+
+- - - - -|fin|&lt;---------------------+
++---+</p>
 </div>
 
 
@@ -1409,7 +1409,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
             
 
-            <td class="description last">Status code explaining why the connection is closing</td>
+            <td class="description last"><p>Status code explaining why the connection is closing</p></td>
         </tr>
 
     
@@ -1445,8 +1445,8 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
             
 
-            <td class="description last">The reason why the connection is
-    closing</td>
+            <td class="description last"><p>The reason why the connection is
+closing</p></td>
         </tr>
 
     
@@ -1531,7 +1531,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
 
 <div class="description">
-    Pause the socket.
+    <p>Pause the socket.</p>
 </div>
 
 
@@ -1619,7 +1619,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
 
 <div class="description">
-    Send a ping.
+    <p>Send a ping.</p>
 </div>
 
 
@@ -1683,7 +1683,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
             
 
-            <td class="description last">The data to send</td>
+            <td class="description last"><p>The data to send</p></td>
         </tr>
 
     
@@ -1716,7 +1716,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
             
 
-            <td class="description last">Indicates whether or not to mask `data`</td>
+            <td class="description last"><p>Indicates whether or not to mask <code>data</code></p></td>
         </tr>
 
     
@@ -1749,7 +1749,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
             
 
-            <td class="description last">Callback which is executed when the ping is sent</td>
+            <td class="description last"><p>Callback which is executed when the ping is sent</p></td>
         </tr>
 
     
@@ -1834,7 +1834,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
 
 <div class="description">
-    Send a pong.
+    <p>Send a pong.</p>
 </div>
 
 
@@ -1898,7 +1898,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
             
 
-            <td class="description last">The data to send</td>
+            <td class="description last"><p>The data to send</p></td>
         </tr>
 
     
@@ -1931,7 +1931,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
             
 
-            <td class="description last">Indicates whether or not to mask `data`</td>
+            <td class="description last"><p>Indicates whether or not to mask <code>data</code></p></td>
         </tr>
 
     
@@ -1964,7 +1964,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
             
 
-            <td class="description last">Callback which is executed when the pong is sent</td>
+            <td class="description last"><p>Callback which is executed when the pong is sent</p></td>
         </tr>
 
     
@@ -2049,7 +2049,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
 
 <div class="description">
-    Resume the socket.
+    <p>Resume the socket.</p>
 </div>
 
 
@@ -2137,7 +2137,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
 
 <div class="description">
-    Send a data message.
+    <p>Send a data message.</p>
 </div>
 
 
@@ -2199,7 +2199,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
             
 
-            <td class="description last">The message to send</td>
+            <td class="description last"><p>The message to send</p></td>
         </tr>
 
     
@@ -2232,7 +2232,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
             
 
-            <td class="description last">Options object
+            <td class="description last"><p>Options object</p>
                 <h6>Properties</h6>
                 
 
@@ -2292,8 +2292,8 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
                 </td>
             
 
-            <td class="description last">Specifies whether `data` is binary or
-    text</td>
+            <td class="description last"><p>Specifies whether <code>data</code> is binary or
+text</p></td>
         </tr>
 
     
@@ -2330,8 +2330,8 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
                 </td>
             
 
-            <td class="description last">Specifies whether or not to compress
-    `data`</td>
+            <td class="description last"><p>Specifies whether or not to compress
+<code>data</code></p></td>
         </tr>
 
     
@@ -2370,8 +2370,8 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
                 </td>
             
 
-            <td class="description last">Specifies whether the fragment is the
-    last one</td>
+            <td class="description last"><p>Specifies whether the fragment is the
+last one</p></td>
         </tr>
 
     
@@ -2408,7 +2408,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
                 </td>
             
 
-            <td class="description last">Specifies whether or not to mask `data`</td>
+            <td class="description last"><p>Specifies whether or not to mask <code>data</code></p></td>
         </tr>
 
     
@@ -2448,7 +2448,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
             
 
-            <td class="description last">Callback which is executed when data is written out</td>
+            <td class="description last"><p>Callback which is executed when data is written out</p></td>
         </tr>
 
     
@@ -2533,7 +2533,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 
 
 <div class="description">
-    Forcibly close the connection.
+    <p>Forcibly close the connection.</p>
 </div>
 
 
@@ -2629,7 +2629,7 @@ CLOSING  |ws.close()|<--|close frame|<--+-----+       CLOSING
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Wed Nov 30 2022 22:00:31 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Thu Dec 01 2022 10:03:38 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>
