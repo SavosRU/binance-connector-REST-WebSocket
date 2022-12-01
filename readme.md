@@ -6,7 +6,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/npm/binance-connector/badge.svg)](https://snyk.io/test/npm/binance-connector)
 
 
-[Binance Connector JSDoc Documentation](https://github.com/mhasanjb/binance-connector/tree/main/examples)
+[Binance Connector JSDoc Documentation](https://github.com/mhasanjb/binance-connector/)
 
 
 ### Structure
