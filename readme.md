@@ -5,10 +5,6 @@
 ![last commit](https://img.shields.io/github/last-commit/mhasanjb/binance-connector)
 [![Known Vulnerabilities](https://snyk.io/test/npm/binance-connector/badge.svg)](https://snyk.io/test/npm/binance-connector)
 
-
-[Binance Connector JSDoc Documentation](https://mhasanjb.github.io/binance-connector/)
-
-
 ### Structure
 `binance-connector` contains this components    
 
