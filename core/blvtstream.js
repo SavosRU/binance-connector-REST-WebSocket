@@ -1,6 +1,13 @@
 import { Websocket } from "./websocket.js"
-import("../types/blvtstream.type.js")
 
+// ############################ Types
+/**
+ * Blvt Stream constructor
+ * @typedef {Object} BlvtStreamConstructor
+ * @property {Number} [reconnectSleep]
+ * @property {Number} [recvWindow]
+ */
+// ############################ Types
 /**
  * @namespace
  */
